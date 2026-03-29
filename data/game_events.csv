@@ -1,0 +1,1001 @@
+game_event_id,date,game_id,minute,type,club_id,club_name,player_id,description,player_in_id,player_assist_id
+60d28dc455d299f5abdb65d7204fef40,2010-06-26,1026846,69,Cards,3589,South Korea,1772,"1. Yellow card  , Foul",,
+71280d139049475e02eb7627897da117,2010-06-26,1026846,38,Cards,3589,South Korea,27402,"1. Yellow card  , Foul",,
+dbb0d095a58423d8377d6b5b6b9f258f,2010-06-26,1026846,8,Goals,3449,Uruguay,44352,", Right-footed shot, 2. Tournament Goal Assist: , Cross, 1. Tournament Assist",,3408
+6948606e52c10f6a2032ebe64355fe14,2010-06-26,1026846,80,Goals,3449,Uruguay,44352,", Right-footed shot, 3. Tournament Goal Assist: , Header, 1. Tournament Assist",,72653
+eb2ca121e9069fac2789c9e0be7cdbd3,2010-06-26,1026846,84,Substitutions,3449,Uruguay,44352,", Tactical",76213,
+55772cba21ac68a0ae91f1c4a0071279,2010-06-26,1026846,74,Substitutions,3449,Uruguay,54859,", Tactical",72653,
+56d9a9fdf8e41024f4a86807336584c9,2010-06-26,1026846,46,Substitutions,3449,Uruguay,54928,", Injury",44935,
+2f4c820f11f27999f888f4abd635a389,2010-06-26,1026846,85,Substitutions,3589,South Korea,81796,", Tactical",92093,
+8591918691cb30df901ed0af178d2b4b,2010-06-26,1026846,68,Goals,3589,South Korea,81801,", Header, 2. Tournament Goal Assist:",,
+63e5f78306a576242e4f29f358200541,2010-06-26,1026846,83,Cards,3589,South Korea,86723,"1. Yellow card  , Foul",,
+fba7c94b2ace9a46b29812c9f223badc,2010-06-26,1026846,61,Substitutions,3589,South Korea,90814,", Tactical",688,
+247406a265003a0243a50ca24eddd13e,2010-06-27,1026847,27,Cards,6303,Mexico,2904,"1. Yellow card  , Foul",,
+f22c5ea4c07ce7ed3de04b7c48846c98,2010-06-27,1026847,25,Goals,3437,Argentina,4276,", Header, 1. Tournament Goal Assist: , Shot on goal, 1. Tournament Assist",,28003
+889a9708070c6cce363f090ed077a223,2010-06-27,1026847,51,Goals,3437,Argentina,4276,", Right-footed shot, 2. Tournament Goal Assist: Without assist",,
+3b73701db293696d5f71afc3110a0102,2010-06-27,1026847,68,Substitutions,3437,Argentina,4276,", Not reported",3143,
+eef064ba07fa91167db7b9060127019f,2010-06-27,1026847,86,Substitutions,3437,Argentina,7895,", Not reported",55215,
+412ee0d42f1b42f3d218943d38efd8ba,2010-06-27,1026847,60,Substitutions,6303,Mexico,20506,", Not reported",37558,
+dbe2f418838ae78ed892d3b4213eaf86,2010-06-27,1026847,46,Substitutions,6303,Mexico,29572,", Not reported",51079,
+ff591ba5267e597e840696753b0e9061,2010-06-27,1026847,32,Goals,3437,Argentina,39153,", Left-footed shot, 4. Tournament Goal Assist: Without assist",,
+ed7a871847d9e6aef909ad3333ede86c,2010-06-27,1026847,78,Substitutions,3437,Argentina,45320,", Not reported",26443,
+5d4ad4e6747b6b9be740f96c2c82bb26,2010-06-27,1026847,70,Goals,6303,Mexico,50935,", Right-footed shot, 2. Tournament Goal Assist: , Pass, 1. Tournament Assist",,7713
+3dbe325e460a2f536c789e937e02e608,2010-06-26,1027001,62,Goals,3505,United States,68,", Penalty, 3. Tournament Goal Assist: , Penalty: Fouled player",,27577
+b0904f3aa061b5d2e222e58d6ad6d370,2010-06-26,1027001,73,Substitutions,3441,Ghana,707,", Tactical",133553,
+bdbc709d7af117231a44c2b318c78446,2010-06-26,1027001,17,Cards,3505,United States,1335,"2. Yellow card  , Foul",,
+bbaad6655254c90104a5f26648f4836d,2010-06-26,1027001,68,Cards,3505,United States,15829,"1. Yellow card  , Foul",,
+5101f4ab22febe7d3a83a53c59c9e890,2010-06-26,1027001,5,Goals,3441,Ghana,16922,", Left-footed shot, 1. Tournament Goal Assist:",,
+c94009447cbf0e18221792320c9c431b,2010-06-26,1027001,78,Substitutions,3441,Ghana,16922,", Injury",5975,
+dc16b9ac53c92ca773e38e4b3a01572a,2010-06-26,1027001,93,Goals,3441,Ghana,26802,", Left-footed shot, 3. Tournament Goal Assist: , Pass, 1. Tournament Assist",,45403
+c5212555e5a58b788883d9d5660f3ee8,2010-06-26,1027001,46,Substitutions,3505,United States,27167,", Tactical",33118,
+eebf13d5794c1f7f7c5c09e51cecf6b9,2010-06-26,1027001,91,Substitutions,3505,United States,39378,", Tactical",39465,
+f8f47715cd8267c8e37fcfda75b0c208,2010-06-26,1027001,7,Cards,3505,United States,39840,"1. Yellow card  , Foul",,
+030da3f8b4e4bb6297bb90c596f74c61,2010-06-26,1027001,31,Substitutions,3505,United States,39840,", Tactical",50987,
+08269d97ae4a4b8e64859a8827116f37,2010-06-26,1027001,90,Cards,3441,Ghana,45403,"2. Yellow card  , Foul",,
+86dfa032529c8687c862a6dbfb674225,2010-06-26,1027001,113,Substitutions,3441,Ghana,106306,", Injury",17129,
+ea7aab37e83f416e4dd3e6c754805c56,2010-06-26,1027001,61,Cards,3441,Ghana,110622,"2. Yellow card  , Foul",,
+d05b32d7c7c4bd735f52e500769f1b87,2010-06-27,1027002,20,Goals,3262,Germany,10,", Right-footed shot, 2. Tournament Goal Assist: , Goal-kick, 1. Tournament Assist",,17259
+efceeb28e01701a38782d8c96d674469,2010-06-27,1027002,72,Substitutions,3262,Germany,10,", Resting",6288,
+af1b446830143da07dd91fd30f1622c6,2010-06-27,1027002,47,Cards,3262,Germany,698,"1. Yellow card  , Foul",,
+a297682297c1a7d9d2ca2e678add777d,2010-06-27,1027002,37,Goals,3299,England,3273,", Header, 1. Tournament Goal Assist: , Cross, 1. Tournament Assist",,3109
+4acf335fb13519b5621a9b3b19b26d13,2010-06-27,1027002,64,Substitutions,3299,England,3333,", Tactical",3876,
+c0555f093b347c6cd860b2983e92bbda,2010-06-27,1027002,71,Substitutions,3299,England,3875,", Tactical",3142,
+528ac0b9cc891d2c884315ca96a118dd,2010-06-27,1027002,82,Cards,3299,England,3881,"2. Yellow card  , Foul",,
+2ca2360fbe73d8fbf01d8f2efae1cadd,2010-06-27,1027002,87,Substitutions,3299,England,3881,", Tactical",3467,
+f4a7f97229cd8b3c5138b9f03e908989,2010-06-27,1027002,32,Goals,3262,Germany,15185,", Left-footed shot, 2. Tournament Goal Assist: , Pass, 3. Tournament Assist",,58358
+9697e700cba66cbb2133ec50ed606fa7,2010-06-27,1027002,83,Substitutions,3262,Germany,35664,", Resting",6237,
+35b10ec5e1daebf0ea3421c23ddfac07,2010-06-27,1027002,67,Goals,3262,Germany,58358,", Right-footed shot, 2. Tournament Goal Assist: , Pass, 1. Tournament Assist",,2514
+ad32200f423b08dcd0461b82c5192300,2010-06-27,1027002,70,Goals,3262,Germany,58358,", Right-footed shot, 3. Tournament Goal Assist: , Pass, 2. Tournament Assist",,35664
+68ac54fcd6432d277f7bdaee532f7866,2010-06-27,1027002,72,Substitutions,3262,Germany,58358,", Special achievements",2623,
+03b9ef64de5d1b293f5f82f46124be72,2010-06-28,1027048,90,Goals,3503,Slovakia,3531,", Penalty, 4. Tournament Goal Assist: , Penalty: Fouled player",,40059
+f643f446036ef0771706431623f8b56c,2010-06-28,1027048,90,Cards,3379,Netherlands,4311,1. Yellow card,,
+b33298880a6a6b2a3161e6a9c66a0783,2010-06-28,1027048,31,Cards,3379,Netherlands,4360,1. Yellow card,,
+fb2778591286a98d9ec4ca1fccba1bcb,2010-06-28,1027048,18,Goals,3379,Netherlands,4360,", Left-footed shot, 1. Tournament Goal Assist: , Pass, 1. Tournament Assist",,4673
+65a32c99f14619a7b00b24be163ef1fd,2010-06-28,1027048,71,Substitutions,3379,Netherlands,4360,", Not reported",27805,
+0d55d502d67599a0ed4f34f65be7fa77,2010-06-28,1027048,80,Substitutions,3379,Netherlands,4380,", Not reported",4357,
+84cdf35180f941eaa3a4557e66d1f044,2010-06-28,1027048,84,Goals,3379,Netherlands,4673,", Right-footed shot, 2. Tournament Goal Assist: , Pass, 1. Tournament Assist",,4010
+0ea10230d1e26307f1751be3fc00226c,2010-06-28,1027048,90,Substitutions,3379,Netherlands,4673,", Not reported",15760,
+f107d5eaf20243086d62b068b91a600a,2010-06-28,1027048,84,Cards,3503,Slovakia,24180,1. Yellow card,,
+96c55d6db186368c47d30c64f43299ed,2010-06-28,1027048,87,Substitutions,3503,Slovakia,24856,", Not reported",24237,
+7cc996b77914636fb8ec1b617ed9f612,2010-06-28,1027048,87,Substitutions,3503,Slovakia,38593,", Not reported",40059,
+9862d5dfea9effea73daaf5c8ba3ba6e,2010-06-28,1027048,72,Cards,3503,Slovakia,40058,1. Yellow card,,
+c4633d77066875402d774cfd4d061021,2010-06-28,1027048,71,Substitutions,3503,Slovakia,41369,", Not reported",40058,
+f41631c8148c4a3af5f90b0b8bca503c,2010-06-28,1027048,39,Cards,3503,Slovakia,74943,1. Yellow card,,
+e5c8c737ff9895048de1ee974e7b0c15,2010-06-29,1027049,94,Substitutions,3581,Paraguay,215,", Not reported",45865,
+587290140ebb0e436795bd4406fc6afe,2010-06-29,1027049,-1,Shootout,3581,Paraguay,2050,", Scored",,
+6a7ec555f265921db64bf05304171894,2010-06-29,1027049,-1,Shootout,3581,Paraguay,16120,", Scored",,
+9b5ade61218a1b1d8a989be8c22246e4,2010-06-29,1027049,58,Cards,3435,Japan,25905,1. Yellow card,,
+2eff606e956ad8922572e3d9b7ccfc95,2010-06-29,1027049,65,Substitutions,3435,Japan,25905,", Not reported",79642,
+dd07d2540b660139d1f7e47c5bca2825,2010-06-29,1027049,75,Substitutions,3581,Paraguay,26726,", Not reported",16120,
+a153a7269ceb7a7e717feda575dfa43b,2010-06-29,1027049,106,Substitutions,3435,Japan,27439,", Not reported",27576,
+a0a1b3027dd4c70e768b828dde56147f,2010-06-29,1027049,114,Cards,3435,Japan,27513,2. Yellow card,,
+0ed09be6d9c6643c6f05aa5a720221c6,2010-06-29,1027049,-1,Shootout,3435,Japan,27513,", Scored",,
+4d13a3036ba136a7c110a52e3d9227ed,2010-06-29,1027049,81,Substitutions,3435,Japan,27765,", Not reported",61888,
+f62787a2bfbf670bc417473845e5f854,2010-06-29,1027049,118,Cards,3581,Paraguay,37713,1. Yellow card,,
+b79cb0d0f6ae63bcd548ea4d64eb8640,2010-06-29,1027049,-1,Shootout,3581,Paraguay,37713,", Scored",,
+80b2dbf5a7815aead1b85d7c414da362,2010-06-29,1027049,-1,Shootout,3435,Japan,38777,", Missed",,
+d1a4a72d69e9226ef8b89fddcef98d1f,2010-06-29,1027049,-1,Shootout,3435,Japan,39259,", Scored",,
+791506d25cd3bef52ecd1d98095c4d5d,2010-06-29,1027049,-1,Shootout,3581,Paraguay,45865,", Scored",,
+62cba42be1fca60e4fb058281d667a9e,2010-06-29,1027049,-1,Shootout,3581,Paraguay,58516,", Scored",,
+0bb90ead623fdfa4ed5f576f26b13a3a,2010-06-29,1027049,90,Cards,3435,Japan,66521,1. Yellow card,,
+1828e7ecb62becc35028a3f56a5c4231,2010-06-29,1027049,-1,Shootout,3435,Japan,66521,", Scored",,
+2e841850802c0b77a4f8799ab7c54931,2010-06-29,1027049,72,Cards,3435,Japan,79522,2. Yellow card,,
+c8b82aacf2234278f3a899c9dee1d397,2010-06-29,1027049,60,Substitutions,3581,Paraguay,90147,", Not reported",2050,
+2189654b05216a892cf915a31dbee2dd,2010-06-28,1027635,34,Goals,3439,Brazil,1599,", Header, 1. Tournament Goal Assist: , Corner, 1. Tournament Assist",,18301
+6f299da1e90cc0f259b6ade3fd3969b7,2010-06-28,1027635,31,Cards,3439,Brazil,3366,1. Yellow card,,
+7904f5f1cff8be2444b176e03e2f7af4,2010-06-28,1027635,81,Substitutions,3439,Brazil,3366,", Tactical",3365,
+640a0aa0a048c0862a8a4166a6ea24d9,2010-06-28,1027635,46,Substitutions,3700,Chile,14520,", Tactical",20758,
+910dc084fa3b4cae3c61dbcacb1e8526,2010-06-28,1027635,59,Goals,3439,Brazil,15511,", Right-footed shot, 1. Tournament Goal Assist: , Pass, 1. Tournament Assist",,54170
+ebbd60cb5519191bb30ee7d72d5fb4c0,2010-06-28,1027635,85,Substitutions,3439,Brazil,15511,", Delay",18734,
+41cc9849c5e3a3b0560a17e80722d023,2010-06-28,1027635,38,Goals,3439,Brazil,19082,", Right-footed shot, 3. Tournament Goal Assist: , Pass, 3. Tournament Assist",,3366
+21db0db1212649dde2fdad72662fda7e,2010-06-28,1027635,76,Substitutions,3439,Brazil,19082,", Tactical",22750,
+20994daa82acf2e16653cb01486259e3,2010-06-28,1027635,46,Substitutions,3700,Chile,21750,", Tactical",3413,
+673fe65a1a8b765c808b7a4d6d98ee58,2010-06-28,1027635,47,Cards,3700,Chile,37666,1. Yellow card,,
+0f86f4a2855e8d627cd09521e877d196,2010-06-28,1027635,68,Cards,3700,Chile,40426,1. Yellow card,,
+23d0d8c66e7825f43221b640834028e9,2010-06-28,1027635,62,Substitutions,3700,Chile,43722,", Tactical",53027,
+4e79e0915ccf27da2ebf8743e570b1b3,2010-06-28,1027635,80,Cards,3700,Chile,53027,1. Yellow card,,
+ce16bc58014cb439cf96bcd7c2296811,2010-06-28,1027635,72,Cards,3439,Brazil,54170,2. Yellow card,,
+79a4a0c84b5503181c38ae67489d2cfa,2010-06-29,1027636,74,Cards,3375,Spain,7476,"1. Yellow card  , Foul",,
+9becb30007599bdad31d230aa14881fe,2010-06-29,1027636,90,Substitutions,3375,Spain,7476,", Delay",7572,
+ca2a4e312221e94521971161a095089a,2010-06-29,1027636,59,Substitutions,3375,Spain,7767,", Tactical",35564,
+e92278af67293ea26e2bfb2a9755f765,2010-06-29,1027636,63,Goals,3375,Spain,7980,", Right-footed shot, 4. Tournament Goal",,
+d773c0cadd78526f947e5c6c671f0548,2010-06-29,1027636,88,Substitutions,3375,Spain,7980,", Tactical",65278,
+0fc66a7a4cfb9be010ec49507b71bed4,2010-06-29,1027636,72,Substitutions,3300,Portugal,8019,", Tactical",13952,
+74d3a69430a0fb9e8f7893fb6741a920,2010-06-29,1027636,80,Cards,3300,Portugal,8538,"2. Yellow card  , Foul",,
+73fa385a3ee0c0976530425c0894cf13,2010-06-29,1027636,89,Cards,3300,Portugal,9819,"Red card  , Violent conduct",,
+e7c18de69e17d98176c46bd9b6404827,2010-06-29,1027636,59,Substitutions,3300,Portugal,9824,", Tactical",14119,
+92c392975d79834dc4886a7260543010,2010-06-29,1027636,72,Substitutions,3300,Portugal,14132,", Tactical",9811,
+af95cd45ce4d363a8cc2c3ed899f5557,2010-07-02,1027723,77,Cards,3441,Ghana,707,"1. Yellow card  , Foul",,
+d24ddbc39dbd6540ec1df862c87f1879,2010-07-02,1027723,55,Goals,3449,Uruguay,3408,", Direct free kick, 3. Tournament Goal",,
+349694d6594b368d60a0f69c72844456,2010-07-02,1027723,-1,Shootout,3449,Uruguay,3408,", Scored",,
+0a7db8c090e3008d1ce9c1e0faee5da6,2010-07-02,1027723,93,Cards,3441,Ghana,5917,"1. Yellow card  , Foul",,
+93aec2884b6c056f60a13f1a9206f9ca,2010-07-02,1027723,-1,Shootout,3441,Ghana,5917,", Saved",,
+d98bcede20c0160eff051417009e6110,2010-07-02,1027723,-1,Shootout,3441,Ghana,5975,", Scored",,
+4d50bdaa092fd0e80038d144873b1e1b,2010-07-02,1027723,38,Substitutions,3449,Uruguay,13829,", Injury",15876,
+6ced4f7c2eaa47016ca20a38ca3f73a9,2010-07-02,1027723,-1,Shootout,3449,Uruguay,15876,", Scored",,
+e98e1573daea54198f23d3dbd3808956,2010-07-02,1027723,45,Goals,3441,Ghana,17129,", Long distance kick, 1. Tournament Goal Assist: , Pass, 1. Tournament Assist",,26802
+092290b7c7fe53b26b6c4f501446ef69,2010-07-02,1027723,88,Substitutions,3441,Ghana,17129,", Tactical",85563,
+c278dd3fce814a13dd6a6021cd9814f6,2010-07-02,1027723,59,Cards,3449,Uruguay,20378,"1. Yellow card  , Foul",,
+de0888009fc8c5412eb4802b4967c1a4,2010-07-02,1027723,-1,Shootout,3441,Ghana,26802,", Scored",,
+a47afcdb1f144d7356d5a7845049d641,2010-07-02,1027723,54,Cards,3441,Ghana,35235,"1. Yellow card  , Foul",,
+5a9f33858d8b7b587a80d533e4a3461f,2010-07-02,1027723,20,Cards,3449,Uruguay,44057,"2. Yellow card  , Foul",,
+0dd4452e5f961d0ebdbf1570668f4cd7,2010-07-02,1027723,120,Cards,3449,Uruguay,44352,"Red card  , Handball",,
+daa3efdca149807c0ed7b4841bd2b9be,2010-07-02,1027723,-1,Shootout,3449,Uruguay,44935,", Scored",,
+2b7a44c130ff2651551bf1932dec4575,2010-07-02,1027723,76,Substitutions,3449,Uruguay,48280,", Tactical",53817,
+f977497459c5283f1a9fa36d93b8a25c,2010-07-02,1027723,-1,Shootout,3449,Uruguay,53817,", Scored",,
+50b0e5091e7742e5263ea68fa03e5d8c,2010-07-02,1027723,48,Cards,3449,Uruguay,54818,"1. Yellow card  , Foul",,
+1cf3e832a22d13457cfd49656eaedca1,2010-07-02,1027723,-1,Shootout,3449,Uruguay,57834,", Missed",,
+2ddaeb964d308cb0eb2e390ea2566fc1,2010-07-02,1027723,46,Substitutions,3449,Uruguay,76213,", Tactical",72653,
+4d7467fa7579cc951e7513acd868da19,2010-07-02,1027723,-1,Shootout,3441,Ghana,85563,", Saved",,
+d903130e74900d622a9544d6d8f57726,2010-07-02,1027723,74,Substitutions,3441,Ghana,106306,", Tactical",5975,
+c6885843e2bc4d7b3a337c84f2ef716a,2010-07-03,1027750,67,Goals,3262,Germany,10,", Tap-in, 3. Tournament Goal Assist: , Pass, 2. Tournament Assist",,15185
+374010dc65b94b2fa6e44055e92a10cd,2010-07-03,1027750,88,Goals,3262,Germany,10,", Right-footed shot, 4. Tournament Goal Assist: , Cross, 3. Tournament Assist",,35664
+8689007b16866a23c4752c2f60f5ef3b,2010-07-03,1027750,73,Goals,3262,Germany,698,", Left-footed shot, 1. Tournament Goal Assist: , Pass, 3. Tournament Assist",,2514
+e7d5320521fc873c34e8542e6232a37d,2010-07-03,1027750,79,Cards,3437,Argentina,19981,"2. Yellow card  , Foul",,
+df8cdfe4be94245f28143bf1b94a44a9,2010-07-03,1027750,71,Substitutions,3262,Germany,26485,", Injury",16624,
+e40f3777301ffc119a59b7c7fc5a2aff,2010-07-03,1027750,76,Substitutions,3262,Germany,29401,", Injury",31909,
+f384d6dec6a4939987bf620b85b8c482,2010-07-03,1027750,74,Substitutions,3437,Argentina,45320,", Tactical",26399,
+38a0dfebd4d0b73fbdc90347dde59acd,2010-07-03,1027750,10,Cards,3437,Argentina,54781,"1. Yellow card  , Foul",,
+d5530d4bc9c0bf9fa7457e86c9fe13c0,2010-07-03,1027750,69,Substitutions,3437,Argentina,54781,", Tactical",55215,
+1b235f1fd72245c4815d7e9f70d98650,2010-07-03,1027750,34,Cards,3262,Germany,58358,"2. Yellow card  , Handball",,
+eda180b57b5573be3d316200becd4fa8,2010-07-03,1027750,2,Goals,3262,Germany,58358,", Header, 4. Tournament Goal Assist: , Free kick, 2. Tournament Assist",,2514
+cbca3ab5f0f63104467eacd89a6cf02b,2010-07-03,1027750,83,Substitutions,3262,Germany,58358,", Tactical",2623,
+942754fb1e2e83b5029b0c899d5be3da,2010-07-02,1028533,14,Cards,3379,Netherlands,4315,"1. Yellow card  , Foul",,
+bed2b4c8ff7787962362817e1accee52,2010-07-02,1028533,76,Cards,3379,Netherlands,4345,"1. Yellow card  , Foul",,
+781be74e6bae186a455c82cd086f90ad,2010-07-02,1028533,85,Substitutions,3379,Netherlands,4380,", Delay",4357,
+fcdf4fc4c2801681fe08811cdd3f7d4b,2010-07-02,1028533,64,Cards,3379,Netherlands,4672,"2. Yellow card  , Foul",,
+2f3d993df85be3a2a7ba7feef79ce698,2010-07-02,1028533,53,Goals,3379,Netherlands,4673,", Left-footed shot, 3. Tournament Goal Assist: , Pass, 2. Tournament Assist",,4360
+c3a345947ece32d076e9e8b5bb54ad5e,2010-07-02,1028533,68,Goals,3379,Netherlands,4673,", Header, 4. Tournament Goal Assist: , Header, 2. Tournament Assist",,4010
+27f96772afb00a1a989f4ddd82510ff5,2010-07-02,1028533,62,Substitutions,3439,Brazil,12142,", Tactical",18734,
+54d6c3893b1891a9248ae553468136ed,2010-07-02,1028533,10,Goals,3439,Brazil,15511,", Right-footed shot, 2. Tournament Goal Assist: , Pass, 1. Tournament Assist",,35537
+31d4c63d8ebceb57d60d6058a5f51436,2010-07-02,1028533,77,Substitutions,3439,Brazil,19082,", Tactical",22750,
+53f9722ca8dc7598fd7cd2ce838e14f5,2010-07-02,1028533,37,Cards,3439,Brazil,35537,"2. Yellow card  , Foul",,
+faf71fd3b52efe87bae7aa2638b836c8,2010-07-02,1028533,73,Cards,3439,Brazil,35537,"Red card  , Violent conduct",,
+9b9d789d7b55d51754b045afccfa21e6,2010-07-02,1028533,47,Cards,3379,Netherlands,45548,"2. Yellow card  , Foul",,
+417ff12f377aa423cb693990c12edb16,2010-07-03,1028686,73,Substitutions,3581,Paraguay,2050,", Injury",215,
+1a451880d357b34b633f8137096f990f,2010-07-03,1028686,75,Substitutions,3375,Spain,7476,", Tactical",65278,
+c201d53504d178f1b0a673f3ec366c8b,2010-07-03,1028686,84,Substitutions,3375,Spain,7594,", Injury",7572,
+2ef67d409a14ed1c0d2942e11c875e5f,2010-07-03,1028686,56,Substitutions,3375,Spain,7767,", Tactical",8806,
+21b73f0ed70dfc8043dbe00da887ec4a,2010-07-03,1028686,71,Cards,3581,Paraguay,7924,"1. Yellow card  , Foul",,
+219eca8ce8893695803e3ea1e140a75a,2010-07-03,1028686,81,Goals,3375,Spain,7980,", Right-footed shot, 5. Tournament Goal",,
+69bbcdd753943f010dea825ac5ce47b7,2010-07-03,1028686,59,Cards,3581,Paraguay,14259,"1. Yellow card  , Foul",,
+49bac76fe4dd21dfb8a38d93e42c385b,2010-07-03,1028686,64,Substitutions,3581,Paraguay,16120,", Injury",61898,
+e067ec75691e5e2c43ae899dd5b28539,2010-07-03,1028686,58,Cards,3375,Spain,18944,"1. Yellow card  , Foul",,
+2594feea68a36d910c08d51578acdf32,2010-07-03,1028686,87,Cards,3581,Paraguay,20000,"1. Yellow card  , Foul",,
+3fe2bab07bbefad7cd42a6bec3b0eec3,2010-07-03,1028686,64,Cards,3581,Paraguay,63076,"3. Yellow card  , Foul",,
+b03b022bcbdc7afdd177ca7b5f1dbd33,2010-07-03,1028686,85,Substitutions,3581,Paraguay,63076,", Tactical",58516,
+9a4ac0e6140fb8a797fc782a35fd6212,2010-07-03,1028686,64,Cards,3375,Spain,65230,"1. Yellow card  , Dissent",,
+e29c290f7a8881802029fc8a89d9f65e,2010-07-06,1029770,18,Goals,3379,Netherlands,3191,", Left-footed shot, 1. Tournament Goal Assist: , Pass, 1. Tournament Assist",,19087
+e65517285936ea102f07c4a32fed481e,2010-07-06,1029770,41,Goals,3449,Uruguay,3408,", Left-footed shot, 4. Tournament Goal Assist: , Pass, 1. Tournament Assist",,52266
+3aca755ee8ef54fbf08832af9e6d821c,2010-07-06,1029770,84,Substitutions,3449,Uruguay,3408,", Not reported",64545,
+71d29dc6b4d377cda4d9d36a75ff24b8,2010-07-06,1029770,90,Cards,3379,Netherlands,3515,1. Yellow card,,
+b9a6a7942f7d2d0495687bb988e38200,2010-07-06,1029770,73,Goals,3379,Netherlands,4360,", Header, 2. Tournament Goal Assist: , Cross, 3. Tournament Assist",,4010
+6526a071dd1fe587675f6878d4742e33,2010-07-06,1029770,90,Substitutions,3379,Netherlands,4360,", Not reported",27805,
+968eb20986fd3e61233f882c6653ea8d,2010-07-06,1029770,78,Cards,3379,Netherlands,4489,1. Yellow card,,
+223dfcd3230ec0710e8c1f7ea9ef7c66,2010-07-06,1029770,30,Cards,3379,Netherlands,4673,1. Yellow card,,
+474a6408fe2a3d7fe8e3c47c183347c8,2010-07-06,1029770,70,Goals,3379,Netherlands,4673,", Right-footed shot, 5. Tournament Goal Assist: , Pass, 2. Tournament Assist",,4380
+11443e216a13fcc5e43284d76096e370,2010-07-06,1029770,46,Substitutions,3379,Netherlands,19087,", Not reported",4192,
+821c2d43d2729fc7f71b4c262836dc7a,2010-07-06,1029770,78,Substitutions,3449,Uruguay,54859,", Not reported",53817,
+a924517b9ad48406b3e6501e1f35667e,2010-07-06,1029770,30,Cards,3449,Uruguay,54935,1. Yellow card,,
+faf95877a3020458de6d6fade3aa4f48,2010-07-06,1029770,21,Cards,3449,Uruguay,57834,1. Yellow card,,
+93e880fb93ac20bec9c3f88ac22f0602,2010-07-06,1029770,90,Goals,3449,Uruguay,57834,", Left-footed shot, 1. Tournament Goal Assist: , Pass, 2. Tournament Assist",,52266
+823d498ce7a7ef34668e87b490068bca,2010-07-07,1029789,62,Substitutions,3262,Germany,2623,", Tactical",31909,
+14e3225d617b3d9f80f7caaee7baeadf,2010-07-07,1029789,90,Substitutions,3375,Spain,7476,", Delay",7572,
+f54ea9ce53c2e7344c84b073da04e04f,2010-07-07,1029789,73,Goals,3375,Spain,7594,", Header, 1. Tournament Goal Assist: , Corner, 1. Tournament Assist",,7607
+97cfb821339ddc7731fcb8653d8dc4ca,2010-07-07,1029789,81,Substitutions,3375,Spain,7980,", Tactical",7767,
+8d2fb843efa633ea1cd7a8932033ae8f,2010-07-07,1029789,52,Substitutions,3262,Germany,26485,", Tactical",16624,
+18beab55932612b4f525e487006dd96e,2010-07-07,1029789,81,Substitutions,3262,Germany,29401,", Tactical",6288,
+2c6e6834d86b72f7bfb333445b4bcdfd,2010-07-07,1029789,86,Substitutions,3375,Spain,65278,", Tactical",35518,
+640c4b0d55a646ca0f7be055c6a4a7c0,2010-07-11,1030710,54,Cards,3379,Netherlands,3191,"2. Yellow card  , Foul",,
+dbf1e8708106f9617d89fd817aa27de4,2010-07-11,1030710,105,Substitutions,3379,Netherlands,3191,", Tactical",16731,
+f97dcd5f257ad9c3828d007911fb092b,2010-07-11,1030710,22,Cards,3379,Netherlands,3515,"2. Yellow card  , Foul",,
+0968714cf7bc77afa4febcefe46a6806,2010-07-11,1030710,71,Substitutions,3379,Netherlands,4010,", Tactical",27805,
+e12e60d034ae9b2136295bd13e766f9d,2010-07-11,1030710,56,Cards,3379,Netherlands,4315,"Yellow card  , Foul",,
+65da85ed559ab056706967d073323136,2010-07-11,1030710,109,Cards,3379,Netherlands,4315,"Second yellow  , Foul",,
+7a3e0765dc567c6b7f5c37d1f1bb413d,2010-07-11,1030710,84,Cards,3379,Netherlands,4360,"2. Yellow card  , Dissent",,
+2f45bfb5832b40ff88f1617528a8e9d1,2010-07-11,1030710,15,Cards,3379,Netherlands,4380,"2. Yellow card  , Foul",,
+ba8dd6fe95a780a46b94990b85084e8b,2010-07-11,1030710,117,Cards,3379,Netherlands,4563,"1. Yellow card  , Dissent",,
+a04172316a7e2b303c15746821781367,2010-07-11,1030710,28,Cards,3379,Netherlands,4672,"3. Yellow card  , Serious foul",,
+84636a012f5ee3274244f05c8d97cb47,2010-07-11,1030710,99,Substitutions,3379,Netherlands,4672,", Tactical",4192,
+a46b6753b6d4bb9290cd1282d0d51367,2010-07-11,1030710,87,Substitutions,3375,Spain,7476,", Tactical",8806,
+6ae340fe590665bea77cd3040659ce77,2010-07-11,1030710,67,Cards,3375,Spain,7486,"1. Yellow card  , Foul",,
+dccd45cc01cfef28afe494cd147a3613,2010-07-11,1030710,17,Cards,3375,Spain,7594,"1. Yellow card  , Foul",,
+9351270e754f2ecfc594336f2a398b5a,2010-07-11,1030710,118,Cards,3375,Spain,7600,"1. Yellow card  , Taking off shirt",,
+555730222d5c0a6ac9834b48d72aeb33,2010-07-11,1030710,116,Goals,3375,Spain,7600,", Right-footed shot, 2. Tournament Goal Assist: , Pass, 1. Tournament Assist",,8806
+e756a40d650338af080fb98aea00e1c0,2010-07-11,1030710,120,Cards,3375,Spain,7607,"1. Yellow card  , Shooting ball",,
+fef1c34cda2dfece4ff63dfd08874237,2010-07-11,1030710,106,Substitutions,3375,Spain,7980,", Tactical",7767,
+a3b45026f26533880925895278715411,2010-07-11,1030710,23,Cards,3375,Spain,25557,"1. Yellow card  , Foul",,
+6fb1d369672f420b05290fc603b19ede,2010-07-11,1030710,111,Cards,3379,Netherlands,45548,"3. Yellow card  , Foul",,
+dd5cffe9188da28437ca0b6498dd473a,2010-07-11,1030710,60,Substitutions,3375,Spain,65278,", Tactical",15956,
+dcb557b487c2391344783041dc6fcc89,2010-07-10,1030711,90,Cards,3262,Germany,698,"2. Yellow card  , Foul",,
+541dd6427b27c8204a04758bb68e7c4c,2010-07-10,1030711,7,Cards,3262,Germany,1426,"2. Yellow card  , Handball",,
+c55b18ce277951c31386d388e89c1cfa,2010-07-10,1030711,73,Substitutions,3262,Germany,1426,", Tactical",6237,
+b5907473838b6fc2eb819e533ccd8991,2010-07-10,1030711,51,Goals,3449,Uruguay,3408,", Right-footed shot, 5. Tournament Goal Assist: , Cross, 1. Tournament Assist",,54818
+544770dcb5ea0cdbec01ab77a2450593,2010-07-10,1030711,56,Goals,3262,Germany,16624,", Header, 1. Tournament Goal Assist: , Cross, 1. Tournament Assist",,26485
+7c3e4b26dcb113e262cc417b6debff97,2010-07-10,1030711,81,Substitutions,3262,Germany,16624,", Tactical",31909,
+a1c477a663ffc2a0929e7999e9d59544,2010-07-10,1030711,4,Cards,3262,Germany,19354,"1. Yellow card  , Foul",,
+490875113c94321ad4cd1c546ca1803f,2010-07-10,1030711,61,Cards,3449,Uruguay,20378,"2. Yellow card  , Foul",,
+479aff1756f5ef58d0346fd94ba6fbc7,2010-07-10,1030711,77,Substitutions,3449,Uruguay,20378,", Tactical",52266,
+a0c691bfe290d17f540bc8276b00c1ef,2010-07-10,1030711,82,Goals,3262,Germany,29401,", Header, 1. Tournament Goal",,
+33e5261d326166d5449a7736efe55b0a,2010-07-10,1030711,90,Substitutions,3262,Germany,35664,", Delay",34593,
+c24bdf657723a4e765f8e9843cd3735f,2010-07-10,1030711,28,Goals,3449,Uruguay,48280,", Right-footed shot, 1. Tournament Goal Assist: , Pass, 3. Tournament Assist",,44352
+5ee4575161bb688ed74002b0802efdff,2010-07-10,1030711,89,Substitutions,3449,Uruguay,48280,", Tactical",53817,
+f5532c55c2589b50eaa988f5181b4400,2010-07-10,1030711,19,Goals,3262,Germany,58358,", Tap-in, 5. Tournament Goal",,
+57a6f6d7235bc797a74166e17835adb3,2006-06-11,1126203,56,Cards,3379,Netherlands,3191,"1. Yellow card  , Foul",,
+58e6f97074dd78ef85568ad47d366073,2006-06-11,1126203,69,Substitutions,3379,Netherlands,3407,", Tactical",4010,
+306d9cfe0d1f440d90ecd18330ad0311,2006-06-11,1126203,34,Cards,23380,Serbia and Montenegro,3428,"1. Yellow card  , Foul",,
+b09ffe67248f2138f3c59d6ea6fb650f,2006-06-11,1126203,60,Substitutions,3379,Netherlands,3515,", Tactical",4570,
+5f7559337b0b0a7907d40a51965febd5,2006-06-11,1126203,85,Cards,3379,Netherlands,4315,"1. Yellow card  , Time wasting",,
+c262471da3bc6deb9f5b3f8ac943796b,2006-06-11,1126203,67,Substitutions,23380,Serbia and Montenegro,4358,", Tactical",5630,
+9b5cba914b77bf00e16c02e3eb8a52ee,2006-06-11,1126203,18,Goals,3379,Netherlands,4360,", Left-footed shot, 1. Tournament Goal Assist: , Pass, 1. Tournament Assist",,4380
+49af6cd3eb599d890c2e92d820257e4a,2006-06-11,1126203,86,Substitutions,3379,Netherlands,4563,", Delay",4489,
+7192be8de73916f23570abe1e5f4c408,2006-06-11,1126203,46,Substitutions,23380,Serbia and Montenegro,7896,", Tactical",19729,
+368451a5db566f2c86f5d178d02ea75d,2006-06-11,1126203,89,Cards,23380,Serbia and Montenegro,9791,"1. Yellow card  , Foul",,
+ed23680294c7bfe79932f861abacbf6c,2006-06-11,1126203,43,Substitutions,23380,Serbia and Montenegro,10297,", Tactical",25002,
+565eefc583929faf2d2addd4cb5ae329,2006-06-11,1126203,81,Cards,23380,Serbia and Montenegro,13453,"1. Yellow card  , Foul",,
+f26cf15ae2c78b6664bc306f4117123e,2006-06-11,1126203,64,Cards,23380,Serbia and Montenegro,25002,"1. Yellow card  , Dissent",,
+e778519719da4744d0d3067c9eb7fccc,2006-06-16,1126204,42,Cards,23380,Serbia and Montenegro,540,"1. Yellow card  , Foul",,
+4add6a9e829d7ae3774c318b4337b0e2,2006-06-16,1126204,36,Cards,3437,Argentina,3410,"1. Yellow card  , Shooting ball",,
+cf266660e14344efbdfcfa224b7b1032,2006-06-16,1126204,78,Goals,3437,Argentina,3410,", Tap-in, 2. Tournament Goal Assist: , Pass, 1. Tournament Assist",,28003
+e32c9f54cbf74e8e6de1314159a7537a,2006-06-16,1126204,84,Goals,3437,Argentina,4276,", Right-footed shot, 1. Tournament Goal",,
+0b11641335fe68c94fe684c54362890d,2006-06-16,1126204,65,Cards,23380,Serbia and Montenegro,4358,"Red card  , Serious foul",,
+18c9bd80a5cfad5b66495b563bab1c1a,2006-06-16,1126204,31,Goals,3437,Argentina,7520,", Left-footed shot, 1. Tournament Goal Assist: , Pass, 1. Tournament Assist",,3410
+7b55bd80d55b50f576e6acf3fe10694b,2006-06-16,1126204,58,Substitutions,3437,Argentina,7611,", Tactical",4276,
+af27ea6d72b98eec6633a38ea09eb988,2006-06-16,1126204,6,Goals,3437,Argentina,7895,", Right-footed shot, 1. Tournament Goal Assist: , Pass, 1. Tournament Assist",,7611
+c22439f0a3fae961f57c0ce7245e6c2b,2006-06-16,1126204,41,Goals,3437,Argentina,7895,", Right-footed shot, 2. Tournament Goal",,
+18cc5b2a469799e157154bbdff7412d4,2006-06-16,1126204,74,Substitutions,3437,Argentina,7895,", Tactical",28003,
+e11adea44a2b722d2efc06a47e47a7ee,2006-06-16,1126204,69,Substitutions,23380,Serbia and Montenegro,7896,", Tactical",14542,
+aecb62da237620135e94a8ba46a1c18d,2006-06-16,1126204,27,Cards,23380,Serbia and Montenegro,10301,"1. Yellow card  , Foul",,
+afc573584c4034a92add8a0b6b334b8b,2006-06-16,1126204,46,Substitutions,23380,Serbia and Montenegro,10301,", Tactical",2893,
+6b51c0df4052fddaad9fab8b1c16e76d,2006-06-16,1126204,7,Cards,23380,Serbia and Montenegro,25002,"2. Yellow card  , Foul",,
+4af568bc54af6242b49b1f699280b19f,2006-06-16,1126204,49,Substitutions,23380,Serbia and Montenegro,25002,", Tactical",5630,
+fa97dc4a7730accbc856298cdc86b660,2006-06-16,1126204,17,Substitutions,3437,Argentina,26244,", Injury",7520,
+1d3fe98d430492e65c13d79ed9bbca65,2006-06-16,1126204,88,Goals,3437,Argentina,28003,", Right-footed shot, 1. Tournament Goal Assist: , Pass, 1. Tournament Assist",,4276
+544c5e3d93c37a77e1fb0554ee7e7ebe,2006-06-21,1126205,16,Substitutions,23380,Serbia and Montenegro,540,", Injury",10301,
+20cc354525a5bfa3e012ab482f9d7b11,2006-06-21,1126205,86,Goals,3591,Ivory Coast,4164,", Penalty, 1. Tournament Goal Assist: Handball by",,19704
+6dea8461c1dc517f63cc578996be731e,2006-06-21,1126205,42,Cards,3591,Ivory Coast,6149,"Yellow card  , Foul",,
+ced3d4dcdbcefb04afd35d1119fe0d97,2006-06-21,1126205,90,Cards,3591,Ivory Coast,6149,"Second yellow  , Repeated Foul",,
+60732707861289b3340e526aeea3fc89,2006-06-21,1126205,43,Cards,3591,Ivory Coast,9597,"1. Yellow card  , Diving",,
+b8100d44cad0f0bc18cbdbf8c039f64d,2006-06-21,1126205,37,Goals,3591,Ivory Coast,9597,", Penalty, 1. Tournament Goal Assist: Handball by",,19704
+ffce43b04c7280de71165c1419bdb9c7,2006-06-21,1126205,68,Goals,3591,Ivory Coast,9597,", Header, 2. Tournament Goal Assist: , Cross, 1. Tournament Assist",,33366
+1a6d3b1402b8149576cc403aae53544c,2006-06-21,1126205,57,Cards,23380,Serbia and Montenegro,9791,"2. Yellow card  , Foul",,
+9c99578706ae9085a9f01a97b5123bd3,2006-06-21,1126205,37,Cards,23380,Serbia and Montenegro,10288,"1. Yellow card  , Foul",,
+bb752543097271c9c781762e934f5d5e,2006-06-21,1126205,20,Goals,23380,Serbia and Montenegro,10298,", Right-footed shot, 1. Tournament Goal Assist:",,
+155a7ba5a6769671384c5ec44c98568d,2006-06-21,1126205,17,Cards,23380,Serbia and Montenegro,10301,"Yellow card  , Foul",,
+9329413d6cc0f0ea579dc09bdca4931d,2006-06-21,1126205,45,Cards,23380,Serbia and Montenegro,10301,"Second yellow  , Repeated Foul",,
+59072398939a863b95c8522df8687607,2006-06-21,1126205,60,Substitutions,3591,Ivory Coast,12060,", Not reported",23941,
+94986e9179fb3971aec8e05b454dc7a8,2006-06-21,1126205,35,Cards,23380,Serbia and Montenegro,19704,"1. Yellow card  , Handball",,
+acdb49e81b35bc40c010a3e621510869,2006-06-21,1126205,10,Goals,23380,Serbia and Montenegro,19729,", Right-footed shot, 1. Tournament Goal Assist: , Pass, 1. Tournament Assist",,3428
+6fcdd5e87c00b5fc4e2a719815e97aa0,2006-06-21,1126205,66,Substitutions,23380,Serbia and Montenegro,19729,", Not reported",7896,
+85ca32c3bbe3e8556c206a0b8e7a263d,2006-06-21,1126205,33,Cards,3591,Ivory Coast,33366,"1. Yellow card  , Foul",,
+5cd779b6abd2fa1a771697e61e75ee23,2006-06-21,1126205,73,Substitutions,3591,Ivory Coast,33366,", Not reported",4164,
+653a2291b89e5e6a8a75974dd3406a16,2012-06-08,1168992,54,Cards,3378,Greece,6106,"1. Yellow card  , Foul",,
+7b7e8b50012ec37750a4b2361cee6100,2012-06-08,1168992,37,Substitutions,3378,Greece,12979,", Injury",58489,
+82c216e7be67390954cc9348fabab056,2012-06-08,1168992,51,Goals,3378,Greece,15153,", Right-footed shot, 1. Tournament Goal",,
+6ac72f6985ba07186acc08de6e31dd26,2012-06-08,1168992,68,Substitutions,3378,Greece,16402,", Tactical",157539,
+a677a138a5011a1ac68addf0d0bafbf4,2012-06-08,1168992,35,Cards,3378,Greece,34322,"Yellow card  , Foul",,
+312c1b69a55174fb806bcd80f3f32e50,2012-06-08,1168992,44,Cards,3378,Greece,34322,"Second yellow  , Repeated Foul",,
+da642104a609c65d361a08e08abde974,2012-06-08,1168992,17,Goals,3442,Poland,38253,", Header, 1. Tournament Goal Assist: , Cross, 1. Tournament Assist",,29835
+d94f013c2a0db6b320f2d14afecfebfd,2012-06-08,1168992,45,Cards,3378,Greece,41112,"1. Yellow card  , Dissent",,
+2ad2c65d98e1d8731ba78a2b43f4023a,2012-06-08,1168992,68,Cards,3442,Poland,44058,"Red card  , Professional foul",,
+6d291ea79c65a8f70598c5828dd99c4f,2012-06-08,1168992,46,Substitutions,3378,Greece,46062,", Tactical",15153,
+887500133ddaf7379b1624c1686a514b,2012-06-08,1168992,70,Substitutions,3442,Poland,59597,", Tactical",33210,
+903feac13c7dac5db5e95503a4d6aa9e,2012-06-08,1168993,86,Substitutions,3445,Czech Republic,3216,", Tactical",5077,
+c5e57727c87a84d4b7c8932a1519b37e,2012-06-08,1168993,82,Goals,3448,Russia,15072,", Right-footed shot, 1. Tournament Goal Assist: , Pass, 2. Tournament Assist",,15378
+070f2bf2bdce61ac74833a4cac0de926,2012-06-08,1168993,73,Substitutions,3448,Russia,15381,", Tactical",15072,
+08d335321c5801c25313f1d6657eb0f7,2012-06-08,1168993,46,Substitutions,3445,Czech Republic,15890,", Tactical",9688,
+977f3f6f7935f86b43cdbba60dcdaa0f,2012-06-08,1168993,24,Goals,3448,Russia,48550,", Right-footed shot, 1. Tournament Goal Assist: , Pass, 1. Tournament Assist",,15378
+017c83bd271cae3614f138b9ac738781,2012-06-08,1168993,76,Substitutions,3445,Czech Republic,63737,", Tactical",21101,
+0a8e77a74c68befc6429708fafb4d698,2012-06-08,1168993,52,Goals,3445,Czech Republic,63955,", Right-footed shot, 1. Tournament Goal Assist: , Pass, 1. Tournament Assist",,8885
+1d41fd55d2a8c0391771d094f6af1285,2012-06-08,1168993,15,Goals,3448,Russia,69683,", Right-footed shot, 1. Tournament Goal Assist: , Shot on goal, 1. Tournament Assist",,15381
+d44480d895af8006ec472fb34578f2b6,2012-06-08,1168993,79,Goals,3448,Russia,69683,", Right-footed shot, 2. Tournament Goal Assist: , Pass, 1. Tournament Assist",,15072
+6175757755974a88d1b384d55c8d9b03,2012-06-08,1168993,84,Substitutions,3448,Russia,69683,", Tactical",89086,
+3f3b3aba782d91b73aec5d67bf50fb21,2012-06-12,1168994,27,Cards,3445,Czech Republic,132,"1. Yellow card  , Foul",,
+02c962ec0a1b0ff58015c43175e72d78,2012-06-12,1168994,46,Substitutions,3445,Czech Republic,132,", Injury",43246,
+52e8f3af09fb335240a9464c9c33e2d6,2012-06-12,1168994,64,Substitutions,3445,Czech Republic,3216,"",38746,
+083307258db62ddc4a277d95662d02d1,2012-06-12,1168994,57,Cards,3378,Greece,15153,"1. Yellow card  , Foul",,
+b644b570602e7710c899ba7e902c2905,2012-06-12,1168994,23,Substitutions,3378,Greece,15423,", Injury",16444,
+a55d51c17fd932158cd10b980ebac22d,2012-06-12,1168994,53,Goals,3378,Greece,16402,", Left-footed shot, 1. Tournament Goal Assist: , Pass, 1. Tournament Assist",,6855
+c5f476b313bd83dac3876de86b0461be,2012-06-12,1168994,46,Substitutions,3378,Greece,16535,"",16402,
+ea8e61392ff78032209d8bbb9e52ae44,2012-06-12,1168994,34,Cards,3378,Greece,24977,"1. Yellow card  , Foul",,
+e481740b2fffd853a68604a3d151966d,2012-06-12,1168994,65,Cards,3445,Czech Republic,43246,"1. Yellow card  , Foul",,
+109968c35c41242397fabf05a5570f8d,2012-06-12,1168994,90,Substitutions,3445,Czech Republic,43246,", Delay",34527,
+ee2993d715d227423e77aaedda68484a,2012-06-12,1168994,56,Cards,3378,Greece,58489,"1. Yellow card  , Foul",,
+80f6291d877651aa2c8eb55a1040b49e,2012-06-12,1168994,36,Cards,3445,Czech Republic,63737,"1. Yellow card  , Foul",,
+98eeb7f34baa2ddb08219af6c2152ef7,2012-06-12,1168994,3,Goals,3445,Czech Republic,63737,", Left-footed shot, 1. Tournament Goal Assist: , Pass, 1. Tournament Assist",,9688
+f3515c5d0e755b7fe1e1e1e273136776,2012-06-12,1168994,6,Goals,3445,Czech Republic,63955,", Left-footed shot, 2. Tournament Goal Assist: , Cross, 1. Tournament Assist",,60632
+8e56418342afcf5701a6c0b9127523c1,2012-06-12,1168994,71,Substitutions,3378,Greece,157539,"",34944,
+7f043f1780319e244fa168510df155aa,2012-06-12,1168995,90,Substitutions,3442,Poland,12106,", Delay",14909,
+9326b24d863e5d3c05038171385ed33e,2012-06-12,1168995,70,Substitutions,3448,Russia,15381,", Tactical",15072,
+c184b29c2175422bfb24ab4c5544aa8d,2012-06-12,1168995,60,Cards,3448,Russia,15650,"1. Yellow card  , Foul",,
+15d09083f60e4150f4dd23c56cafc362,2012-06-12,1168995,79,Cards,3442,Poland,19548,"1. Yellow card  , Foul",,
+14f4dd88b37fea2d65cbd41891319674,2012-06-12,1168995,85,Substitutions,3442,Poland,19548,", Injury",52830,
+f84cfce1e7faf0e81af9eb62c22b181b,2012-06-12,1168995,73,Substitutions,3442,Poland,24502,", Tactical",16955,
+093db6136cc5f40af704a8d1d3606c4c,2012-06-12,1168995,57,Goals,3442,Poland,29835,", Left-footed shot, 1. Tournament Goal Assist: , Pass, 1. Tournament Assist",,25727
+18608d9cc88c6b214d4191095868587f,2012-06-12,1168995,60,Cards,3442,Poland,38253,"1. Yellow card  , Dissent",,
+696ce6f3fde807acc5bf20d05ff068ee,2012-06-12,1168995,75,Cards,3448,Russia,69683,"1. Yellow card  , Dissent",,
+d21e22a9d1963667205c5ab49a0a2eb4,2012-06-12,1168995,37,Goals,3448,Russia,69683,", Header, 3. Tournament Goal Assist: , Free kick, 3. Tournament Assist",,15378
+a8402d47e64b64cb153ab943109630bf,2012-06-12,1168995,79,Substitutions,3448,Russia,69683,", Tactical",9645,
+2caf7adbb872d3ca55aec58490db847d,2012-06-16,1168996,61,Cards,3378,Greece,6106,"2. Yellow card  , Foul",,
+bfb828fc7cd82d7b05fcd042a54d374d,2012-06-16,1168996,45,Goals,3378,Greece,6106,", Right-footed shot, 1. Tournament Goal",,
+fb337b733d0c5e3b7022c76fd660e669,2012-06-16,1168996,67,Substitutions,3378,Greece,6106,", Tactical",12872,
+a84aa4957f5cde3da1c4a59e71cfa9fe,2012-06-16,1168996,90,Cards,3448,Russia,15074,"1. Yellow card  , Handball",,
+99f4b05503ec93a1039471fe47cdc641,2012-06-16,1168996,83,Substitutions,3378,Greece,15153,", Tactical",46062,
+0cef7b07296819d1c77132b69c70a69c,2012-06-16,1168996,46,Substitutions,3448,Russia,15381,", Tactical",15072,
+54882025ed31503690fc2259eea7e2d4,2012-06-16,1168996,64,Substitutions,3378,Greece,16402,", Tactical",41112,
+e5984c747bc26fb1310b2f93d7c25441,2012-06-16,1168996,69,Cards,3448,Russia,16760,"1. Yellow card  , Foul",,
+3f10b0ac53e9299e2955c1eec9f1950e,2012-06-16,1168996,72,Substitutions,3448,Russia,17749,", Tactical",15074,
+122ec35f3a6913f319e5ee89f1789df9,2012-06-16,1168996,90,Cards,3378,Greece,41112,"2. Yellow card  , Time wasting",,
+331550db4d6ea070f6ffd38fff8d00a8,2012-06-16,1168996,81,Substitutions,3448,Russia,55336,", Tactical",9645,
+48f83cb8b85c779275b1e4b91965b88f,2012-06-16,1168996,71,Cards,3448,Russia,69683,"2. Yellow card  , Foul",,
+4c8bfb2f5a467d47652c2f854b2eb6f3,2012-06-16,1168997,90,Substitutions,3445,Czech Republic,3216,", Delay",38746,
+690ed940f92553d955bedd7917bd8138,2012-06-16,1168997,87,Cards,3445,Czech Republic,8885,"1. Yellow card  , Mass confrontation",,
+3e50691c424b0c95e24d1e6278e3653a,2012-06-16,1168997,73,Substitutions,3442,Poland,12106,", Tactical",14909,
+b1d37ea1f32977a252846a19ea499b35,2012-06-16,1168997,12,Cards,3445,Czech Republic,16090,"1. Yellow card  , Foul",,
+36f6c8a431f65f77ec2c4d09ede0f209,2012-06-16,1168997,61,Cards,3442,Poland,16947,"1. Yellow card  , Foul",,
+13bba83e8a91fc7008ff47a25b7078ca,2012-06-16,1168997,48,Cards,3442,Poland,19548,"2. Yellow card  , Foul",,
+26ff7f56b19c45d06e1d6bdd62b25cea,2012-06-16,1168997,56,Substitutions,3442,Poland,19548,", Tactical",37920,
+79a3fc6870bf8e0f9ce5b8eb5e6b2f01,2012-06-16,1168997,87,Cards,3442,Poland,29835,"1. Yellow card  , Mass confrontation",,
+d82a5c3b291e54c3236a8d81a59efd99,2012-06-16,1168997,90,Cards,3442,Poland,31050,"1. Yellow card  , Foul",,
+4ffe31c1fc7b6ff17382cc2c2fd2920b,2012-06-16,1168997,23,Cards,3442,Poland,32301,"1. Yellow card  , Foul",,
+dee47d33206f362e41eb08ca10b1eef5,2012-06-16,1168997,73,Substitutions,3442,Poland,32301,", Tactical",16955,
+0a59ad84abfae4e403b959b800b282a2,2012-06-16,1168997,90,Cards,3445,Czech Republic,38746,"1. Yellow card  , Unsporting behaviour",,
+920e505dfd09f5377e21e5dc80111d43,2012-06-16,1168997,72,Goals,3445,Czech Republic,63737,", Right-footed shot, 2. Tournament Goal Assist: , Pass, 1. Tournament Assist",,3216
+79257f7254e3423603f08e7ecdf4143f,2012-06-16,1168997,84,Substitutions,3445,Czech Republic,63737,", Tactical",34527,
+15ea2483bec9f8f9d688951131fcef30,2012-06-16,1168997,87,Substitutions,3445,Czech Republic,63955,", Tactical",15890,
+14e2118bde7ddc1214cc665a7e271b98,2012-06-09,1168998,67,Cards,3379,Netherlands,3515,"1. Yellow card  , Foul",,
+551e8389241e50732f77aa4f9fbb195d,2012-06-09,1168998,84,Substitutions,3436,Denmark,4361,", Tactical",44567,
+63f53a04d909d30f9361c8f6b1b08974,2012-06-09,1168998,71,Substitutions,3379,Netherlands,4672,", Tactical",4192,
+fdcd03ad5e593282fd352fb561fe0230,2012-06-09,1168998,71,Substitutions,3379,Netherlands,15760,", Tactical",4357,
+121482b72eabbe27162fccd9c0f72619,2012-06-09,1168998,24,Goals,3436,Denmark,18006,", Left-footed shot, 1. Tournament Goal Assist: , Pass, 1. Tournament Assist",,23097
+9dfb8f02e92ec5827aef2d85901a858a,2012-06-09,1168998,78,Cards,3436,Denmark,23097,"1. Yellow card  , Time wasting",,
+324ce6d2ef5b223ad9220275ffb004b0,2012-06-09,1168998,81,Cards,3436,Denmark,36787,"1. Yellow card  , Handball",,
+b4fd78da93b803d23ac7cc0b37edde3a,2012-06-09,1168998,85,Substitutions,3379,Netherlands,45548,", Tactical",4010,
+93b51646974fb9670f6d4bbdc9466dad,2012-06-09,1168998,74,Substitutions,3436,Denmark,69633,", Tactical",34784,
+13b7deb1a7dd2d81ffb3d6c1b0b3a26d,2012-06-09,1168999,13,Cards,3300,Portugal,5169,"1. Yellow card  , Foul",,
+22149171691c3f3e81e07afcffcb853d,2012-06-09,1168999,70,Substitutions,3300,Portugal,5169,", Tactical",72768,
+91fc2565a448667a32a701879a9ef0b2,2012-06-09,1168999,72,Goals,3262,Germany,6288,", Header, 1. Tournament Goal Assist: , Cross, 1. Tournament Assist",,29401
+0e777ea21d71921eb4f48b5c7cd23386,2012-06-09,1168999,80,Substitutions,3262,Germany,6288,", Tactical",10,
+fb0044f03d7358404c09cef4ed157e8d,2012-06-09,1168999,80,Substitutions,3300,Portugal,13168,", Tactical",31316,
+6ea61eef58bb89aec811d2402067e537,2012-06-09,1168999,69,Cards,3262,Germany,26485,"1. Yellow card  , Foul",,
+c7916732d81e289534c433e6d1490d27,2012-06-09,1168999,60,Cards,3300,Portugal,33648,"1. Yellow card  , Foul",,
+2bd6470b34d919b9f1f76521283e80e7,2012-06-09,1168999,87,Substitutions,3262,Germany,35664,", Delay",31909,
+68082868c27068a314a584256b0e522a,2012-06-09,1168999,43,Cards,3262,Germany,54659,"1. Yellow card  , Foul",,
+5a19c96eb52eeccce2ad9e5cb165dbc5,2012-06-09,1168999,90,Substitutions,3262,Germany,58358,", Delay",30059,
+12e78de5b3c2e70f1c6a96cf5b326451,2012-06-13,1169000,46,Substitutions,3379,Netherlands,3515,", Tactical",4192,
+026fd6dca33b89c7ed1f268c72f0193e,2012-06-13,1169000,83,Substitutions,3379,Netherlands,4360,", Tactical",4010,
+46a3139bf833bf0d3be5fd66fe84d4cd,2012-06-13,1169000,73,Goals,3379,Netherlands,4380,", Right-footed shot, 1. Tournament Goal Assist: , Pass, 1. Tournament Assist",,4360
+9ce91937fed6131aea6fc092476c0529,2012-06-13,1169000,81,Cards,3379,Netherlands,4672,"1. Yellow card  , Foul",,
+429d022fab56f916413f70081ac9f981,2012-06-13,1169000,24,Goals,3262,Germany,6288,", Right-footed shot, 2. Tournament Goal Assist: , Pass, 1. Tournament Assist",,2514
+4391b080fd099fc002367e0e2f9c2ad4,2012-06-13,1169000,38,Goals,3262,Germany,6288,", Right-footed shot, 3. Tournament Goal Assist: , Pass, 2. Tournament Assist",,2514
+081d82ec05a8a57cf97d56a71ecc5bea,2012-06-13,1169000,72,Substitutions,3262,Germany,6288,", Tactical",10,
+59685fcd02b0f5d2b82aefb4c3539530,2012-06-13,1169000,46,Substitutions,3379,Netherlands,15760,", Tactical",4357,
+a683ae77415c8b060d596a0ba27ce330,2012-06-13,1169000,87,Cards,3262,Germany,26485,"2. Yellow card  , Time wasting",,
+626d927bd11a5d56e054911258fb860c,2012-06-13,1169000,81,Substitutions,3262,Germany,35664,", Tactical",31909,
+7d2ae93b050f630f9e53d28f1cdbe1c8,2012-06-13,1169000,90,Substitutions,3262,Germany,58358,", Delay",30059,
+99246840a94d43419d2d17f43f589f1a,2012-06-13,1169000,90,Cards,3379,Netherlands,146258,"1. Yellow card  , Foul",,
+9cb3c5851be9cb9064d469267eb5cc37,2012-06-13,1169001,81,Cards,3436,Denmark,1423,"1. Yellow card  , Foul",,
+018784ae2169da66f5d496f1644eea74,2012-06-13,1169001,60,Substitutions,3436,Denmark,4361,", Injury",44567,
+2ebaf5099925b9cbf5f0bde14b1d3c35,2012-06-13,1169001,36,Goals,3300,Portugal,5169,", Right-footed shot, 1. Tournament Goal Assist: , Pass, 1. Tournament Assist",,33706
+f941a8b39ed3a48e9a1ff00849544e5c,2012-06-13,1169001,64,Substitutions,3300,Portugal,5169,", Tactical",72768,
+9700e1eb243b4816f8b3e706bb60733d,2012-06-13,1169001,90,Cards,3300,Portugal,8198,"1. Yellow card  , Foul",,
+25f9a9e638db32a9bc680e42a583fba5,2012-06-13,1169001,29,Cards,3300,Portugal,13168,"1. Yellow card  , Handball",,
+50185e08bf16bcc5dd54eaf4a92d207c,2012-06-13,1169001,84,Substitutions,3300,Portugal,13168,", Tactical",31316,
+85e3b8ac66919f7d9d88940232c21144,2012-06-13,1169001,24,Goals,3300,Portugal,14132,", Header, 1. Tournament Goal Assist: , Corner, 1. Tournament Assist",,29364
+2631134c0465daf7d5b19ea5e34cf234,2012-06-13,1169001,16,Substitutions,3436,Denmark,15045,", Injury",20861,
+977bb69c192a9a66ebd480fe7ba6c506,2012-06-13,1169001,90,Substitutions,3436,Denmark,18006,", Tactical",34784,
+de0ce38b4e79d08f70531939a4ae66ec,2012-06-13,1169001,56,Cards,3436,Denmark,20861,"1. Yellow card  , Foul",,
+baeec0be3306c9f5939fb88af257387b,2012-06-13,1169001,87,Goals,3300,Portugal,31316,", Right-footed shot, 1. Tournament Goal Assist: , Cross, 1. Tournament Assist",,33648
+815f6e28f2c06bb3e1577805ab09926d,2012-06-13,1169001,89,Substitutions,3300,Portugal,33706,", Delay",27300,
+65ebe97876962430213e6396fdce02d8,2012-06-13,1169001,41,Goals,3436,Denmark,34557,", Header, 1. Tournament Goal Assist: , Header, 1. Tournament Assist",,18006
+a71a7d3457282e81fe3804977d707fbc,2012-06-13,1169001,80,Goals,3436,Denmark,34557,", Header, 2. Tournament Goal Assist: , Cross, 1. Tournament Assist",,1423
+bf37d2c2eed1a4426172b8e5dd2cc9e1,2012-06-17,1169002,11,Goals,3379,Netherlands,4192,", Left-footed shot, 1. Tournament Goal Assist: , Pass, 2. Tournament Assist",,4360
+7b4336383ffe13e6027e693150380b1b,2012-06-17,1169002,69,Cards,3379,Netherlands,4380,"1. Yellow card  , Foul",,
+2f1c6907d8f75b90f5a0e082f39a2aec,2012-06-17,1169002,64,Substitutions,3300,Portugal,5169,", Tactical",72768,
+9ee59c4b53c59b5ae52ef23ca2b51393,2012-06-17,1169002,28,Goals,3300,Portugal,8198,", Right-footed shot, 1. Tournament Goal Assist: , Pass, 1. Tournament Assist",,13217
+541d760b4c579e3602a542184a7df147,2012-06-17,1169002,74,Goals,3300,Portugal,8198,", Right-footed shot, 2. Tournament Goal Assist: , Pass, 2. Tournament Assist",,33706
+7cfd211075d5273c229d136e7522ab0b,2012-06-17,1169002,72,Substitutions,3300,Portugal,13168,", Tactical",13862,
+2781be9630cc7b0c8c342ed542fed235,2012-06-17,1169002,90,Cards,3300,Portugal,13217,"1. Yellow card  , Foul",,
+85e82170281fd0a86ecaf5e5e34bb900,2012-06-17,1169002,87,Substitutions,3300,Portugal,33706,", Tactical",27300,
+f3c0cfdc22c9dc3149cb8745b7509037,2012-06-17,1169002,51,Cards,3379,Netherlands,146258,"2. Yellow card  , Foul",,
+a92ef8dc73b037a3007d245822ef6af6,2012-06-17,1169002,67,Substitutions,3379,Netherlands,146258,", Tactical",15760,
+31de643e8579557507a5ee1e87c50872,2012-06-17,1169003,74,Substitutions,3262,Germany,6288,", Tactical",10,
+e6d17637dfa21de51c6aea204a87e92b,2012-06-17,1169003,79,Substitutions,3436,Denmark,15045,", Tactical",1443,
+855aa38218413b8fa1e9ce108021f0bc,2012-06-17,1169003,19,Goals,3262,Germany,15185,", Right-footed shot, 1. Tournament Goal Assist: , Pass, 1. Tournament Assist",,6288
+2845a0a2392445a42b682b7d976c9351,2012-06-17,1169003,64,Substitutions,3262,Germany,15185,", Tactical",58205,
+37d455c3100ca86129333418532f2b01,2012-06-17,1169003,24,Goals,3436,Denmark,18006,", Header, 2. Tournament Goal Assist: , Header, 1. Tournament Assist",,34557
+f3eb9ce78f414d1939005ed9dfa7be84,2012-06-17,1169003,82,Substitutions,3436,Denmark,20861,", Tactical",44567,
+b34630bd06ebc69a269bbb683822fac0,2012-06-17,1169003,80,Goals,3262,Germany,30059,", Right-footed shot, 1. Tournament Goal Assist: , Pass, 1. Tournament Assist",,35664
+4b4fe8273c67a7686b484f4a243bf6f6,2012-06-17,1169003,84,Substitutions,3262,Germany,58358,", Tactical",31909,
+92450a5ba743bd2c4f3549d644bd8894,2012-06-10,1169004,65,Substitutions,3376,Italy,5962,", Tactical",52312,
+df4913d32886fe11d89e5b2432ad53b8,2012-06-10,1169004,60,Goals,3376,Italy,6031,", Right-footed shot, 1. Tournament Goal Assist: , Pass, 1. Tournament Assist",,5817
+0525989e093f0a6776eccf1286904f78,2012-06-10,1169004,90,Substitutions,3376,Italy,7602,", Tactical",22203,
+571e59bd76c2a6a454990de777f6c72b,2012-06-10,1169004,84,Cards,3375,Spain,7767,"1. Yellow card  , Foul",,
+27a7bd84f90a5a3867c3e99776378eff,2012-06-10,1169004,64,Goals,3375,Spain,8806,", Left-footed shot, 1. Tournament Goal Assist: , Pass, 1. Tournament Assist",,35518
+5142ab56d81c4ea1c42439c280653702,2012-06-10,1169004,74,Substitutions,3375,Spain,8806,", Tactical",7767,
+22107a9fb2c4bfea9fb3532368dfa743,2012-06-10,1169004,89,Cards,3376,Italy,21151,"1. Yellow card  , Foul",,
+73db943cc525e73bba3515e555478ce3,2012-06-10,1169004,84,Cards,3375,Spain,28260,"1. Yellow card  , Foul",,
+ceb9d8c224b578ed29a3b20158c6b9e1,2012-06-10,1169004,79,Cards,3376,Italy,29260,"1. Yellow card  , Foul",,
+2bfcab62d408da96a040fe24cf90b54a,2012-06-10,1169004,65,Substitutions,3375,Spain,35518,", Tactical",15956,
+1e54e0bbd70d16d918a0b9f88e617b5a,2012-06-10,1169004,66,Cards,3376,Italy,39983,"1. Yellow card  , Foul",,
+69806c8804a922ea34705ea3de824b49,2012-06-10,1169004,37,Cards,3376,Italy,45146,"1. Yellow card  , Foul",,
+91a90e189525de63fa910cc66e2fc93f,2012-06-10,1169004,57,Substitutions,3376,Italy,45146,", Tactical",6031,
+0c263dfebcd572decc42229191d3af73,2012-06-10,1169004,66,Cards,3375,Spain,69751,"1. Yellow card  , Dissent",,
+f39d48569bf209fa5ad590949cb94a46,2012-06-10,1169005,75,Substitutions,3509,Republic of Ireland,3144,", Tactical",37304,
+6f2607b7abee3796f1bfd5cf96fb5792,2012-06-10,1169005,45,Cards,3509,Republic of Ireland,8035,"1. Yellow card  , Foul",,
+96807df55caea1e50fd502213a6bdd9e,2012-06-10,1169005,84,Cards,3556,Croatia,16746,"1. Yellow card  , Foul",,
+f746e72f38969a6f726b5d69fb7616ef,2012-06-10,1169005,54,Substitutions,3509,Republic of Ireland,21333,", Tactical",37150,
+1c1c0be8541bea5b2ece1e04ff3c2e37,2012-06-10,1169005,43,Goals,3556,Croatia,25742,", Right-footed shot, 1. Tournament Goal",,
+694d49fe9ccaa971004510d114677f6f,2012-06-10,1169005,72,Substitutions,3556,Croatia,25742,", Tactical",16746,
+93c9eb42dc99eacb6451b6b30f23e47a,2012-06-10,1169005,53,Cards,3556,Croatia,27992,"1. Yellow card  , Foul",,
+1619b48991f8dbb545c78058f51a6933,2012-06-10,1169005,90,Substitutions,3556,Croatia,32467,", Delay",27986,
+8ab3677a5004d69a5250b5e31dd40d39,2012-06-10,1169005,3,Goals,3556,Croatia,34572,", Header, 1. Tournament Goal Assist: , Cross, 1. Tournament Assist",,14942
+5feab3d7b474015baf84700fbadfad52,2012-06-10,1169005,49,Goals,3556,Croatia,34572,", Header, 2. Tournament Goal Assist: , Cross, 1. Tournament Assist",,42460
+fe7f4ade4b200a10609ad7ac2763f8fb,2012-06-10,1169005,53,Substitutions,3509,Republic of Ireland,35193,", Tactical",3306,
+2e024efc9eb1f554e84d99f4bc2a6492,2012-06-10,1169005,19,Goals,3509,Republic of Ireland,42206,", Header, 1. Tournament Goal Assist: , Free kick, 1. Tournament Assist",,21333
+7a9416b4ac4481de6fb5ce4c2e007b07,2012-06-10,1169005,89,Substitutions,3556,Croatia,42460,", Tactical",24633,
+432f37ffe3e9fa6e9184eee036b3febf,2012-06-14,1169006,39,Goals,3376,Italy,5817,", Direct free kick, 1. Tournament Goal",,
+f655c3c58d3a4792c5d2eddc462a218f,2012-06-14,1169006,83,Substitutions,3376,Italy,5962,", Tactical",52312,
+6f748a70e41b08e6a8eaca49ea594256,2012-06-14,1169006,57,Cards,3376,Italy,7602,"1. Yellow card  , Foul",,
+20a945398b7ae34f0058650a12c970eb,2012-06-14,1169006,63,Substitutions,3376,Italy,7602,", Injury",19446,
+94b375b3da167dd07e38bd9e2ecfbaa5,2012-06-14,1169006,80,Cards,3376,Italy,19446,"1. Yellow card  , Foul",,
+72eb1ea2439c60e6e1577aa14d5377a6,2012-06-14,1169006,83,Substitutions,3556,Croatia,25742,", Tactical",24633,
+a4789c94fece9b9d0725bd1cc2bb9987,2012-06-14,1169006,72,Goals,3556,Croatia,34572,", Right-footed shot, 3. Tournament Goal Assist: , Cross, 1. Tournament Assist",,39799
+0a9c48285e47f8cbd574b4ef1846f5de,2012-06-14,1169006,90,Substitutions,3556,Croatia,34572,", Injury",16746,
+ebbc87a8b2103a91ee9490bcb3627f64,2012-06-14,1169006,86,Cards,3556,Croatia,38870,"1. Yellow card  , Foul",,
+ef32d0fcc8bdf28571f5adc92ff7a168,2012-06-14,1169006,68,Substitutions,3556,Croatia,42460,", Tactical",25617,
+99d1653c9c1e55bd8d88c4bd7ae29bea,2012-06-14,1169006,69,Substitutions,3376,Italy,45146,", Tactical",6031,
+5b6459a9a0d1a47de4ae1bf3fecacc52,2012-06-14,1169007,36,Cards,3509,Republic of Ireland,3144,"1. Yellow card  , Foul",,
+fc3f1ffb65d846315ae27cd85c7b27d4,2012-06-14,1169007,76,Substitutions,3509,Republic of Ireland,3259,", Tactical",85935,
+28cc3999d13f098aa4870c6fdcb770bc,2012-06-14,1169007,54,Cards,3375,Spain,7476,"1. Yellow card  , Foul",,
+8882d844d7e475e8dd44e623345188f8,2012-06-14,1169007,65,Substitutions,3375,Spain,7476,", Tactical",44017,
+5e7fe3b594765d2730a67870ac1fade2,2012-06-14,1169007,78,Substitutions,3375,Spain,7600,", Resting",15799,
+f71b4bbb69b7fccb1eefdd14309af324,2012-06-14,1169007,4,Goals,3375,Spain,7767,", Right-footed shot, 1. Tournament Goal Assist: , Pass, 2. Tournament Assist",,35518
+b1357670c0e4ba7392ebdf3d20e6660d,2012-06-14,1169007,70,Goals,3375,Spain,7767,", Right-footed shot, 2. Tournament Goal Assist: , Pass, 3. Tournament Assist",,35518
+966aaf1de6076ac1d59b81dfd7405703,2012-06-14,1169007,73,Substitutions,3375,Spain,7767,", Resting",8806,
+f24625ef4e162d87f54109c9cf30d9e6,2012-06-14,1169007,82,Goals,3375,Spain,8806,", Right-footed shot, 2. Tournament Goal Assist: , Corner, 4. Tournament Assist",,35518
+bbbebe48bbfd66a23a37d6551b15ff25,2012-06-14,1169007,45,Cards,3509,Republic of Ireland,12124,"1. Yellow card  , Foul",,
+aa037c67b308d529604826e898f60a0c,2012-06-14,1169007,80,Substitutions,3509,Republic of Ireland,12124,", Tactical",48961,
+890311363ef4852095f53222d578af3e,2012-06-14,1169007,49,Goals,3375,Spain,35518,", Left-footed shot, 1. Tournament Goal Assist: , Shot on goal, 1. Tournament Assist",,7600
+bad0c0fc8ee477aee57af9b1092f0f35,2012-06-14,1169007,46,Substitutions,3509,Republic of Ireland,37150,", Tactical",3306,
+35e538fa0af5413f68c6fa615c3bdac5,2012-06-14,1169007,84,Cards,3509,Republic of Ireland,42206,"1. Yellow card  , Foul",,
+9d88d936e30723836fc655bd4c6c024e,2012-06-14,1169007,76,Cards,3375,Spain,44017,"1. Yellow card  , Foul",,
+3b0daf16b89684b25897b862f860102d,2012-06-18,1169008,89,Substitutions,3375,Spain,7607,", Delay",18644,
+b02a7c0e5c9b3d36f5b58e2c2414c2d4,2012-06-18,1169008,61,Substitutions,3375,Spain,7767,", Tactical",15956,
+5802ff1d27156ebafff5ab74a1821aa9,2012-06-18,1169008,44,Cards,3556,Croatia,14942,"1. Yellow card  , Foul",,
+0b15c3b133abd7529a5da87013c1a8dd,2012-06-18,1169008,88,Goals,3375,Spain,15956,", Right-footed shot, 1. Tournament Goal Assist: , Pass, 2. Tournament Assist",,7600
+d353320c3f97e13c21c79c607c7540b7,2012-06-18,1169008,65,Substitutions,3556,Croatia,25617,", Tactical",42460,
+809a23a9546deb7f14137e7f4b40645c,2012-06-18,1169008,90,Cards,3556,Croatia,25742,"1. Yellow card  , Handball",,
+4d283c4b136185b0dcc0eeda1c7f3d7f,2012-06-18,1169008,81,Substitutions,3556,Croatia,27954,", Tactical",24633,
+73ba0e8a1389b0b040f3b5104079a92d,2012-06-18,1169008,90,Cards,3556,Croatia,32467,"1. Yellow card  , Foul",,
+1c48edfb9bc868effec46dfc24796e59,2012-06-18,1169008,27,Cards,3556,Croatia,34393,"1. Yellow card  , Dissent",,
+916add90f3ecb27dd7927fc7a18478d9,2012-06-18,1169008,90,Cards,3556,Croatia,34572,"1. Yellow card  , Dissent",,
+e3c0a330939bbb33009bccc0a21d83b6,2012-06-18,1169008,73,Substitutions,3375,Spain,35518,", Tactical",8806,
+b7ed843d334961d52c3262132635a0fb,2012-06-18,1169008,53,Cards,3556,Croatia,39799,"1. Yellow card  , Foul",,
+4acdccff57898a75fee88577c34184c9,2012-06-18,1169008,66,Substitutions,3556,Croatia,46083,", Tactical",25742,
+ef5fbd873f5cd067c719c11bba7a1ce1,2012-06-18,1169009,86,Substitutions,3509,Republic of Ireland,3144,", Tactical",37150,
+2fa4fe5315558026147aeb9640443810,2012-06-18,1169009,39,Cards,3509,Republic of Ireland,3540,"1. Yellow card  , Foul",,
+054a64238683c50344851f3c377cbf2d,2012-06-18,1169009,74,Cards,3376,Italy,5023,"1. Yellow card  , Dissent",,
+abba9d39f88426ffd67655e19c5a76e0,2012-06-18,1169009,71,Cards,3376,Italy,5947,"1. Yellow card  , Foul",,
+ef70f20e90f09cf543c7507059b9520f,2012-06-18,1169009,35,Goals,3376,Italy,5962,", Header, 1. Tournament Goal Assist: , Corner, 2. Tournament Assist",,5817
+6a76fc49e8aacb7f4addc8eec30fff7c,2012-06-18,1169009,63,Substitutions,3376,Italy,5962,", Tactical",23197,
+85b09ce86271b31eedb974eb0c2adf7f,2012-06-18,1169009,75,Substitutions,3376,Italy,6031,", Tactical",45146,
+57b6d1417015ab858e4ea2011a156fe3,2012-06-18,1169009,37,Cards,3509,Republic of Ireland,8035,"Yellow card  , Foul",,
+2eb8e7009f8a950724f6d5293b54c128,2012-06-18,1169009,89,Cards,3509,Republic of Ireland,8035,"Second yellow  , Repeated Foul",,
+e77e69b2dbc74cd14b4f19276ef89c61,2012-06-18,1169009,65,Substitutions,3509,Republic of Ireland,21333,", Tactical",37304,
+05982e8cfba76f4bcf68a4c52ac586b6,2012-06-18,1169009,30,Cards,3376,Italy,21876,"1. Yellow card  , Foul",,
+e880c52ed45ba22de9fe896ccda3722d,2012-06-18,1169009,57,Substitutions,3376,Italy,29260,", Injury",39983,
+1048cb69844afa98cf11839667dabdb7,2012-06-18,1169009,76,Substitutions,3509,Republic of Ireland,35193,", Tactical",3306,
+626dfa11759989de8b071cc2a0c47403,2012-06-18,1169009,84,Cards,3509,Republic of Ireland,42206,"2. Yellow card  , Foul",,
+92c054c3a3b84da047c9dba68f907869,2012-06-18,1169009,90,Goals,3376,Italy,45146,", Right-footed shot, 1. Tournament Goal Assist: , Corner, 1. Tournament Assist",,23197
+120078863cee44a225ba8674dfdc42e6,2012-06-11,1169010,77,Substitutions,3299,England,3785,", Tactical",61651,
+4e67424674126188e084992405098cdb,2012-06-11,1169010,30,Goals,3299,England,4241,", Header, 1. Tournament Goal Assist: , Free kick, 1. Tournament Assist",,3109
+ae76e9f46eee8789eefe382cb3cb7885,2012-06-11,1169010,84,Substitutions,3377,France,5461,", Tactical",77834,
+8b485bec6a67e4833cf8d52904b84dfd,2012-06-11,1169010,71,Cards,3299,England,14086,"1. Yellow card  , Foul",,
+719b068c139fa9e69108cc9884422cbf,2012-06-11,1169010,39,Goals,3377,France,18935,", Right-footed shot, 1. Tournament Goal Assist: , Pass, 1. Tournament Assist",,22068
+7b48c938c78023ef32681c473c029d92,2012-06-11,1169010,84,Substitutions,3377,France,29434,", Tactical",18900,
+4e2a81fa6e714554ef6ee63a0a0bbec7,2012-06-11,1169010,90,Substitutions,3299,England,67063,", Tactical",33713,
+c77a5cd62d3d42b45f3c0b9e25604000,2012-06-11,1169010,34,Cards,3299,England,143424,"1. Yellow card  , Foul",,
+ec01140bee88883791f628e5c5412594,2012-06-11,1169010,77,Substitutions,3299,England,143424,", Tactical",3875,
+c3de6146a96697bfbe3d6e89d55c5a72,2012-06-11,1169011,84,Substitutions,3699,Ukraine,1075,", Tactical",24049,
+6ba77fd9f9036f3c8d5fb47aec959711,2012-06-11,1169011,52,Goals,3557,Sweden,3455,", Right-footed shot, 1. Tournament Goal Assist: , Pass, 1. Tournament Assist",,3730
+0871afed94471da2919b171fd9b16705,2012-06-11,1169011,55,Goals,3699,Ukraine,3522,", Header, 1. Tournament Goal Assist: , Cross, 1. Tournament Assist",,69015
+d87d367b8350c569290f37b236e9ae6d,2012-06-11,1169011,61,Goals,3699,Ukraine,3522,", Header, 2. Tournament Goal Assist: , Corner, 1. Tournament Assist",,58949
+9f274ba07dfc85d04dc44c29d2a36473,2012-06-11,1169011,81,Substitutions,3699,Ukraine,3522,", Tactical",9800,
+6373900bb6f89bf33c4b547650976aec,2012-06-11,1169011,10,Cards,3557,Sweden,3730,"1. Yellow card  , Foul",,
+5b4c81c030519b5ab71267227b67e7ee,2012-06-11,1169011,71,Substitutions,3557,Sweden,27505,", Tactical",4383,
+d6739735ecf9fad1399ab3b56473822b,2012-06-11,1169011,83,Cards,3557,Sweden,30391,"1. Yellow card  , Foul",,
+4cb6d0e84a070989344790a514daa17e,2012-06-11,1169011,68,Substitutions,3557,Sweden,31720,", Tactical",9611,
+aa319ad0f50230b38d1644c2715fe513,2012-06-11,1169011,62,Substitutions,3557,Sweden,36500,", Tactical",3688,
+b7d128c3a88aec0cfc61cd334a6a4fc1,2012-06-11,1169011,90,Substitutions,3699,Ukraine,58949,", Delay",59411,
+fb6d480b332737b215702bb122569639,2012-06-15,1169012,63,Cards,3557,Sweden,3098,"1. Yellow card  , Foul",,
+a5799371b471003130eb5b832ab4cd84,2012-06-15,1169012,59,Goals,3557,Sweden,3098,", Header, 1. Tournament Goal Assist: , Free kick, 1. Tournament Assist",,31720
+371f284e09fb84a87189292b2a1b81ed,2012-06-15,1169012,58,Cards,3299,England,3333,"1. Yellow card  , Foul",,
+5f817ed0a73251857523969fdbec78f8,2012-06-15,1169012,60,Substitutions,3299,England,3333,", Tactical",33713,
+0887b3a0a425db79bd3decdcab7369ad,2012-06-15,1169012,90,Cards,3557,Sweden,3688,"1. Yellow card  , Foul",,
+fc2c7d721e5e2a4c6a62781d51690013,2012-06-15,1169012,49,Goals,3557,Sweden,3881,", Own-goal Assist: , Shot on goal, 1. Tournament Assist",,3098
+7fe4ad1d7f83d57b5ae5172f3c9551ae,2012-06-15,1169012,79,Substitutions,3557,Sweden,4383,", Tactical",27505,
+286697fdd2e0cc2ce5c84a740f2c02d2,2012-06-15,1169012,73,Cards,3557,Sweden,25248,"1. Yellow card  , Unsporting behaviour",,
+69d6ab523ba6316e217c273fb8adaafc,2012-06-15,1169012,66,Substitutions,3557,Sweden,29213,", Injury",36025,
+2d752ca945727b0fa3931500cd9c37ae,2012-06-15,1169012,81,Substitutions,3557,Sweden,30391,", Tactical",9611,
+e3caee1c60a23a9f0515c2ff698604b1,2012-06-15,1169012,64,Goals,3299,England,33713,", Right-footed shot, 1. Tournament Goal",,
+28b4ff68883cf07450e6a8a73c8f8824,2012-06-15,1169012,23,Goals,3299,England,48066,", Header, 1. Tournament Goal Assist: , Cross, 2. Tournament Assist",,3109
+0329452c78415175f095525497a94c66,2012-06-15,1169012,78,Goals,3299,England,67063,", Right-footed shot, 1. Tournament Goal Assist: , Cross, 1. Tournament Assist",,33713
+7d4b9edbf300b361fcff0712e5b0fe1f,2012-06-15,1169012,89,Substitutions,3299,England,67063,", Tactical",143424,
+f81e088afb595b9fcb899cc409950c57,2012-06-15,1169013,46,Substitutions,3699,Ukraine,1075,", Tactical",59411,
+7c44b870debb8535169dd3cbc7729cec,2012-06-15,1169013,81,Cards,3377,France,5422,"1. Yellow card  , Foul",,
+a6017f4229cac7d77692565f0a13fa47,2012-06-15,1169013,87,Cards,3699,Ukraine,14944,"1. Yellow card  , Foul",,
+1b11f02da06458affdce823ca4663370,2012-06-15,1169013,40,Cards,3377,France,16993,"1. Yellow card  , Foul",,
+20a747bdcf82bb3ecdac93b5bbabc517,2012-06-15,1169013,53,Goals,3377,France,16993,", Left-footed shot, 1. Tournament Goal Assist: , Pass, 1. Tournament Assist",,18922
+ad81bebe8559b66a45acbbe077e00815,2012-06-15,1169013,73,Substitutions,3377,France,16993,", Tactical",77834,
+fc4ceb05ca5b9acb3a03069d6e9733b7,2012-06-15,1169013,76,Substitutions,3377,France,18922,", Tactical",82442,
+b7337acc1344ad69348af2c53663b666,2012-06-15,1169013,60,Substitutions,3699,Ukraine,24043,", Tactical",9800,
+31106746017238526244badeb68d5640,2012-06-15,1169013,79,Cards,3377,France,27306,"1. Yellow card  , Foul",,
+db09a214f795820c2a7fd9263c1c0657,2012-06-15,1169013,56,Goals,3377,France,29434,", Left-footed shot, 1. Tournament Goal Assist: , Pass, 2. Tournament Assist",,18922
+29184198759209e1b3b91ad52211e2ff,2012-06-15,1169013,68,Substitutions,3377,France,29434,", Tactical",60573,
+ea5ef0ab1427da81f50188059ce03300,2012-06-15,1169013,55,Cards,3699,Ukraine,59442,"1. Yellow card  , Foul",,
+5fd6721fa3c90642a70d44c0820dea11,2012-06-15,1169013,68,Substitutions,3699,Ukraine,69015,", Tactical",9796,
+0e4536e0e969bbae822e63a0ea969ccc,2012-06-19,1169014,54,Goals,3557,Sweden,3455,", Right-footed shot, 2. Tournament Goal Assist: , Cross, 2. Tournament Assist",,31720
+db8032663f7e2e0b9d35ee75e3e4275a,2012-06-19,1169014,70,Cards,3557,Sweden,3688,"2. Yellow card  , Foul",,
+6ae5892120d1ee617dbf23384c4ae10c,2012-06-19,1169014,78,Substitutions,3557,Sweden,3688,", Tactical",24379,
+f5ea3b609742001c1389538735816e70,2012-06-19,1169014,68,Cards,3377,France,5422,"2. Yellow card  , Foul",,
+0811362b80f530da34abdb3883a405d8,2012-06-19,1169014,59,Substitutions,3377,France,18900,", Tactical",5461,
+06924cc32cd6e5745badbc566b6e414d,2012-06-19,1169014,77,Substitutions,3377,France,18935,", Tactical",16993,
+be7ef1860bb325bbf625c6a5522556de,2012-06-19,1169014,81,Cards,3557,Sweden,24379,"1. Yellow card  , Foul",,
+9b18a3eb1c431db895d25a93e513b9b5,2012-06-19,1169014,90,Goals,3557,Sweden,31720,", Right-footed shot, 1. Tournament Goal Assist: , Shot on goal, 1. Tournament Assist",,24379
+92fd880b976d825fa06d6bd6b47eac63,2012-06-19,1169014,78,Substitutions,3557,Sweden,36500,", Tactical",36688,
+5d9dd5b25bf583f31030a89a279b0305,2012-06-19,1169014,46,Substitutions,3557,Sweden,36689,", Tactical",9611,
+760b8a0bd2603083acf10a46306c3e7e,2012-06-19,1169014,83,Substitutions,3377,France,60573,", Tactical",82442,
+b659dc0f25f2532efd7e37fc7ffc6a47,2012-06-19,1169015,73,Cards,3299,England,3109,"1. Yellow card  , Foul",,
+feedc71bd2770567094059b3ec1fd0be,2012-06-19,1169015,78,Cards,3299,England,3182,"1. Yellow card  , Time wasting",,
+39455bc54a327e85af0710b5fdb9366f,2012-06-19,1169015,48,Goals,3299,England,3332,", Header, 1. Tournament Goal Assist: , Cross, 3. Tournament Assist",,3109
+187c4c20b826544b201b9dbfd7dd9e98,2012-06-19,1169015,87,Substitutions,3299,England,3332,", Tactical",143424,
+c94635aea623e5a01da1224c1b196c91,2012-06-19,1169015,70,Substitutions,3299,England,3333,", Tactical",33713,
+3820fa2e79dece5d6584d34e0ab7b8d8,2012-06-19,1169015,86,Cards,3699,Ukraine,3522,"1. Yellow card  , Foul",,
+56f616d56b03fc94dfa08f3cb6455ee4,2012-06-19,1169015,77,Substitutions,3699,Ukraine,9800,", Tactical",94922,
+b606dc5de05b422547a101a4a94e9915,2012-06-19,1169015,63,Cards,3699,Ukraine,14944,"2. Yellow card  , Foul",,
+4ded55074a3cddbe67165cbc47a5d04c,2012-06-19,1169015,70,Substitutions,3699,Ukraine,59411,", Tactical",3522,
+4edeeb1f8ede5ebee7df6d2d996223ef,2012-06-19,1169015,82,Substitutions,3299,England,67063,", Tactical",48066,
+ba67734b30078f68ba5e99a496f068d3,2012-06-19,1169015,78,Substitutions,3699,Ukraine,70754,", Tactical",24043,
+0f8894de88686c90adc5e47be54b8322,2012-06-19,1169015,74,Cards,3699,Ukraine,89222,"1. Yellow card  , Foul",,
+2f41da30c471492e7d4a984951671677,2012-08-05,2211607,77,Cards,610,Ajax Amsterdam,4425,"1. Yellow card  , Mass confrontation",,
+a72f7186d132775f234d3e2f7bc0ed5b,2012-08-05,2211607,77,Cards,383,PSV Eindhoven,33210,"1. Yellow card  , Mass confrontation",,
+b2d721eaed4692a5c59a92323689ef18,2012-08-05,2211607,3,Goals,383,PSV Eindhoven,36500,", Header, 1. Tournament Goal Assist: , Corner, 1. Tournament Assist",,56416
+aef768899cedac0c9a650980219075a2,2012-08-05,2211607,53,Goals,383,PSV Eindhoven,36500,", Right-footed shot, 2. Tournament Goal Assist: , Pass, 1. Tournament Assist",,146258
+5d6d9533023057b6619ecd145a038bbe,2012-08-05,2211607,74,Substitutions,383,PSV Eindhoven,36500,", Not reported",49499,
+eef9c46dd75c3aa4c6a503225427446e,2012-08-05,2211607,11,Goals,383,PSV Eindhoven,38497,", Right-footed shot, 1. Tournament Goal Assist: , Goal-kick, 1. Tournament Assist",,33210
+5d5aef7dedcd5dc9d35dea9438ee35e0,2012-08-05,2211607,90,Cards,610,Ajax Amsterdam,42710,1. Yellow card,,
+7717860e3b0376b86f445f4749fa2ce5,2012-08-05,2211607,44,Goals,610,Ajax Amsterdam,42710,", Header, 1. Tournament Goal Assist: , Corner, 1. Tournament Assist",,4425
+02c708273f4fa2003873ef5908e4e3a6,2012-08-05,2211607,79,Cards,610,Ajax Amsterdam,45509,1. Yellow card,,
+d1be2ce4bd5f0ca091c1b15a8569301c,2012-08-05,2211607,90,Goals,383,PSV Eindhoven,49499,", Right-footed shot, 1. Tournament Goal Assist: , Pass, 1. Tournament Assist",,167850
+f0dfb41b779ad8efbd5acbd0aeedff11,2012-08-05,2211607,76,Substitutions,610,Ajax Amsterdam,52246,", Not reported",182932,
+06d75371c9a8f3a8db9236ffdd01dcb1,2012-08-05,2211607,75,Goals,610,Ajax Amsterdam,52920,", Own-goal Assist: , Cross, 1. Tournament Assist",,124891
+6ab3a43a37e3b264d03dcf997e38c167,2012-08-05,2211607,37,Cards,383,PSV Eindhoven,68864,1. Yellow card,,
+e67340caefbf1cbe1be393d3d61448e1,2012-08-05,2211607,84,Substitutions,383,PSV Eindhoven,72462,", Not reported",167850,
+ac69368250666fd5e9d142f53f1e539f,2012-08-05,2211607,65,Substitutions,610,Ajax Amsterdam,95755,", Not reported",34784,
+874987f117bca74599041037e0c43075,2012-08-05,2211607,-1,Cards,610,Ajax Amsterdam,124883,1. Yellow card,,
+c7273eb67de6f9ba953ae41e7bffb62a,2012-08-05,2211607,31,Cards,610,Ajax Amsterdam,187245,1. Yellow card,,
+584282a7024a5a6da90cbb20317111ff,2012-08-05,2211607,76,Substitutions,610,Ajax Amsterdam,187245,", Not reported",111184,
+ed9bded6064e693d92634a764cfd3e1a,2012-08-11,2218677,76,Cards,506,Juventus FC,2865,1. Yellow card,,
+fead616bb25013d5cb15d9fe7f12880e,2012-08-11,2218677,89,Substitutions,506,Juventus FC,2865,", Not reported",56703,
+2ffa0f67024c418c1f45e0b46b64eb7f,2012-08-11,2218677,52,Cards,6195,SSC Napoli,5858,1. Yellow card,,
+4f3cd2789c256c62c092494a547a8bed,2012-08-11,2218677,62,Substitutions,6195,SSC Napoli,5858,", Not reported",85475,
+4d35cfa33a6e61c743c04e7483c778fd,2012-08-11,2218677,101,Goals,506,Juventus FC,6448,", Right-footed shot, 1. Tournament Goal Assist: , Pass, 1. Tournament Assist",,44716
+c8a234f070eb5ebbccb07feabd2818d4,2012-08-11,2218677,86,Cards,6195,SSC Napoli,12563,"Red card  , Abuse",,
+726d818a55fb9c77d981eb2512253e00,2012-08-11,2218677,41,Goals,6195,SSC Napoli,12563,", Left-footed shot, 1. Tournament Goal",,
+ba03d3a1bde4d0a317d96b9223477f69,2012-08-11,2218677,105,Substitutions,6195,SSC Napoli,19041,", Not reported",21863,
+73e63e65cf095e9223244061e30b590b,2012-08-11,2218677,97,Goals,506,Juventus FC,21151,", Own-goal Assist: , Free kick, 1. Tournament Assist",,5817
+fb2f257ac6207a5e48aee11d6e009468,2012-08-11,2218677,53,Cards,6195,SSC Napoli,21905,1. Yellow card,,
+1208cf1da970693f0ffc7df25312d0fe,2012-08-11,2218677,74,Goals,506,Juventus FC,37666,", Penalty, 1. Tournament Goal Assist: , Fouled player",,6448
+bbcad11a9aba6970d1fbbb2dd321a7d5,2012-08-11,2218677,78,Cards,6195,SSC Napoli,37941,Yellow card,,
+2028fc7c17766278db005842ae4af909,2012-08-11,2218677,90,Cards,6195,SSC Napoli,37941,"Second yellow  , Foul",,
+e10bd49565118b9e77ffc5ebb39c33f1,2012-08-11,2218677,68,Substitutions,6195,SSC Napoli,38593,", Not reported",52266,
+dfa8790de663b083a5a8eaa8718c1405,2012-08-11,2218677,111,Cards,506,Juventus FC,39983,1. Yellow card,,
+d3bd2efca74712aff0c855d065ff7c5c,2012-08-11,2218677,46,Substitutions,506,Juventus FC,40660,", Not reported",6448,
+ef2e6892da65ae6606e0a9eac4534213,2012-08-11,2218677,64,Cards,6195,SSC Napoli,48280,1. Yellow card,,
+9d7fc22658a661cecde0beb59631f7d9,2012-08-11,2218677,27,Goals,6195,SSC Napoli,48280,", Right-footed shot, 1. Tournament Goal",,
+d94f3b21300a34994dc2792e4627759e,2012-08-11,2218677,90,Cards,506,Juventus FC,52312,1. Yellow card,,
+a48c7395fcbb5c4ee972f02c43469b15,2012-08-11,2218677,116,Substitutions,506,Juventus FC,52312,", Not reported",84835,
+d2f2b6b4173553f5426e368b6cf1e97e,2012-08-11,2218677,37,Goals,506,Juventus FC,63531,", Left-footed shot, 1. Tournament Goal Assist: , Pass, 1. Tournament Assist",,37666
+f439cf06de501664e21745deb2fd936a,2012-08-11,2218677,32,Cards,6195,SSC Napoli,76799,1. Yellow card,,
+036f6b5691a38f718f7e3de42b8a017d,2012-06-21,2219366,40,Substitutions,3300,Portugal,5169,", Injury",9824,
+d16553b3c11c86eb92ad085b86ba84a7,2012-06-21,2219366,79,Goals,3300,Portugal,8198,", Header, 3. Tournament Goal Assist: , Cross, 2. Tournament Assist",,29364
+36109e9cea6aaf328c2b160fb2aae70b,2012-06-21,2219366,86,Substitutions,3445,Czech Republic,9688,", Tactical",38746,
+ff7fe08655c8c49a57ae60f96f35e390,2012-06-21,2219366,88,Substitutions,3300,Portugal,13168,", Tactical",27300,
+1a020dec0650034671b30b6aff99eea4,2012-06-21,2219366,90,Cards,3445,Czech Republic,16090,"2. Yellow card  , Foul",,
+6a21038f68e679739816ea13debb5a82,2012-06-21,2219366,26,Cards,3300,Portugal,33706,"1. Yellow card  , Foul",,
+285075b961657b3b2e44986a797a6ebf,2012-06-21,2219366,84,Substitutions,3300,Portugal,33706,", Tactical",13862,
+5f3562dd4aedae5157a35073e80de1f6,2012-06-21,2219366,27,Cards,3300,Portugal,43848,"1. Yellow card  , Foul",,
+dc1901caaa21f74ccd7aabd1f1d02c9e,2012-06-21,2219366,61,Substitutions,3445,Czech Republic,179643,", Tactical",15890,
+03289dc8066f176a7caba4ec1aea77f6,2012-06-22,2219367,68,Goals,3262,Germany,10,", Header, 1. Tournament Goal Assist: , Free kick, 3. Tournament Assist",,35664
+bf2b3538e9c7dd935427098207c95938,2012-06-22,2219367,80,Substitutions,3262,Germany,10,", Resting",6288,
+67c0d167d656423e53e23c01b812444b,2012-06-22,2219367,39,Goals,3262,Germany,2219,", Right-footed shot, 1. Tournament Goal Assist: , Pass, 2. Tournament Assist",,35664
+36c1af744a4e6f2d1ede782eaa8ed765,2012-06-22,2219367,14,Cards,3378,Greece,6855,"1. Yellow card  , Repeated Foul",,
+e6c6da46c36be637f2741c6b186f0ecc,2012-06-22,2219367,55,Goals,3378,Greece,6855,", Right-footed shot, 1. Tournament Goal Assist: , Pass, 1. Tournament Assist",,15153
+dbd0e314d6630faa953e644d9118f88e,2012-06-22,2219367,72,Substitutions,3378,Greece,12872,", Tactical",9854,
+fcfe58ab158771640821f892d33d7f59,2012-06-22,2219367,89,Goals,3378,Greece,15153,", Penalty, 2. Tournament Goal Assist: Handball by",,26485
+967f32522753583baf113d65ee7a5227,2012-06-22,2219367,61,Goals,3262,Germany,29401,", Right-footed shot, 1. Tournament Goal Assist: , Cross, 1. Tournament Assist",,26485
+ef98c43e5bfb0c4ae75b991ff0238ba2,2012-06-22,2219367,75,Cards,3378,Greece,34322,"1. Yellow card  , Foul",,
+95210f2480df501a1ea4fd5b4f358608,2012-06-22,2219367,74,Goals,3262,Germany,35207,", Right-footed shot, 1. Tournament Goal Assist: , Shot on goal, 1. Tournament Assist",,10
+0a880e803fae97c18e5a595c9f7c2c15,2012-06-22,2219367,80,Substitutions,3262,Germany,35207,", Resting",74842,
+32304c6f174563fee8bdf6082b6cda1c,2012-06-22,2219367,46,Substitutions,3378,Greece,42942,", Tactical",16535,
+3e5aa951d80edde9c056b981a939f06c,2012-06-22,2219367,46,Substitutions,3378,Greece,46062,", Tactical",16402,
+146536b517f2bef76dc777785f8c25ab,2012-06-22,2219367,67,Substitutions,3262,Germany,58205,", Tactical",58358,
+bc6ff39aef9804bf2484e57dcb1091cb,2012-06-23,2219615,65,Substitutions,3377,France,5461,", Tactical",18935,
+aa7fb7a7b657660210f9407d53f42f05,2012-06-23,2219615,19,Goals,3375,Spain,7476,", Header, 1. Tournament Goal Assist: , Cross, 1. Tournament Assist",,69751
+fd313665b058bba682377ab31cd72f55,2012-06-23,2219615,90,Goals,3375,Spain,7476,", Penalty, 2. Tournament Goal Assist: , Penalty: Fouled player",,65278
+5776f2454b62dec7967fae15a3265afe,2012-06-23,2219615,84,Substitutions,3375,Spain,7600,", Tactical",15799,
+94e580919801ecd5ca5e412eb25f9e24,2012-06-23,2219615,67,Substitutions,3375,Spain,8806,", Tactical",7767,
+a6e264e1e8dd0e39318f0737ae57e5db,2012-06-23,2219615,76,Cards,3377,France,16993,"2. Yellow card  , Dissent",,
+936fce218683934dfa5f344283b7aefd,2012-06-23,2219615,31,Cards,3375,Spain,25557,"1. Yellow card  , Foul",,
+a802390a0a374abf9855e7c16d188bc3,2012-06-23,2219615,64,Substitutions,3377,France,27306,", Tactical",16993,
+ed5a89fae98cbd712187a8006c33fb79,2012-06-23,2219615,42,Cards,3377,France,29434,"1. Yellow card  , Foul",,
+98f493e538d80dd812700789dcf47e10,2012-06-23,2219615,65,Substitutions,3375,Spain,35518,", Tactical",65278,
+ceb44d42ea415d87fc6cf6236afc43ca,2012-06-23,2219615,79,Substitutions,3377,France,60573,", Tactical",82442,
+1bae555df649cc48b8388d9fd6fba12c,2012-06-24,2219616,-1,Shootout,3299,England,3109,", Scored",,
+750826fe5188c39be3175cf87ae3309d,2012-06-24,2219616,-1,Shootout,3299,England,3182,", Saved",,
+f1f9d6efd725c026924ce32cf23c2dff,2012-06-24,2219616,-1,Shootout,3299,England,3332,", Scored",,
+c1bfbe403ce41f508d03c1e38dc775f8,2012-06-24,2219616,61,Substitutions,3299,England,3333,", Tactical",33713,
+7f988a773611589d7e117ef12656d3bf,2012-06-24,2219616,94,Substitutions,3299,England,3785,", Tactical",61651,
+cf519b52f6de4c64720ede1e8cdbba2b,2012-06-24,2219616,-1,Shootout,3376,Italy,5817,", Scored",,
+cd8b6b5ac99e944b2ff06e1831056818,2012-06-24,2219616,80,Substitutions,3376,Italy,5947,", Tactical",22203,
+443a8d9bb21151abb8a3720134fbe90b,2012-06-24,2219616,78,Substitutions,3376,Italy,5962,", Tactical",23197,
+a128257d2218eae3aa82995e33a97cd2,2012-06-24,2219616,82,Cards,3376,Italy,7109,"1. Yellow card  , Foul",,
+3ce1d548a6a6b7c49ceeb3a02836931e,2012-06-24,2219616,-1,Shootout,3299,England,14086,", Missed",,
+8d61452acdb4facbee36a47d35fc02e3,2012-06-24,2219616,90,Substitutions,3376,Italy,16631,", Tactical",21151,
+f560b37ee152a6ab7fc232f0cea20089,2012-06-24,2219616,-1,Shootout,3376,Italy,19446,", Missed",,
+4d16be46a3fd6c8354246429044036d2,2012-06-24,2219616,94,Cards,3376,Italy,21151,"2. Yellow card  , Foul",,
+72dfc75ca03cb75ceff75ed806e8d224,2012-06-24,2219616,-1,Shootout,3376,Italy,22203,", Scored",,
+6b59834ac8d7a31969df5f36df4c8b03,2012-06-24,2219616,-1,Shootout,3376,Italy,23197,", Scored",,
+ff0ce39aa81dec62b2a1b99a018899f6,2012-06-24,2219616,-1,Shootout,3376,Italy,45146,", Scored",,
+9df8b75f4470d6fc22b94f3b58e572c2,2012-06-24,2219616,61,Substitutions,3299,England,67063,", Tactical",48066,
+1e1954090777ce9aa3a02d14cd314a43,2012-07-22,2219794,48,Goals,498,KSC Lokeren (- 2020),7784,", Right-footed shot, 1. Tournament Goal Assist: , Pass, 1. Tournament Assist",,187744
+f9b1ef727258b1006b41d561919b036a,2012-07-22,2219794,58,Goals,498,KSC Lokeren (- 2020),7784,", Left-footed shot, 2. Tournament Goal Assist: , Pass, 1. Tournament Assist",,13292
+fe14482639e3f7cb544b410d960b1f4c,2012-07-22,2219794,80,Substitutions,498,KSC Lokeren (- 2020),7784,", Not reported",43012,
+ec7628cc7ecb114d81cb42c7509a30e2,2012-07-22,2219794,36,Cards,58,RSC Anderlecht,9593,1. Yellow card,,
+5bf34cace45d9a24f4f0d4e0a65b02dd,2012-07-22,2219794,87,Substitutions,58,RSC Anderlecht,14933,", Not reported",39475,
+08d355af04e9eeb3d8c6046e2a4ab877,2012-07-22,2219794,76,Goals,58,RSC Anderlecht,31952,", Right-footed shot, 1. Tournament Goal Assist: , Pass, 1. Tournament Assist",,73912
+3d18b11dec400b07822f0fd5e38cb7ab,2012-07-22,2219794,29,Cards,58,RSC Anderlecht,44624,1. Yellow card,,
+f86a55688be3dee9ec9cc3a25c41c277,2012-07-22,2219794,46,Goals,58,RSC Anderlecht,44624,", Header, 1. Tournament Goal Assist: , Cross, 1. Tournament Assist",,59641
+fc73f7c3a8cf0e65278ab39c00557d63,2012-07-22,2219794,46,Substitutions,498,KSC Lokeren (- 2020),52746,", Not reported",13292,
+de9f38758ac06c1b09e9f518b916f7fb,2012-07-22,2219794,88,Substitutions,58,RSC Anderlecht,73912,", Not reported",31776,
+c9e02731648bd98595864239b8e6b44d,2012-07-22,2219794,24,Goals,58,RSC Anderlecht,129588,", Right-footed shot, 1. Tournament Goal Assist:",,
+fa77cf67ef9952f77490d7bf39a6f87e,2012-07-22,2219794,61,Substitutions,58,RSC Anderlecht,129588,", Not reported",92904,
+3d1624814c4b24a116dbb6c67b629ec5,2012-07-22,2219794,78,Substitutions,498,KSC Lokeren (- 2020),187744,", Not reported",129580,
+db9068771bfb830da58c93a668ef04c1,2012-08-31,2219795,89,Substitutions,631,Chelsea FC,3182,", Not reported",40611,
+ebae9889f15cae6ceb73db78072350d4,2012-08-31,2219795,74,Goals,631,Chelsea FC,27511,", Right-footed shot, 1. Tournament Goal Assist: , Corner, 1. Tournament Assist",,3163
+e508d65e2af62ab24ebce7cec31d4426,2012-08-31,2219795,60,Goals,13,Atlético de Madrid,33357,", Tap-in, 1. Tournament Goal Assist: , Pass, 1. Tournament Assist",,39152
+210cf35c2b259f6d50ef0327bc3f2439,2012-08-31,2219795,29,Cards,631,Chelsea FC,36827,"1. Yellow card  , Dissent",,
+644bf043ab708eac39f6d4ada62f6654,2012-08-31,2219795,6,Goals,13,Atlético de Madrid,39152,", Left-footed shot, 1. Tournament Goal Assist: , Pass, 1. Tournament Assist",,45383
+dc025ed7b7794580c8170a96a7abf4a1,2012-08-31,2219795,19,Goals,13,Atlético de Madrid,39152,", Left-footed shot, 2. Tournament Goal Assist: , Pass, 1. Tournament Assist",,74229
+dfd4d0ee1bb2b06489e9c271c3192d5c,2012-08-31,2219795,45,Goals,13,Atlético de Madrid,39152,", Left-footed shot, 3. Tournament Goal Assist: , Pass, 1. Tournament Assist",,21369
+faab8ce773910ad5b628022d5b79b09a,2012-08-31,2219795,87,Substitutions,13,Atlético de Madrid,39152,", Not reported",5782,
+ad3edfe56119eb8a380443aa8721e548,2012-08-31,2219795,80,Substitutions,631,Chelsea FC,44068,", Not reported",47082,
+09417efa35b8a774d146775b12082ea4,2012-08-31,2219795,56,Substitutions,13,Atlético de Madrid,45383,", Not reported",33448,
+68580fe516206c535a293d13d53e3080,2012-08-31,2219795,46,Substitutions,631,Chelsea FC,54170,", Not reported",85314,
+1ef589a426a887735dd9e7e4afb8c6c6,2012-08-31,2219795,80,Substitutions,13,Atlético de Madrid,74229,", Not reported",34601,
+af5669e63fc55279f5274a8436379207,2012-06-27,2221241,113,Cards,3375,Spain,7476,"2. Yellow card  , Foul",,
+3655b6f22fabf7b181a61fb57b9e9404,2012-06-27,2221241,-1,Shootout,3375,Spain,7476,", Saved",,
+352d292021f29cce13e86bc635821b9f,2012-06-27,2221241,-1,Shootout,3375,Spain,7600,", Scored",,
+0586b718e1f8fb3530a57602461ac373,2012-06-27,2221241,87,Substitutions,3375,Spain,7607,", Tactical",65278,
+c5c20a9a43ef3dc768b0da3e4cd64d73,2012-06-27,2221241,-1,Shootout,3375,Spain,8806,", Scored",,
+eb7c71525ebb8ce35f38ef4d2091aee9,2012-06-27,2221241,81,Substitutions,3300,Portugal,9824,", Tactical",72768,
+59437b177444ed036c74a6fa26256ccd,2012-06-27,2221241,86,Cards,3300,Portugal,13121,"1. Yellow card  , Foul",,
+d3f50378cf1c545303877fd3864a6da5,2012-06-27,2221241,-1,Shootout,3300,Portugal,13121,", Missed",,
+8ea706f2ba843a1f5ba47189b9335091,2012-06-27,2221241,113,Substitutions,3300,Portugal,13168,", Tactical",31316,
+0ccee968b3c0ea6278ce759dca96de48,2012-06-27,2221241,64,Cards,3300,Portugal,13217,"2. Yellow card  , Foul",,
+1a5999649776abf2d8271705927687b3,2012-06-27,2221241,61,Cards,3300,Portugal,14132,"1. Yellow card  , Foul",,
+d20dbe7b9cf84b548711857a026b2506,2012-06-27,2221241,-1,Shootout,3300,Portugal,14132,", Scored",,
+197be255b0ed51a5674cc9ca23a45ad0,2012-06-27,2221241,54,Substitutions,3375,Spain,18644,", Tactical",8806,
+e4eb5aae6be76578c95f06726b8f2150,2012-06-27,2221241,-1,Shootout,3375,Spain,18944,", Scored",,
+007fe69bb43d2fc37a01f8545dc2e506,2012-06-27,2221241,40,Cards,3375,Spain,25557,"2. Yellow card  , Foul",,
+3688504424ffeead6e1d35f3e9f26554,2012-06-27,2221241,-1,Shootout,3375,Spain,25557,", Scored",,
+07f9e171d7e19edd47c9badffc209cc1,2012-06-27,2221241,84,Cards,3375,Spain,28260,"2. Yellow card  , Handball",,
+7543b20f9434afb25a4d66d8f8dbb77f,2012-06-27,2221241,-1,Shootout,3300,Portugal,29364,", Saved",,
+5c605906b917d1458b4eaf8ea825382e,2012-06-27,2221241,45,Cards,3300,Portugal,33648,"2. Yellow card  , Dissent",,
+9475cc402506a88b710bd3c16b965ead,2012-06-27,2221241,-1,Shootout,3300,Portugal,33706,", Scored",,
+f4cda7e0bf6edbd9709b10251d44b120,2012-06-27,2221241,60,Substitutions,3375,Spain,35518,", Tactical",15956,
+bace50f8d994d1780b231521840446cd,2012-06-27,2221241,90,Cards,3300,Portugal,43848,"2. Yellow card  , Foul",,
+087c038a6b309d1b5d15aa1425943ac7,2012-06-27,2221241,106,Substitutions,3300,Portugal,43848,", Tactical",13862,
+ab05372f97665ca31430cc09b8a088f1,2012-06-27,2221241,60,Cards,3375,Spain,65230,"1. Yellow card  , Unsporting behaviour",,
+6458b92e33267e56157c3086e7ad5d2c,2012-06-28,2221626,84,Cards,3376,Italy,5947,"2. Yellow card  , Foul",,
+c6482964ca39b48a329ea92d3d1abccb,2012-06-28,2221626,58,Substitutions,3376,Italy,5962,", Tactical",23197,
+0d75ce88c063099598c89d2b80945c6e,2012-06-28,2221626,46,Substitutions,3262,Germany,6288,", Tactical",10,
+20b23908190e6b6abc098b334344bc68,2012-06-28,2221626,89,Cards,3376,Italy,7602,"2. Yellow card  , Foul",,
+dde1b296e9e6367f25efc5da990670b1,2012-06-28,2221626,46,Substitutions,3262,Germany,15185,", Tactical",35207,
+2d37f3c1e3c2ea10a668201a86799961,2012-06-28,2221626,64,Substitutions,3376,Italy,19446,", Tactical",7602,
+370b55cc3db8c8accfae9f5dc582653c,2012-06-28,2221626,71,Substitutions,3262,Germany,26485,", Tactical",58358,
+bec3594384b70f71ebacc938b8b06e77,2012-06-28,2221626,90,Goals,3262,Germany,35664,", Penalty, 1. Tournament Goal Assist: Handball by",,21876
+c47de97605d0d932736fe980ebf7903d,2012-06-28,2221626,90,Cards,3262,Germany,39728,"1. Yellow card  , Dissent",,
+0ef21f335981a7d78c6a0747be12746d,2012-06-28,2221626,61,Cards,3376,Italy,39983,"2. Yellow card  , Foul",,
+44197b9a1f362e948d8960cb1d5011c6,2012-06-28,2221626,37,Cards,3376,Italy,45146,"2. Yellow card  , Taking off shirt",,
+b274b29c82e05b55a1269dfe8627fc50,2012-06-28,2221626,20,Goals,3376,Italy,45146,", Header, 2. Tournament Goal Assist: , Cross, 1. Tournament Assist",,5962
+29fcbce103b55cb2ffa524822647e0d7,2012-06-28,2221626,36,Goals,3376,Italy,45146,", Right-footed shot, 3. Tournament Goal Assist: , Pass, 1. Tournament Assist",,19446
+5d8041d7249f6e130f6cda93c299c12a,2012-06-28,2221626,70,Substitutions,3376,Italy,45146,", Injury",6031,
+d2a3778c459dd27bb2c490ea7e6ad96a,2012-08-19,2221641,27,Goals,42,Hannover 96,277,", Left-footed shot, 1. Tournament Goal Assist: , Pass, 1. Tournament Assist",,2805
+fcd96dccce5a1f0ab01a223cebeb29c3,2012-08-19,2221641,32,Goals,42,Hannover 96,277,", Right-footed shot, 2. Tournament Goal Assist: , Pass, 1. Tournament Assist",,3114
+33fe702f44484d5ac6353c7d261ac21c,2012-08-19,2221641,70,Substitutions,1203,FC Nöttingen,948,", Not reported",55657,
+c6a3c088ed8a38d4ce074dd73b20d3da,2012-08-19,2221641,62,Substitutions,42,Hannover 96,1335,", Not reported",45668,
+5f2f7577cd766b73c1dc2288c5f0c68c,2012-08-19,2221641,55,Goals,42,Hannover 96,3114,", Right-footed shot, 1. Tournament Goal Assist: , Pass, 1. Tournament Assist",,61901
+2fdf6c3be014799e166578390ad8889e,2012-08-19,2221641,83,Goals,42,Hannover 96,3114,", Right-footed shot, 2. Tournament Goal Assist: , Pass, 1. Tournament Assist",,45668
+1baf51d647cc1e9e7669204f71b0b4a0,2012-08-19,2221641,75,Cards,42,Hannover 96,18331,1. Yellow card,,
+49e4b2b6586504f1b306282ba564de30,2012-08-19,2221641,47,Goals,42,Hannover 96,22837,", Header, 1. Tournament Goal Assist: , Corner, 1. Tournament Assist",,277
+fd14303cc2a4259d5395a60cd0fbefaa,2012-08-19,2221641,53,Goals,1203,FC Nöttingen,37459,", Left-footed shot, 1. Tournament Goal Assist: , Pass, 1. Tournament Assist",,48594
+e985cc3aaa301febf7a9c9ca7c9a182f,2012-08-19,2221641,87,Substitutions,1203,FC Nöttingen,37459,", Not reported",226149,
+789488e1cf0b4eaddd894848e7025c4a,2012-08-19,2221641,79,Goals,42,Hannover 96,45668,", Left-footed shot, 1. Tournament Goal Assist: , Shot on goal, 1. Tournament Assist",,39198
+72b2e1dac71b71f209fc4c8f24f213f3,2012-08-19,2221641,46,Substitutions,42,Hannover 96,48298,", Not reported",41507,
+f93646c386824f25942e3043e522c8b2,2012-08-19,2221641,78,Cards,1203,FC Nöttingen,48594,1. Yellow card,,
+189b1d9a956c05996c3231f5b84cd30b,2012-08-19,2221641,81,Substitutions,1203,FC Nöttingen,48594,", Not reported",37803,
+2b14247a55137f28c5b879c9fa2b8753,2012-08-19,2221641,62,Substitutions,42,Hannover 96,61901,", Not reported",39198,
+53f14df1e226987ee3fe3ece1c9921df,2012-08-19,2221641,56,Cards,42,Hannover 96,68815,1. Yellow card,,
+36c286a755b1265f0c130bd7b5b72cc1,2012-08-17,2221746,65,Substitutions,293,FSV Frankfurt,21318,", Tactical",125231,
+d797e20c4bdd7dcc9ff343dc71d4459d,2012-08-17,2221746,27,Cards,293,FSV Frankfurt,38425,"1. Yellow card  , Foul",,
+eb676559ced3fe8f398dea33360535df,2012-08-17,2221746,21,Goals,293,FSV Frankfurt,49737,", Right-footed shot, 1. Tournament Goal Assist:",,
+600802b438974d3769eb377e3cdea4ec,2012-08-17,2221746,16,Goals,2589,SG Sonnenhof Großaspach,58146,", Right-footed shot, 1. Tournament Goal Assist: , Pass, 1. Tournament Assist",,31954
+c4b84e6c30106cc52a48b3f0bda07f74,2012-08-17,2221746,86,Substitutions,2589,SG Sonnenhof Großaspach,79268,", Tactical",43492,
+5cda23635ab9003038112c7675f69297,2012-08-17,2221746,65,Substitutions,293,FSV Frankfurt,99003,", Tactical",32485,
+2c71d7912e5877d3765b4b69e5e6085e,2012-08-17,2221746,22,Goals,293,FSV Frankfurt,126214,", Header, 1. Tournament Goal Assist: , Pass, 1. Tournament Assist",,862
+b1e77c65742c7f227f14b0befa957f92,2012-08-17,2221746,81,Substitutions,2589,SG Sonnenhof Großaspach,139942,", Tactical",94637,
+841cba2f1322f9d2887773279db546cd,2012-08-18,2221747,42,Cards,52,MSV Duisburg,1459,1. Yellow card,,
+ee5fd5d49a77e3c3a96f4eef507ef89d,2012-08-18,2221747,17,Goals,52,MSV Duisburg,1459,", Penalty, 1. Tournament Goal Assist: , Fouled player",,83423
+fde4240ceb72a6df9e96e7636cad8937,2012-08-18,2221747,50,Cards,52,MSV Duisburg,2125,1. Yellow card,,
+f1a3130d9f67d0264e22d65fcb88f959,2012-08-18,2221747,70,Substitutions,52,MSV Duisburg,2125,", Tactical",43984,
+b07cbe93fff2ffc5b48ec9aa3c791014,2012-08-18,2221747,73,Cards,52,MSV Duisburg,8639,1. Yellow card,,
+77d15f0579564548a4afe92f91e6b481,2012-08-18,2221747,86,Substitutions,52,MSV Duisburg,8639,", Tactical",42749,
+8724aa7430122a99b0a509302ae409a8,2012-08-18,2221747,77,Cards,440,Hallescher FC,23566,1. Yellow card,,
+f329481c33349e1ee114eaf163c68eaf,2012-08-18,2221747,80,Substitutions,440,Hallescher FC,23566,", Tactical",40679,
+df3f14c2914f880c2cd934d88ae27f6a,2012-08-18,2221747,88,Substitutions,440,Hallescher FC,43822,", Tactical",83191,
+3f7c0f68792864c9f552bee610db2a69,2012-08-18,2221747,79,Cards,52,MSV Duisburg,44182,1. Yellow card,,
+f743a6086fd135fd06328c3fa3b401f9,2012-08-18,2221747,84,Cards,52,MSV Duisburg,44594,1. Yellow card,,
+ca4c2cd53e2cc6da78debeeb74e49b65,2012-08-18,2221747,69,Substitutions,440,Hallescher FC,81076,", Tactical",74041,
+cd17d87041b7bec444a2a9d7b8025095,2012-08-18,2221747,89,Substitutions,52,MSV Duisburg,83423,", Delay",100628,
+ea640044ef0a1f2eb66b3e414aa13864,2012-08-18,2221747,90,Cards,52,MSV Duisburg,85164,1. Yellow card,,
+c37ef47d4dff66b3a7d9638dcba39441,2012-08-19,2221748,46,Substitutions,44,Hertha BSC,2334,", Not reported",58500,
+4eea721d0452b7434587bc9f45962dec,2012-08-19,2221748,84,Substitutions,158,VfR Wormatia Worms,4300,", Not reported",37069,
+bdc44fb76eb09d4ed9f03b3a049f8fd7,2012-08-19,2221748,3,Goals,158,VfR Wormatia Worms,17294,", Penalty, 1. Tournament Goal Assist: , Fouled player",,152907
+3117fd3985293b1806c64e5a215d6a62,2012-08-19,2221748,33,Cards,158,VfR Wormatia Worms,31152,1. Yellow card,,
+56f50c88f98d617a6cf7ab6a31eb6dae,2012-08-19,2221748,90,Cards,44,Hertha BSC,35872,1. Yellow card,,
+1e65a8bceef7381b40c95c0459693f6b,2012-08-19,2221748,43,Cards,44,Hertha BSC,39083,1. Yellow card,,
+bc68518545f5b6e330f951230019855e,2012-08-19,2221748,82,Goals,158,VfR Wormatia Worms,39308,", Right-footed shot, 1. Tournament Goal Assist: , Pass, 1. Tournament Assist",,4300
+8f3d188c17bebcd8ec4a369fec771897,2012-08-19,2221748,64,Goals,44,Hertha BSC,39743,", Tap-in, 1. Tournament Goal Assist: , Header, 1. Tournament Assist",,4691
+d52102ca5c5b891fb7434463874e2381,2012-08-19,2221748,87,Substitutions,44,Hertha BSC,42203,", Not reported",37013,
+99ba9350bb019bf055262a9ea6835752,2012-08-19,2221748,60,Substitutions,158,VfR Wormatia Worms,44952,", Not reported",31452,
+909a7e2eb64c5e3ed377bf3929bdaf91,2012-08-19,2221748,81,Substitutions,44,Hertha BSC,49501,", Not reported",50135,
+4c1a9cb12368bcd5299cc9cab723311f,2012-08-19,2221748,3,Cards,44,Hertha BSC,93869,"1. Yellow card  , Foul",,
+bc15e00ec8e040b1487cb7b53d661671,2012-08-19,2221748,46,Substitutions,158,VfR Wormatia Worms,123157,", Not reported",39308,
+ee73f5eb1de25bb4c9c51cf93c18cd96,2012-08-18,2221749,63,Substitutions,115,FC Oberneuland,380,", Tactical",20288,
+a8c0c83477005cce2434531c7c6d7589,2012-08-18,2221749,58,Substitutions,115,FC Oberneuland,10930,", Tactical",72290,
+22e53d32e3b278ffab35c9355ccbc8d7,2012-08-18,2221749,73,Substitutions,115,FC Oberneuland,20226,", Tactical",2994,
+05551be71cb347bcf4a05270e2e6623c,2012-08-18,2221749,38,Goals,16,Borussia Dortmund,29835,", Right-footed shot, 1. Tournament Goal Assist: , Header, 1. Tournament Assist",,25727
+bf2fa041cf420535ab56de8d8bd3965d,2012-08-18,2221749,84,Substitutions,16,Borussia Dortmund,29835,", Tactical",44521,
+0e811014d1ac96973d30c294c5caae5d,2012-08-18,2221749,10,Goals,16,Borussia Dortmund,35207,", Right-footed shot, 1. Tournament Goal Assist: , Pass, 1. Tournament Assist",,38253
+071090f993ad04ef3e0a6c5c254a4a6c,2012-08-18,2221749,64,Substitutions,16,Borussia Dortmund,35207,", Resting",74842,
+7a92313eef5f18a6bea08eef66496eef,2012-08-18,2221749,69,Substitutions,16,Borussia Dortmund,38253,", Resting",58124,
+c89d7f02ff6ee1f0d714b03696d1db23,2012-08-18,2221749,67,Goals,16,Borussia Dortmund,42460,", Right-footed shot, 1. Tournament Goal Assist: , Pass, 1. Tournament Assist",,29835
+06475d2e80cb158016ab0b23cb09348a,2012-08-18,2221750,70,Substitutions,2036,1.FC Heidenheim 1846,1983,", Tactical",40456,
+938c0028c78b38b1951791a6b36b5a3d,2012-08-18,2221750,46,Substitutions,2036,1.FC Heidenheim 1846,18068,", Tactical",39103,
+af8d272468a53223f248eec4097bece7,2012-08-18,2221750,6,Goals,80,VfL Bochum,28835,", Right-footed shot, 1. Tournament Goal Assist: , Pass, 1. Tournament Assist",,408
+c069f5b735be253db1438cb6906ad2cb,2012-08-18,2221750,41,Goals,80,VfL Bochum,28835,", Right-footed shot, 2. Tournament Goal Assist: , Pass, 1. Tournament Assist",,1301
+45d34975afa5cf1c073f424293bd150c,2012-08-18,2221750,86,Substitutions,80,VfL Bochum,28835,", Tactical",66641,
+13670143be08ea3f91f62a2f3b23ff84,2012-08-18,2221750,87,Cards,2036,1.FC Heidenheim 1846,37338,"1. Yellow card  , Foul",,
+35058c43b29f4fbf8fd91662556e9f41,2012-08-18,2221750,46,Substitutions,2036,1.FC Heidenheim 1846,44067,", Tactical",1077,
+8eb480c82ba26a70ddabc59df6991240,2012-08-18,2221750,35,Cards,80,VfL Bochum,53681,"1. Yellow card  , Foul",,
+4dbdecfc7ddc41b691dad325a03a9772,2012-08-18,2221750,77,Substitutions,80,VfL Bochum,53681,", Tactical",54871,
+146bbd3ced1cc5f321c3a418bc90f2c7,2012-08-18,2221750,70,Substitutions,80,VfL Bochum,79486,", Tactical",627,
+32eea26a02036f9537f71743c49d1918,2012-08-18,2221750,76,Cards,80,VfL Bochum,82097,"1. Yellow card  , Foul",,
+ee18b986a88085f904d3c4cb1c6a6795,2012-08-18,2221751,50,Cards,431,SC Victoria Hamburg,8159,"1. Yellow card  , Foul",,
+58dc748bff380e101415712479bfd0fb,2012-08-18,2221751,12,Goals,431,SC Victoria Hamburg,16860,", Left-footed shot, 1. Tournament Goal Assist: , Pass, 1. Tournament Assist",,19830
+0f4363e0eb277f8f4abbb2b958dd769d,2012-08-18,2221751,57,Substitutions,431,SC Victoria Hamburg,16860,", Tactical",76217,
+d2f99a5f43ad65e12e706db8d81f115f,2012-08-18,2221751,79,Goals,60,SC Freiburg,25468,", Right-footed shot, 1. Tournament Goal Assist: , Header, 1. Tournament Assist",,36182
+3a4ef58419b5a1a8d680bc67579c51e3,2012-08-18,2221751,58,Substitutions,60,SC Freiburg,27900,", Injury",73333,
+ba3b3781179fb4c260589bb66f8f314f,2012-08-18,2221751,51,Cards,60,SC Freiburg,29865,"1. Yellow card  , Foul",,
+7b62f8392332d3c6ddecf5f689519ef0,2012-08-18,2221751,27,Substitutions,60,SC Freiburg,31173,", Injury",10885,
+95d1004b676be7c5ba6a6bca47480410,2012-08-18,2221751,11,Goals,60,SC Freiburg,36182,", Header, 1. Tournament Goal Assist: , Cross, 1. Tournament Assist",,29865
+33051b6041c28e141d5be25606190f85,2012-08-18,2221751,76,Substitutions,60,SC Freiburg,45832,", Tactical",25468,
+a308197fd83b827664727b6075883895,2012-08-18,2221751,84,Substitutions,431,SC Victoria Hamburg,57237,", Tactical",39229,
+3f2f73c92fb882ed2f1a6285f29c704a,2012-08-18,2221751,45,Cards,60,SC Freiburg,82389,"1. Yellow card  , Foul",,
+f4442f55fcf08420e383955afe0eb370,2012-08-18,2221751,71,Substitutions,431,SC Victoria Hamburg,85914,", Tactical",69908,
+a0a6966c60c7c0685b6fcb32e915a103,2012-08-18,2221751,87,Cards,431,SC Victoria Hamburg,95565,"1. Yellow card  , Foul",,
+f8c58747ccd9700ba4e336e21b9fc019,2012-08-18,2221752,28,Goals,3,1.FC Köln,13686,", Right-footed shot, 1. Tournament Goal Assist:",,
+133aaf1fa9dcb932c3851c979b9af571,2012-08-18,2221752,40,Goals,3,1.FC Köln,13686,", Right-footed shot, 2. Tournament Goal Assist: , Cross, 1. Tournament Assist",,15300
+2f0c9d0ac4615ac3dbe0bdefc2710072,2012-08-18,2221752,64,Substitutions,3,1.FC Köln,47513,", Resting",57845,
+0504f7ab1d024cca30f85bb6aafc22b8,2012-08-18,2221752,82,Substitutions,3,1.FC Köln,74762,", Tactical",68574,
+e7117ae669437b5e96ad2a6531099129,2012-08-18,2221752,67,Substitutions,66,SpVgg Unterhaching,81559,", Tactical",43986,
+c848d90afc89abb3bbb8f4da0f94b83c,2012-08-18,2221752,64,Substitutions,3,1.FC Köln,86030,", Tactical",153637,
+41d028fa5950bf145ec02e69ce44208e,2012-08-18,2221752,24,Cards,66,SpVgg Unterhaching,92051,"1. Yellow card  , Foul",,
+57c9a1dc4f8db25c08ee6b8f180abb47,2012-08-18,2221752,90,Goals,66,SpVgg Unterhaching,94771,", Right-footed shot, 1. Tournament Goal Assist: , Pass, 1. Tournament Assist",,43986
+b6d9a6bbb30a6e0e1a6ac0c4fff0c06e,2012-08-18,2221752,59,Substitutions,66,SpVgg Unterhaching,152963,", Tactical",94771,
+e532da03dd4a367bdf67f4116c5bcd6f,2012-08-18,2221753,50,Substitutions,2652,SV Falkensee/Finkenkrug,9562,", Tactical",238159,
+a7f27544c593ed59be67f6b20c1f526d,2012-08-18,2221753,30,Goals,79,VfB Stuttgart,21175,", Tap-in, 1. Tournament Goal Assist: , Header, 1. Tournament Assist",,31570
+af57db8e4a1acd0f44482ed4b20ae611,2012-08-18,2221753,61,Substitutions,79,VfB Stuttgart,21175,", Resting",79642,
+b47a1e47418b16a6b34582bdc02d6ddd,2012-08-18,2221753,43,Goals,79,VfB Stuttgart,31159,", Tap-in, 1. Tournament Goal Assist: , Header, 1. Tournament Assist",,21175
+1a107be2de8a4e6ebb1747ff299887ba,2012-08-18,2221753,54,Goals,79,VfB Stuttgart,31159,", Header, 2. Tournament Goal Assist: , Cross, 1. Tournament Assist",,18833
+7a462089808ca6356f74100217e4d723,2012-08-18,2221753,61,Substitutions,79,VfB Stuttgart,31159,", Resting",39247,
+db31b713bfdd344bb0901239a881f1aa,2012-08-18,2221753,46,Substitutions,79,VfB Stuttgart,36787,", Resting",1426,
+a42c4ab7dd7458c05fab0231cd48a994,2012-08-18,2221753,79,Goals,79,VfB Stuttgart,39247,", Left-footed shot, 1. Tournament Goal Assist: , Pass, 1. Tournament Assist",,1426
+b4e11e1460966ede8d58c5ab3b074cb1,2012-08-18,2221753,87,Goals,79,VfB Stuttgart,79642,", Right-footed shot, 1. Tournament Goal Assist: , Pass, 1. Tournament Assist",,39247
+85155809276054993bec61ef1cc39071,2012-08-18,2221753,44,Cards,2652,SV Falkensee/Finkenkrug,84106,"1. Yellow card  , Foul",,
+447de60304c4cc541f91ea4c42440af0,2012-08-18,2221753,62,Substitutions,2652,SV Falkensee/Finkenkrug,238167,", Tactical",117342,
+9641a3d941e321dc378b344d26dfc4e9,2012-08-18,2221753,84,Substitutions,2652,SV Falkensee/Finkenkrug,238169,", Tactical",32506,
+75167fa2a2b8379e83ff35bf460f8199,2012-08-19,2221754,78,Goals,48,Karlsruher SC,4978,", Tap-in, 1. Tournament Goal Assist: , Free kick, 1. Tournament Assist",,126414
+102e9538dbeb674f307a132a68ac7082,2012-08-19,2221754,70,Substitutions,48,Karlsruher SC,16311,", Tactical",94157,
+0062f4f0858744bb74d927eee216e14a,2012-08-19,2221754,85,Substitutions,41,Hamburger SV,18918,", Tactical",30308,
+1e912454da430b6eb605dfec25930304,2012-08-19,2221754,23,Goals,41,Hamburger SV,30418,", Left-footed shot, 1. Tournament Goal Assist: , Pass, 1. Tournament Assist",,16624
+8fe9f534233fb8f885d60a568bf7258b,2012-08-19,2221754,86,Goals,48,Karlsruher SC,50674,", Left-footed shot, 1. Tournament Goal Assist: , Pass, 1. Tournament Assist",,51216
+ac4264ecc8edf9bcfb9a2cc1c6157483,2012-08-19,2221754,31,Goals,48,Karlsruher SC,56376,", Header, 1. Tournament Goal Assist: , Cross, 1. Tournament Assist",,41541
+924bbd92552b9fe0cd71766e772f2584,2012-08-19,2221754,56,Substitutions,48,Karlsruher SC,56376,", Tactical",50674,
+de13f9f7c8bfd45a816cde510fcfbfc7,2012-08-19,2221754,45,Goals,41,Hamburger SV,58379,", Left-footed shot, 1. Tournament Goal Assist: , Pass, 1. Tournament Assist",,69396
+cc3540465d1a96cc364e2fac85c64e59,2012-08-19,2221754,75,Substitutions,41,Hamburger SV,58379,", Tactical",103547,
+0ac343c596ab063a7807551925d699d0,2012-08-19,2221754,60,Cards,41,Hamburger SV,88721,1. Yellow card,,
+887553312ae3818ee2f92370d8cd0e12,2012-08-19,2221754,58,Goals,48,Karlsruher SC,89005,", Direct free kick, 1. Tournament Goal Assist:",,
+6f31e92e582ac298997b1b73da0aa9e5,2012-08-19,2221754,85,Substitutions,41,Hamburger SV,91845,", Tactical",53536,
+66669735ca672692b2fef163bf54c0d4,2012-08-19,2221754,22,Cards,48,Karlsruher SC,126414,"1. Yellow card  , Serious foul",,
+aa7351040fdedba4da1be53b9378f93b,2012-08-19,2221754,82,Substitutions,48,Karlsruher SC,126414,", Risk of booking",33317,
+c2002fda152a9d1b91f558a754c4c89c,2012-08-19,2221755,72,Cards,4795,FC Ingolstadt 04,2464,"1. Yellow card  , Foul",,
+8729d78e38df4337c50a4fd31004d66e,2012-08-19,2221755,15,Goals,83,VfR Aalen,4184,", Header, 1. Tournament Goal Assist: , Corner, 1. Tournament Assist",,25950
+9bb88ab7cc09158fd3c3d35751a16871,2012-08-19,2221755,89,Substitutions,83,VfR Aalen,4184,", Special achievements",40605,
+6369f7a23259a7be6cbe2a1272dc45de,2012-08-19,2221755,77,Substitutions,4795,FC Ingolstadt 04,17025,", Tactical",2077,
+146059a06989b6fa15649f7bc9f36289,2012-08-19,2221755,36,Goals,83,VfR Aalen,25950,", Right-footed shot, 1. Tournament Goal Assist: , Pass, 1. Tournament Assist",,53418
+6013b36640bc68cea03c24ed04625298,2012-08-19,2221755,77,Substitutions,83,VfR Aalen,25950,", Tactical",5034,
+c9e2c9f227bd62fa0fc66a1d9cc4d164,2012-08-19,2221755,67,Substitutions,83,VfR Aalen,29972,", Tactical",39093,
+73528d7da504689108cb20708f9d89a3,2012-08-19,2221755,77,Substitutions,4795,FC Ingolstadt 04,37977,", Tactical",55524,
+9f54ba73501363dd9fdea1ef1cd690e7,2012-08-19,2221755,90,Goals,83,VfR Aalen,40605,", Right-footed shot, 1. Tournament Goal Assist: , Cross, 1. Tournament Assist",,39093
+d5a811d0fd6ec215eb624e6b04a18070,2012-08-19,2221755,18,Cards,4795,FC Ingolstadt 04,82873,"1. Yellow card  , Foul",,
+220c88dfbed175120ac7c5c4c9885c68,2012-08-19,2221755,37,Substitutions,4795,FC Ingolstadt 04,82873,", Tactical",122623,
+e16eb688b8c6ced664605993be75c031,2012-08-18,2221756,23,Goals,35,FC St. Pauli,2453,", Left-footed shot, 1. Tournament Goal Assist: , Pass, 1. Tournament Assist",,30985
+a6f9e022c4144a6cf6c05d3db6a2096c,2012-08-18,2221756,68,Goals,35,FC St. Pauli,2453,", Header, 2. Tournament Goal Assist: , Cross, 1. Tournament Assist",,79501
+ae1c06b704bbe2a098ae852b0765461f,2012-08-18,2221756,84,Substitutions,35,FC St. Pauli,2453,", Special achievements",94213,
+7bf832067056b8bcb88ea0c193e3f3a8,2012-08-18,2221756,64,Substitutions,35,FC St. Pauli,23553,", Tactical",79501,
+5a82ace012fcaf4a274c97bcbb73eb72,2012-08-18,2221756,64,Substitutions,35,FC St. Pauli,30985,", Tactical",94174,
+72a850333d81de681d1a2c088ed9193e,2012-08-18,2221756,73,Substitutions,5280,Offenburger FV,43503,", Tactical",203075,
+da058f6c175f038ad46b8d16fb31426a,2012-08-18,2221756,36,Substitutions,5280,Offenburger FV,57602,", Injury",38437,
+ba8e3a8515b391a3a0bf9c8fb89781eb,2012-08-18,2221756,77,Goals,35,FC St. Pauli,79501,", Right-footed shot, 1. Tournament Goal Assist: , Cross, 1. Tournament Assist",,36207
+4d8edad51a778c8f2f15eb6729c591fd,2012-08-18,2221756,64,Substitutions,5280,Offenburger FV,155827,", Tactical",232514,
+3aaa80875fbd40d6286c2ad811c81dd5,2012-08-19,2221757,-1,Cards,127,SC Paderborn 07,2198,"1. Yellow card  , Foul",,
+12332d376f646311d98f269f05f261db,2012-08-19,2221757,-1,Cards,127,SC Paderborn 07,2201,"1. Yellow card  , Dissent",,
+4c09eda9da873985d901ea44d61d84ff,2012-08-19,2221757,90,Goals,10,Arminia Bielefeld,3858,", Penalty, 1. Tournament Goal Assist: , Fouled player",,78147
+407eb3d3c6aa098b1712783bf7c98ead,2012-08-19,2221757,60,Substitutions,10,Arminia Bielefeld,8616,", Tactical",53521,
+0d4f339222781c29c52f23b6f95397c8,2012-08-19,2221757,62,Substitutions,10,Arminia Bielefeld,12233,", Tactical",51969,
+7f4e0853e5e7919964a331a43c975c2b,2012-08-19,2221757,36,Goals,127,SC Paderborn 07,28252,", Right-footed shot, 1. Tournament Goal Assist: , Pass, 1. Tournament Assist",,22542
+024e93d97e34ba86bec89a30eadbb1a1,2012-08-19,2221757,79,Substitutions,127,SC Paderborn 07,34753,", Tactical",20265,
+acd8bc16b3cefb8f03542964942a7379,2012-08-19,2221757,-1,Cards,10,Arminia Bielefeld,39105,"1. Yellow card  , Foul",,
+d908a0edff1984e10d465d0dc103f159,2012-08-19,2221757,55,Goals,10,Arminia Bielefeld,39105,", Left-footed shot, 1. Tournament Goal Assist: , Cross, 1. Tournament Assist",,78147
+cc8045ccfb2728b2a1292a2691046897,2012-08-19,2221757,72,Substitutions,127,SC Paderborn 07,39372,", Tactical",119037,
+7c7180985df4db2caf6c6b173d955e98,2012-08-19,2221757,83,Substitutions,10,Arminia Bielefeld,56112,", Tactical",77630,
+5d52467708d6c25d619b6198c1b3681f,2012-08-19,2221757,-1,Cards,10,Arminia Bielefeld,77879,"1. Yellow card  , Serious foul",,
+5282390fa14023048f68a2372a243b60,2012-08-19,2221757,86,Goals,10,Arminia Bielefeld,77879,", Right-footed shot, 1. Tournament Goal Assist: , Cross, 1. Tournament Assist",,2122
+a42f9ce603289bdec63911c46acc4fc1,2012-08-19,2221757,-1,Cards,127,SC Paderborn 07,82070,"1. Yellow card  , Foul",,
+9b15362d03349cb245821d804a4c9a5a,2012-08-19,2221757,86,Substitutions,127,SC Paderborn 07,82070,", Tactical",85960,
+2958112d2e1d5ba1ccd01ea9c7625591,2012-08-18,2221758,77,Cards,82,VfL Wolfsburg,4248,"1. Yellow card  , Foul",,
+d9d1ae88e1d4523b12acda06d4fb4170,2012-08-18,2221758,43,Goals,82,VfL Wolfsburg,4248,", Right-footed shot, 1. Tournament Goal Assist: , Pass, 1. Tournament Assist",,56331
+af66ba29a78b4761dd389870c7f7d62f,2012-08-18,2221758,28,Goals,82,VfL Wolfsburg,7427,", Right-footed shot, 1. Tournament Goal Assist: , Shot on goal, 1. Tournament Assist",,32213
+02f92e83fbc07b46e602f031db19694b,2012-08-18,2221758,30,Goals,82,VfL Wolfsburg,7427,", Header, 2. Tournament Goal Assist: , Cross, 1. Tournament Assist",,47592
+6d39f19211b5fb69afa222ce59d71185,2012-08-18,2221758,68,Goals,82,VfL Wolfsburg,7427,", Left-footed shot, 3. Tournament Goal Assist: , Pass, 1. Tournament Assist",,4248
+7d4563ae4a2cb7115b023e3c9008e9c8,2012-08-18,2221758,70,Substitutions,82,VfL Wolfsburg,7427,", Tactical",117674,
+d8277bb54a6ea2d637050f07694d0396,2012-08-18,2221758,62,Substitutions,546,FC Schönberg 95,8174,", Tactical",152899,
+e89bca842278680fb9d204a590450e29,2012-08-18,2221758,46,Substitutions,82,VfL Wolfsburg,32213,", Tactical",94201,
+a2b76039b617bb24fe6a1a32b688f5aa,2012-08-18,2221758,66,Goals,82,VfL Wolfsburg,56331,", Right-footed shot, 1. Tournament Goal Assist: , Header, 1. Tournament Assist",,1094
+1d98a65a9d7f09fb72f69ec35e98266f,2012-08-18,2221758,46,Substitutions,546,FC Schönberg 95,146239,", Tactical",238449,
+41983f643c0c71c91705e0c4a5460865,2012-08-18,2221758,71,Substitutions,546,FC Schönberg 95,171006,", Tactical",101616,
+9c40e379d1c07eff90873e04a35224a6,2012-08-20,2221759,88,Goals,27,Bayern Munich,532,", Right-footed shot, 1. Tournament Goal Assist: , Cross, 2. Tournament Assist",,86792
+4294005dd276c72ae37c29ca04410fde,2012-08-20,2221759,46,Substitutions,109,SSV Jahn Regensburg,2343,", Not reported",60006,
+7c6c07046096c3921131a584f7d0dbef,2012-08-20,2221759,75,Substitutions,27,Bayern Munich,4360,", Not reported",2514,
+a20719086c5e24f349e0e90f7fb0c719,2012-08-20,2221759,46,Substitutions,109,SSV Jahn Regensburg,20258,", Not reported",60021,
+a9dbdba3598b31e6dd5ea4a876de54bf,2012-08-20,2221759,46,Substitutions,27,Bayern Munich,22068,", Not reported",86792,
+0f4bf8635d7fcf43a874a3a403b08a17,2012-08-20,2221759,90,Cards,27,Bayern Munich,26485,1. Yellow card,,
+ac7fdf196ef8468f21242fc1ff2a8fca,2012-08-20,2221759,75,Cards,27,Bayern Munich,34572,1. Yellow card,,
+ef4bdeef936db9aa24097041ded3fcad,2012-08-20,2221759,32,Goals,27,Bayern Munich,34572,", Right-footed shot, 1. Tournament Goal Assist: , Pass, 1. Tournament Assist",,22068
+de2f8e76ad18dc4bdca7785a9bb3dcbd,2012-08-20,2221759,80,Goals,27,Bayern Munich,34572,", Right-footed shot, 2. Tournament Goal Assist: , Pass, 1. Tournament Assist",,86792
+3975fec2af64bb281454b5f6add7fc13,2012-08-20,2221759,81,Substitutions,27,Bayern Munich,34572,", Not reported",532,
+b72417f25c4008cda2a41530db91d5a8,2012-08-20,2221759,76,Cards,109,SSV Jahn Regensburg,44634,1. Yellow card,,
+4ce7b021a5723e19a29b6cbe16e492a7,2012-08-20,2221759,85,Substitutions,109,SSV Jahn Regensburg,58029,", Not reported",110495,
+9079020b5b76a4e9260df9b93828140b,2012-08-20,2221759,38,Cards,27,Bayern Munich,58358,1. Yellow card,,
+c2445243a419d52afe374fc9588284d7,2012-08-20,2221759,60,Goals,27,Bayern Munich,86792,", Direct free kick, 1. Tournament Goal Assist:",,
+970714bdf58dbafefdf4c3f82c1ba2c4,2012-08-18,2221760,3,Goals,15,Bayer 04 Leverkusen,691,", Right-footed shot, 1. Tournament Goal Assist: , Pass, 1. Tournament Assist",,61087
+ac5a5483b91b7d22c533b8451cfa646b,2012-08-18,2221760,81,Goals,15,Bayer 04 Leverkusen,6237,", Right-footed shot, 1. Tournament Goal Assist: , Pass, 1. Tournament Assist",,38434
+36b80a9655b60f49b334db78ad9a3bf9,2012-08-18,2221760,85,Substitutions,15,Bayer 04 Leverkusen,6237,", Special achievements",89708,
+7004d1c15526d1ada808fad7d9706cfa,2012-08-18,2221760,30,Cards,113,FC Carl Zeiss Jena,19583,1. Yellow card,,
+8291f161fcc473f0eed9f36e46d88312,2012-08-18,2221760,77,Substitutions,113,FC Carl Zeiss Jena,19583,", Tactical",120267,
+75fa47d05c71c2086bb6ef885533b113,2012-08-18,2221760,68,Substitutions,15,Bayer 04 Leverkusen,28947,", Tactical",43274,
+428d567b42d82564d1333484c329a31a,2012-08-18,2221760,42,Cards,113,FC Carl Zeiss Jena,43441,1. Yellow card,,
+5bb1eec086bb8e6e6812c8465d240a0a,2012-08-18,2221760,85,Substitutions,113,FC Carl Zeiss Jena,43441,", Tactical",214304,
+01759220a92dc18d45d5c1bc90fcba14,2012-08-18,2221760,15,Goals,15,Bayer 04 Leverkusen,61087,", Right-footed shot, 1. Tournament Goal Assist: , Pass, 1. Tournament Assist",,58205
+78b92748b7865f547dcc5ebfeeb34608,2012-08-18,2221760,68,Substitutions,15,Bayer 04 Leverkusen,61087,", Special achievements",39102,
+b20f2580b1067694fa3bcbe42ed0de8f,2012-08-18,2221760,90,Goals,15,Bayer 04 Leverkusen,89708,", Tap-in, 1. Tournament Goal Assist: , Shot on goal, 2. Tournament Assist",,58205
+c57bbd46c358528caa3d8710246ffb7e,2012-08-18,2221760,69,Substitutions,113,FC Carl Zeiss Jena,124243,", Tactical",121463,
+eba346fc39841468a111cdfdebad1f06,2012-08-19,2221761,70,Substitutions,10589,SV Roßbach/Verscheid,2549,", Not reported",9573,
+11b8ec4773fc3b79e3b7fb9c8464c784,2012-08-19,2221761,72,Substitutions,39,1.FSV Mainz 05,2923,", Not reported",26486,
+18cec6383cfc7e2f39e01a8be6553983,2012-08-19,2221761,68,Substitutions,39,1.FSV Mainz 05,30070,", Not reported",51176,
+7013aefc7bde4358ae07f07c4e2f9184,2012-08-19,2221761,47,Goals,39,1.FSV Mainz 05,34787,", Right-footed shot, 1. Tournament Goal Assist:",,
+f4ba242ac92fad0a20f44c7e4595671b,2012-08-19,2221761,5,Goals,39,1.FSV Mainz 05,39106,", Header, 1. Tournament Goal Assist: , Corner, 1. Tournament Assist",,2923
+42eef8b7e29ec4b9bd7de76bbefe9332,2012-08-19,2221761,43,Goals,39,1.FSV Mainz 05,39106,", Right-footed shot, 2. Tournament Goal Assist: , Pass, 1. Tournament Assist",,45660
+190c193ec4cc5417b1617c358c76f311,2012-08-19,2221761,62,Goals,39,1.FSV Mainz 05,45660,", Right-footed shot, 1. Tournament Goal Assist: , Pass, 2. Tournament Assist",,2923
+18788787a12a616427c2ac9ccda57296,2012-08-19,2221761,77,Substitutions,39,1.FSV Mainz 05,45660,", Not reported",142281,
+5f94c4f1300d005845e825bda10f01d2,2012-08-19,2221761,82,Substitutions,10589,SV Roßbach/Verscheid,104194,", Not reported",195478,
+f53a73cf52ce5298af2f697938f76c47,2012-08-19,2221761,53,Substitutions,10589,SV Roßbach/Verscheid,119201,", Not reported",93786,
+fee7d9c9a5fd3e4353e87daa68ab92a3,2012-08-18,2221762,46,Substitutions,533,TSG 1899 Hoffenheim,20444,", Not reported",9354,
+a0ec0a20cd824df79137e7b3e45eaa2c,2012-08-18,2221762,31,Goals,584,Berliner AK 07,54840,", Left-footed shot, 1. Tournament Goal Assist: , 1. Tournament Assist",,84454
+b170b83f5210ed2d94bff7c4f3c6f978,2012-08-18,2221762,46,Substitutions,533,TSG 1899 Hoffenheim,57051,", Not reported",111881,
+4d40030f00f3c4aa99be188f305894b9,2012-08-18,2221762,3,Goals,584,Berliner AK 07,72432,", Left-footed shot, 1. Tournament Goal Assist: , 1. Tournament Assist",,57654
+21ccee4ac79d4e640cbc013e0231214d,2012-08-18,2221762,49,Goals,584,Berliner AK 07,72432,", Right-footed shot, 2. Tournament Goal Assist:",,
+bd1f9b6f55dd3d11f48bb86a3deb1451,2012-08-18,2221762,64,Substitutions,584,Berliner AK 07,72432,", Not reported",33665,
+10ea234f67d3a7d4a81d16f25005688e,2012-08-18,2221762,40,Goals,584,Berliner AK 07,86434,", Left-footed shot, 1. Tournament Goal Assist: , 2. Tournament Assist",,84454
+a6e0d26cc6712d9dbb23b911b9dff927,2012-08-18,2221762,73,Substitutions,584,Berliner AK 07,86434,", Not reported",158376,
+390a252357d2e8ebf6376b0efc824941,2012-08-18,2221762,59,Substitutions,584,Berliner AK 07,114058,", Not reported",155121,
+4f0bf418a35f9f156e7730a616b762ce,2012-08-18,2221762,60,Substitutions,533,TSG 1899 Hoffenheim,131789,", Not reported",52530,
+b208bd8647e91f89d2c404a4622be8ae,2012-08-19,2221763,76,Substitutions,91,Preußen Münster,674,", Tactical",59949,
+c702aa4b96fe97509e6b722bdc376fc7,2012-08-19,2221763,65,Substitutions,86,SV Werder Bremen,1277,", Tactical",75489,
+49dec92add3aaa5e3a3c905a9961ec76,2012-08-19,2221763,61,Substitutions,91,Preußen Münster,1748,", Tactical",4285,
+4d4e180a5b88cc0ade131c83a62f6c7f,2012-08-19,2221763,47,Cards,91,Preußen Münster,2624,"1. Yellow card  , Foul",,
+1383611fccb18236fb82fab3e1eac8c8,2012-08-19,2221763,91,Substitutions,86,SV Werder Bremen,4687,", Tactical",42033,
+1dd4b95cc453949c0e71a7ce3c99e10e,2012-08-19,2221763,54,Goals,91,Preußen Münster,26865,", Right-footed shot, 1. Tournament Goal Assist: , Pass, 1. Tournament Assist",,55608
+8884d94edbab601879ae223ebd89a1e9,2012-08-19,2221763,81,Goals,91,Preußen Münster,26865,", Left-footed shot, 2. Tournament Goal Assist: , Pass, 1. Tournament Assist",,19037
+f1fb12036efb6be14a4e7544466723fe,2012-08-19,2221763,118,Goals,91,Preußen Münster,26865,", Right-footed shot, 3. Tournament Goal Assist: , Pass, 1. Tournament Assist",,32950
+6a1420df41050ac0680153acdf07dcd5,2012-08-19,2221763,45,Goals,86,SV Werder Bremen,27805,", Right-footed shot, 1. Tournament Goal Assist: , Pass, 1. Tournament Assist",,88755
+a846061a1945121a18aae351a3cb8a51,2012-08-19,2221763,59,Substitutions,86,SV Werder Bremen,27805,", Injury",41384,
+b2ec12a825ca16498ffb0283e0a9c302,2012-08-19,2221763,87,Cards,86,SV Werder Bremen,34322,"Yellow card  , Foul",,
+3d9bbf535dd2658fd66d7cba7f6ff15c,2012-08-19,2221763,108,Cards,86,SV Werder Bremen,34322,"Second yellow  , Unsporting behaviour",,
+086260be0a6070e12aa5abb2c8950f0f,2012-08-19,2221763,96,Goals,91,Preußen Münster,55608,", Right-footed shot, 1. Tournament Goal Assist: , Pass, 1. Tournament Assist",,26865
+1cd5ca1428611322cce04c030105e7a9,2012-08-19,2221763,108,Cards,91,Preußen Münster,59949,"1. Yellow card  , Foul",,
+186e4883054a2ff862b824b509651adc,2012-08-19,2221763,50,Cards,86,SV Werder Bremen,74295,"1. Yellow card  , Foul",,
+e595708aef85f69f3f149a00a57c1ad4,2012-08-19,2221763,67,Goals,86,SV Werder Bremen,75489,", Header, 1. Tournament Goal Assist: , Cross, 1. Tournament Assist",,41384
+aaabf4874a62e52168e5fb0c83e78654,2012-08-19,2221763,46,Substitutions,91,Preußen Münster,112617,", Tactical",26061,
+212828b7a753cb9125fc18b046aa1fc8,2012-08-18,2221764,67,Substitutions,65,SpVgg Greuther Fürth,258,", Tactical",45986,
+9d16745015d22baf679adfbcbc130d09,2012-08-18,2221764,27,Cards,65,SpVgg Greuther Fürth,31169,"1. Yellow card  , Foul",,
+d6039138e7df233cb14f7595bdea97d7,2012-08-18,2221764,77,Substitutions,65,SpVgg Greuther Fürth,31610,", Tactical",82110,
+f1d6491c58458cf86885561a273bc04c,2012-08-18,2221764,58,Substitutions,65,SpVgg Greuther Fürth,31864,", Tactical",224884,
+31b1f8f03a6d42c046a7ffeca6f3bcf4,2012-08-18,2221764,28,Goals,107,Kickers Offenbach,33291,", Penalty, 1. Tournament Goal Assist: Handball by",,31169
+db19e7b621a5d527212187c6961db2e0,2012-08-18,2221764,88,Substitutions,107,Kickers Offenbach,33291,", Tactical",39416,
+69c0baf4bde59685a4b38673e79e75be,2012-08-18,2221764,37,Cards,65,SpVgg Greuther Fürth,45464,"1. Yellow card  , Foul",,
+cfeae4e30a4aeb4cfd59d756497ac659,2012-08-18,2221764,80,Substitutions,107,Kickers Offenbach,48313,", Tactical",54070,
+df9a2658b9a546843d4923a79c819f73,2012-08-18,2221764,90,Goals,107,Kickers Offenbach,54070,", Right-footed shot, 1. Tournament Goal Assist: , Pass, 1. Tournament Assist",,31741
+881ca98af75ae62df67587b02ebbb725,2012-08-18,2221764,49,Cards,65,SpVgg Greuther Fürth,60028,"Yellow card  , Foul",,
+3d962e9a1674ad82ec65a978c15b76d1,2012-08-18,2221764,55,Cards,65,SpVgg Greuther Fürth,60028,"Second yellow  , Repeated Foul",,
+c9eb5e96c08a20d409eb3879076bfe26,2012-08-18,2221764,88,Cards,65,SpVgg Greuther Fürth,224884,"Red card  , Violent conduct",,
+5f99fa035420253e6e4c4ec560efdc34,2012-08-19,2221765,46,Substitutions,24,Eintracht Frankfurt,1496,", Not reported",332,
+b2d8d8fc27dda1b87f2e60112c888767,2012-08-19,2221765,66,Cards,94,FC Erzgebirge Aue,1562,"Yellow card  , Foul",,
+0842d9d25941bdf85dd84efcb8962cb1,2012-08-19,2221765,71,Cards,94,FC Erzgebirge Aue,1562,"Second yellow  , Repeated Foul",,
+c8283080f71ef0795062192b2ebe946f,2012-08-19,2221765,76,Cards,94,FC Erzgebirge Aue,2175,"1. Yellow card  , Foul",,
+7af3073930781b36f963c7d6240d204d,2012-08-19,2221765,21,Goals,94,FC Erzgebirge Aue,6890,", Penalty, 1. Tournament Goal Assist: , Fouled player",,74900
+abfddc80633e81e76a2ee6c7545d3063,2012-08-19,2221765,46,Substitutions,94,FC Erzgebirge Aue,17902,", Not reported",55099,
+6e18ae26acf090d8606163041c70220c,2012-08-19,2221765,87,Cards,94,FC Erzgebirge Aue,31569,"1. Yellow card  , Shooting ball",,
+9ea1720e2fd6e8bcb11b1093c07f5dcf,2012-08-19,2221765,45,Cards,94,FC Erzgebirge Aue,33668,"1. Yellow card  , Dissent",,
+30536d3a74deb3ebf4548754d7cbf5ef,2012-08-19,2221765,68,Substitutions,94,FC Erzgebirge Aue,33668,", Not reported",2175,
+f018c7aa822ca08d419302f2c8b4e431,2012-08-19,2221765,90,Substitutions,94,FC Erzgebirge Aue,34232,", Not reported",35195,
+6d5622e927e989b90a55622c96d91b6d,2012-08-19,2221765,31,Cards,24,Eintracht Frankfurt,35183,"1. Yellow card  , Foul",,
+4f512988c3010608b25198bab34ee0e6,2012-08-19,2221765,75,Substitutions,24,Eintracht Frankfurt,37247,", Not reported",33729,
+53a565c73dc3371f12e8368e2b1a90e7,2012-08-19,2221765,19,Cards,24,Eintracht Frankfurt,45672,"Red card  , Professional foul",,
+3d6465b8a04e1e52917b38c44c1eb131,2012-08-19,2221765,60,Goals,94,FC Erzgebirge Aue,74900,", Left-footed shot, 1. Tournament Goal Assist: , Pass, 1. Tournament Assist",,33668
+6d5812853c61d7fc2586595d34ae033b,2012-08-19,2221765,90,Goals,94,FC Erzgebirge Aue,74900,", Left-footed shot, 2. Tournament Goal Assist: , 1. Tournament Assist",,34232
+376486898303c17b9093cccca2e77756,2012-08-19,2221765,20,Substitutions,24,Eintracht Frankfurt,98249,", Not reported",447,
+27613bc0cc07b1720454386783c8c281,2012-08-19,2221766,67,Cards,38,Fortuna Düsseldorf,886,"1. Yellow card  , Foul",,
+5582b33231e38161297e485b66f37bf2,2012-08-19,2221766,90,Substitutions,38,Fortuna Düsseldorf,1075,", Delay",2712,
+4bdd7e2132b9ff8cdf32539017b617e5,2012-08-19,2221766,76,Goals,38,Fortuna Düsseldorf,1568,", Header, 1. Tournament Goal Assist: , Cross, 1. Tournament Assist",,31218
+385ce4ded3e6fbd9669dc99a9abb7520,2012-08-19,2221766,60,Substitutions,38,Fortuna Düsseldorf,6457,", Tactical",24232,
+b882213bb44332edcd3d1bafd8132748,2012-08-19,2221766,65,Substitutions,38,Fortuna Düsseldorf,8640,", Injury",20778,
+aced719fb52b2d64108fcded1f7083a9,2012-08-19,2221766,55,Cards,38,Fortuna Düsseldorf,31216,"1. Yellow card  , Mass confrontation",,
+ae8730075ab91de82ebb004b9a02f64f,2012-08-19,2221766,86,Cards,110,SV Wacker Burghausen,40087,"1. Yellow card  , Diving",,
+b5245975a944c94cabe5f1222362570b,2012-08-19,2221766,89,Cards,38,Fortuna Düsseldorf,51972,"1. Yellow card  , Foul",,
+fa0e287840157f9da93284093be775f0,2012-08-19,2221766,55,Cards,110,SV Wacker Burghausen,57934,"1. Yellow card  , Mass confrontation",,
+987dd2365e3e74a3ec6872d4882987bc,2012-08-19,2221766,83,Substitutions,110,SV Wacker Burghausen,57934,", Tactical",84634,
+a546676a66f034cf67dd2d82aa76d26c,2012-08-19,2221766,70,Cards,110,SV Wacker Burghausen,57940,"1. Yellow card  , Foul",,
+4c0be15e90a53db627cba3bffbe4bb54,2012-08-19,2221766,80,Substitutions,110,SV Wacker Burghausen,57940,", Tactical",40087,
+8c719c93f0231f387f52ef33914f87d7,2012-08-19,2221766,64,Substitutions,110,SV Wacker Burghausen,72111,", Tactical",120301,
+cb2c71de095bf03c31a77bc3577b8275,2012-08-20,2221767,77,Cards,129,SG Dynamo Dresden,1442,"1. Yellow card  , Time wasting",,
+91cc8a7dd65279f88757c087a2d67c39,2012-08-20,2221767,89,Substitutions,129,SG Dynamo Dresden,1442,", Tactical",94210,
+222601eeb8ce708e9b2a425dac564da8,2012-08-20,2221767,46,Substitutions,21,Chemnitzer FC,31745,", Tactical",35779,
+473d2ffe9dac02c45d439a46c16d293a,2012-08-20,2221767,32,Goals,129,SG Dynamo Dresden,34713,", Header, 1. Tournament Goal Assist: , Header, 1. Tournament Assist",,34076
+638fde7463dca9ae872ec391b27e7e93,2012-08-20,2221767,72,Substitutions,21,Chemnitzer FC,35425,", Tactical",51614,
+f150b7b92d47d8972c5871cb73796e09,2012-08-20,2221767,86,Substitutions,129,SG Dynamo Dresden,46716,", Not reported",5036,
+4ad4784b2e3f201b6be6b6478049b7ac,2012-08-20,2221767,72,Substitutions,21,Chemnitzer FC,50558,", Tactical",57669,
+df655e48138ef6fac389196c440f2c5d,2012-08-20,2221767,42,Goals,129,SG Dynamo Dresden,57542,", Right-footed shot, 1. Tournament Goal Assist: , Cross, 1. Tournament Assist",,1442
+11c6c0e1059ede504ec47c351b220d32,2012-08-20,2221767,80,Substitutions,129,SG Dynamo Dresden,57542,", Resting",21023,
+4071e3bafd2b50848a5e2ff417015a65,2012-08-20,2221767,84,Goals,129,SG Dynamo Dresden,57921,", Own-goal Assist: , Cross, 1. Tournament Assist",,46716
+ca5f0b97b21adb78ab396498b5351de6,2012-08-20,2221767,50,Cards,129,SG Dynamo Dresden,111266,"1. Yellow card  , Foul",,
+3467cb12295a6033cce88dc321a0dce9,2012-08-18,2221768,14,Cards,8,Alemannia Aachen,505,"1. Yellow card  , Serious foul",,
+eb2775f1cfa9b676a3b25577cc4f2781,2012-08-18,2221768,75,Substitutions,8,Alemannia Aachen,505,", Tactical",35716,
+ce7ad20f95193e5f5e94764a3ccc074e,2012-08-18,2221768,81,Substitutions,18,Borussia Mönchengladbach,13023,", Tactical",1428,
+d2d4d531eb04d73391c72aaefc3809c8,2012-08-18,2221768,64,Cards,8,Alemannia Aachen,16143,"1. Yellow card  , Foul",,
+ec758d5e534eea28c541a9fabd929a65,2012-08-18,2221768,70,Goals,18,Borussia Mönchengladbach,26063,", Left-footed shot, 1. Tournament Goal Assist: , Pass, 1. Tournament Assist",,72522
+bf750de7acb6386f21e0885bbc1fe758,2012-08-18,2221768,90,Substitutions,18,Borussia Mönchengladbach,26063,", Special achievements",19305,
+3c42dbe68de7664693d757e0f1b22b62,2012-08-18,2221768,80,Substitutions,8,Alemannia Aachen,32207,", Tactical",53432,
