@@ -11,6 +11,7 @@ library(dplyr)
 library(ggplot2)
 library(shiny)
 library(shinydashboard)
+library(readr)
 ```
 
 ```{r}
@@ -26,7 +27,54 @@ library(shinydashboard)
 ## 2. L'impact de l'âge sur le temps de jeu
 ```{r}
 
+players <- read.csv("./data/players.csv")
+appearances <- read.csv("./data/appearances.csv")
+
+# Filtre les players qui n'ont pas de date_of_birth
+players <- players %>% filter(date_of_birth != '')
+
+# Calcule l'âge des joueurs en années
+players$age <- as.integer(difftime(Sys.Date(), as.Date(players$date_of_birth), units = "days") / 365.25)
+
+# Fusionne les deux jeux de données (sur player_id)
+data <- left_join(appearances, players, by = "player_id")
+
+# supprime les ages incalculés
+data <- data %>% filter(!is.na(age))
+
+# Crée la colonne 'age_group' pour les tranches d'âge
+data <- data %>%
+  mutate(age_group = cut(age, breaks = seq(15, 60, by = 5), right = FALSE, labels = c("15-19", "20-24", "25-29", "30-34", "35-39", "40-44", "45-49", "50-54", "55-59")))
+
+# supprime les age_group incalculés
+data <- data %>% filter(!is.na(age_group))
+
+# 1. **Boxplot** pour visualiser la dispersion des minutes jouées par tranche d'âge
+ggplot(data, aes(x = age_group, y = minutes_played)) +
+  geom_boxplot() +
+  labs(title = "Temps de jeu par tranche d'âge",
+       x = "Tranche d'âge",
+       y = "Minutes jouées") +
+  theme_minimal()
+
+# 2. **Line Chart** pour visualiser la moyenne des minutes jouées par tranche d'âge
+
+# Calcule la moyenne des minutes jouées par tranche d'âge
+age_groups <- data %>%
+  group_by(age_group) %>%
+  summarise(mean_minutes_played = mean(minutes_played, na.rm = TRUE))
+
+ggplot(age_groups, aes(x = age_group, y = mean_minutes_played, group = 1)) +
+  geom_line() +
+  geom_point() +
+  labs(title = "Moyenne des minutes jouées par tranche d'âge",
+       x = "Tranche d'âge",
+       y = "Moyenne des minutes jouées") +
+  theme_minimal()
+
 ```
+
+On constate que plus les joueurs sont âgés, plus ils ont de chances d'avoir un temps de jeu élevé durant un match. À l'inverse, plus le joueur est jeune, plus son temps de jeu est variable et en moyenne plus bas qu'un joueur plus âgé.
 
 ## 3. Discipline et agressivité par championnat
 ```{r}
