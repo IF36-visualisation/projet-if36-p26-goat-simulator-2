@@ -5,9 +5,13 @@ Les données proviennent du site Transfermarkt, une plateforme de référence mo
 Téléchargeable [ici](https://www.kaggle.com/datasets/davidcariboo/player-scores?resource=download)  
 
 ou  
->pip install kaggle
->chmod 600 ~/.kaggle/kaggle.json
->kaggle datasets download -d davidcariboo/player-scores --unzip -p ./data
+```bash
+   pip install kaggle
+```
+puis
+```bash
+   kaggle datasets download -d davidcariboo/player-scores --unzip -p ./data
+```
 
 Ce jeu de données a été créé pour offrir une base propre, structurée et régulièrement mise à jour (automatiquement via des scripts Python) pour l'analyse du football mondial. Il est utilisé par les data scientists pour la prédiction de valeurs marchandes, l'analyse de performance des joueurs ou le scouting.
 
