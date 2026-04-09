@@ -6,6 +6,10 @@ Téléchargeable [ici](https://www.kaggle.com/datasets/davidcariboo/player-score
 
 ou  
 ```bash
+   rm data/*
+```
+puis
+```bash
    pip install kaggle
 ```
 puis
