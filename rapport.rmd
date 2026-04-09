@@ -1,0 +1,94 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+
+```{r}
+# import libraries
+library(tibble)
+library(dplyr)
+library(ggplot2)
+library(shiny)
+library(shinydashboard)
+```
+
+```{r}
+# load and process dataset
+
+```
+
+## 1. L'efficacité offensive : Buts vs Passes décisives
+```{r}
+
+```
+
+## 2. L'impact de l'âge sur le temps de jeu
+```{r}
+
+```
+
+## 3. Discipline et agressivité par championnat
+```{r}
+
+```
+
+## 4. Corrélation entre Valeur Marchande et Performance
+```{r}
+
+```
+
+## 5. Évolution historique des prix des transferts
+```{r}
+
+```
+
+## 6. Balance commerciale des clubs (Achats vs Ventes)
+```{r}
+
+```
+
+## 7. Domination à domicile vs Extérieur
+```{r}
+
+```
+
+## 8. Analyse des systèmes tactiques les plus victorieux
+```{r}
+
+```
+
+## 9. Répartition des nationalités dans les grands championnats
+```{r}
+
+```
+
+## 10. Relation entre Taille (Hauteur) et Position sur le terrain
+```{r}
+
+```
+
+## 11. Analyse des moments les plus cruciaux au sein d'un match Y a-t-il des tranches horaires où les buts et événements décisifs sont statistiquement plus fréquents ?
+```{r}
+
+```
+
+## 12. Recherche d'une relation entre pays d'origine et poste sur le terrain La nationalité d'un joueur est-elle statistiquement liée au poste qu'il occupe sur le terrain ?
+```{r}
+
+```
+
+## 13. Étude de l'impact des grandes affluence sur les résultats d'une équipe Les clubs jouant devant de grandes foules obtiennent-ils de meilleurs résultats ?
+```{r}
+
+```
+
+## 14. L'impact des agents sur la valeur marchande d'un joueur ? Existe-t-il un écart significatif de valeur marchande entre les joueurs représentés et ceux sans agent déclaré ?
+```{r}
+
+```
+
+## 15. Identification des clubs performants pour faire évoluer leurs joueurs Quels clubs créent le plus de valeur sur leurs joueurs formés ?
+```{r}
+
+```
