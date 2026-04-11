@@ -12,6 +12,7 @@ library(ggplot2)
 library(shiny)
 library(shinydashboard)
 library(readr)
+library(ggrepel)
 ```
 
 ```{r}
@@ -82,9 +83,120 @@ On constate que plus les joueurs sont âgés, plus ils ont de chances d'avoir un
 ```
 
 ## 4. Corrélation entre Valeur Marchande et Performance
+
+Aujourd’hui, de nombreux analystes, spécialistes ou simples supporters s’interrogent sur l’évolution du marché des joueurs et sur la légitimité de leur valorisation. Cette étude vise donc à tenter de répondre à cette question à travers la recherche d’une corrélation entre les performances d’un joueur, ses contributions décisives et sa valorisation marchande.
+
+Dans un premier temps, énumérons les données dont nous avons besoin pour notre étude :
+
+-le nombre total de buts d’un joueur (somme des buts lors de chacune de ses apparitions)
+-le nombre total de passes décisives d’un joueur (même calcul que pour les buts)
+-en additionnant ces deux variables, nous obtenons le nombre total de contributions décisives
+-la valorisation actuelle du joueur en euros, ainsi que sa plus haute valorisation enregistrée
+-le nom des joueurs pour pouvoir les identifier et faciliter l’analyse
+
+Avec ces données, nous avons d’abord tenté de créer un graphique en nuage de points (scatter plot) prenant en compte la valeur marchande actuelle d’un joueur et le total de ses contributions décisives en essayant de tracer une relation via une régression linéaire (geom_smooth).
+
 ```{r}
+#loading des DFs players et appearances que nous allons utiliser
+players <- read_csv(file.path(path, "players.csv"))
+appearances <- read_csv(file.path(path, "appearances.csv"))
+
+#premier traitement sur les joueurs :  nous nous intéressons seulement aux joueurs encore en activités car les statistiques seront faussées, car pas pris sur le même interval de temps (juillet 2012 -> mars 2026)
+players<- players %>% filter(!is.na(current_club_id))
+
+#création du DF contributions qui retient et calcul les buts et les passes décisives par joueurs en fonction de ces apparences lors des matchs référencés.
+contributions <- appearances %>% group_by(player_id) %>% summarise( total_goals = sum(goals), total_assists = sum(assists))
+contributions <- contributions %>% mutate(total_contribution = total_goals+ total_assists)
+                                                           
+#on créer le dataset DATA qui regroupe les caractéristiques essentiels des joueurs pour cette analyse (contributions décisives, valeurs marchandes et noms) puis on le réduit en enlevant les valeurs manquantes (NA).
+data <- players %>%
+  left_join(contributions, by = "player_id") %>%
+  select(player_id, first_name, last_name, total_contribution, market_value_in_eur,position, highest_market_value_in_eur,sub_position)
+
+data <- data %>% transmute(position,sub_position,total_contribution,market_value_in_eur,highest_market_value_in_eur,player_id, name = paste(first_name, last_name))
+data <- data %>% filter(!is.na(market_value_in_eur))
+data <- data %>% filter(!is.na(total_contribution))
+
+#Création d'un graphique en point qui montre la relation entre la valeur marchande actuelle d'un joueur et sa performance (ces contributions décisives)
+
+data %>% ggplot(aes(x = market_value_in_eur, y = total_contribution)) +
+  geom_point(alpha = 0.4, color = "blue")  +
+  labs(
+    title = "Relation entre valeur marchande et performance",
+    subtitle = "Contribution offensive (buts + passes)",
+    x = "Valeur marchande",
+    y = "Contributions décisives"
+  ) +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(face = "bold", size = 14),
+    axis.text = element_text(size = 10)
+  ) + geom_text_repel(
+    data = data %>%
+      filter(
+        total_contribution >= 400 |
+          market_value_in_eur > 100000000
+      ),aes(label = name),
+    size = 3,
+    color = "black"
+  )+ geom_smooth(method = "lm", color = "red", se = FALSE)
 
 ```
+Cette première étude n’est pas totalement concluante :
+
+En effet nous retrouvons :
+-des joueurs avec énormément de contributions (+500) et une valeur marchande moyenne (ex : Cristiano Ronaldo, Lionel Messi, Robert Lewandowski)
+-des joueurs avec des valeurs marchandes très élevées (+120 000 000 €) qui ne dépassent pas (ou à peine) une centaine de contributions (Declan Rice, Pedri, Federico Valverde)
+
+Après analyse, ces deux “incohérences” s’expliquent par d’autres facteurs :
+
+-l’âge
+-la position sur le terrain
+
+En effet, les joueurs en fin de carrière voient leurs performances décliner avec l’âge, ce qui diminue leur valeur marchande. De plus, comme nous prenons en compte l’ensemble des contributions décisives depuis juillet 2012 jusqu’à mars 2026, nous avons décidé de changer d’approche et de sélectionner plutôt la plus haute valorisation atteinte par joueur sur la période.
+
+Un autre aspect qui ressort de cette étude est que la performance d’un défenseur ou d’un milieu à vocation défensive ne peut pas être correctement mesurée par les contributions décisives offensives. Pour plus de cohérence et de fidélité, nous avons donc choisi de limiter notre étude aux joueurs à vocation offensive (attaquants ou milieux offensifs → variables position et sub_position de players).
+
+Nous répétons ainsi le graphique avec en abscisse la valorisation maximale et en ordonnée le nombre de contributions décisives des joueurs offensifs.
+
+```{r}
+#Création d'un second  scatter plot qui montre la relation entre la valeur marchande maximale ateinte par un joueur à vocation offensive (depuis 2012) et sa performance (ces contributions décisives)
+data_attaquant <- data %>% filter(position == "Attack" | position == "Midfield" & sub_position == "Attacking Midfield")
+
+data_attaquant %>% ggplot(aes(x= highest_market_value_in_eur,y= total_contribution)) +
+  geom_point(alpha = 0.4, color = "blue")  +
+  labs(
+    title = "Relation entre la plus grande valeur marchande et la performance",
+    subtitle = "Contribution offensive (buts + passes) selection parmis les attaquants",
+    x = "Plus grande Valeur marchande",
+    y = "Contributions décisives"
+  ) +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(face = "bold", size = 14),
+    axis.text = element_text(size = 10)
+  ) + geom_text_repel(
+    data = data_attaquant %>%
+      filter(
+        total_contribution >= 400 |
+        highest_market_value_in_eur > 125000000
+      ),aes(label = name),
+    size = 3,
+    color = "black"
+  )+
+  geom_smooth(method = "lm", color = "red", se = FALSE)
+
+```
+Il en résulte une corrélation légèrement plus cohérente, mais qui reste, selon nous, insatisfaisante.
+
+En effet, les points restent très dispersés et ne sont pas toujours centrés autour de la droite, notamment à cause des valeurs extrêmes (outliers).
+
+En conclusion, on peut affirmer que la valorisation d’un joueur est influencé par ses contribution décisives mais n'est pas limité à cette donnée. Certes, plus un joueur est efficace et participe à des buts, plus sa valeur marchande tend à augmenter, mais ce n’est pas le seul facteur déterminant pour plusieurs raisons :
+
+- ces contributions ne permettent pas de décrire totalement la performance d’un joueur, (en particulier pour les joueurs à rôle défensif)
+- la valorisation dépend également des mécanismes du marché (concurrence, investissement à court ou long terme en fonction de l'âge du joueur, offre et demande, championnats, image du joueur, etc...), qui restent difficiles à quantifier.
+
+Il serait donc pertinent de s’intéresser également à l’évolution du marché et des prix des transferts au cours des années afin de mieux appréhender ces dynamiques.
 
 ## 5. Évolution historique des prix des transferts
 ```{r}
