@@ -78,9 +78,112 @@ ggplot(age_groups, aes(x = age_group, y = mean_minutes_played, group = 1)) +
 On constate que plus les joueurs sont âgés, plus ils ont de chances d'avoir un temps de jeu élevé durant un match. À l'inverse, plus le joueur est jeune, plus son temps de jeu est variable et en moyenne plus bas qu'un joueur plus âgé.
 
 ## 3. Discipline et agressivité par championnat
-```{r}
 
+Y a-t-il un championnat où les cartons sont plus souvent distribués que dans les autres, ou au contraire des championnats où les joueurs sont plus disciplinés ? C’est la question à laquelle nous allons essayer de répondre aujourd’hui. 
+
+Nous allons examiner cela en comparant la moyenne de cartons reçus par match pour chaque championnat national (Ligue 1, Premier League, LaLiga…).
+
+Pour cela, nous avons besoin des données suivantes :
+
+- les noms des championnats ainsi que le pays dans lequel ils se déroulent ;
+- la moyenne de cartons rouges et jaunes par championnat, triée par moyenne de cartons jaune reçus.
+
+Grâce à ces données, nous allons créer un graphique en bar (barchart) avec la moyenne de cartons par match pour chaque championnat.
+
+Certains championnats ont la réputation d'être plus "rugueux" que d'autres. On peut donc s'attendre à observer des différences significatives dans le nombre de cartons distribués selon les ligues, avec peut-être les championnats méditerranéens plus sanctionnés que les ligues du nord de l'Europe.
+
+```{r fig-width: 16}
+# --- 1. Chargement des données ---
+appearances  <- read.csv("./data/appearances.csv",  stringsAsFactors = FALSE)
+competitions <- read.csv("./data/competitions.csv", stringsAsFactors = FALSE)
+
+# --- 2. Filtre : ligues nationales de première division uniquement ---
+domestic_leagues <- competitions %>%
+  filter(
+    type     == "domestic_league",
+    sub_type == "first_tier"
+  ) %>%
+  select(competition_id, name, country_name)
+
+# --- 3. Étape clé : agréger par match (game_id) d'abord ---
+# On somme tous les cartons de tous les joueurs pour chaque match
+cards_per_match <- appearances %>%
+  inner_join(domestic_leagues, by = "competition_id") %>%
+  group_by(competition_id, country_name, game_id) %>%
+  summarise(
+    yellow_cards = sum(yellow_cards, na.rm = TRUE),
+    red_cards    = sum(red_cards,    na.rm = TRUE),
+    .groups = "drop"
+  )
+
+# --- 4. Puis moyenne par championnat ---
+stats <- cards_per_match %>%
+  group_by(competition_id, country_name) %>%
+  summarise(
+    yellow_cards = mean(yellow_cards),
+    red_cards    = mean(red_cards),
+    n_matchs     = n(),
+    .groups = "drop"
+  ) %>%
+  arrange(desc(yellow_cards)) %>%
+  mutate(
+    display_label = paste0(country_name, "\n(", n_matchs, " matchs)"),
+    display_label = factor(display_label, levels = display_label)
+  )
+
+# --- 5. Format long pour ggplot ---
+stats_long <- stats %>%
+  pivot_longer(
+    cols      = c(yellow_cards, red_cards),
+    names_to  = "card_type",
+    values_to = "avg_cards"
+  ) %>%
+  mutate(
+    card_type = factor(card_type,
+                       levels = c("red_cards", "yellow_cards"),
+                       labels = c("Cartons rouges", "Cartons jaunes"))
+  )
+
+# --- 6. Graphique ---
+ggplot(stats_long, aes(x = display_label, y = avg_cards, fill = card_type)) +
+  geom_col(width = 0.5, position = "stack") +
+  scale_fill_manual(
+    values = c("Cartons jaunes" = "#E9A820",
+               "Cartons rouges" = "#C94040")
+  ) +
+  scale_y_continuous(
+    expand = expansion(mult = c(0, 0.08)),
+    labels = scales::number_format(accuracy = 0.1)
+  ) +
+  labs(
+    title    = "Discipline par championnat national",
+    subtitle = "Moyenne de cartons par match — ligues de 1ère division uniquement",
+    x        = NULL,
+    y        = "Moy. cartons / match",
+    fill     = NULL,
+    caption  = "Source : appearances.csv + competitions.csv"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    plot.title         = element_text(face = "bold", size = 14),
+    plot.subtitle      = element_text(color = "grey50", size = 11, margin = margin(b = 10)),
+    axis.text.x        = element_text(size = 9, lineheight = 1.2,
+                                      angle = 35,  # ← 0 = droit, 45 = diagonal, 90 = vertical
+                                      hjust = 1,
+                                      vjust = 1),
+    axis.text.y        = element_text(color = "grey50"),
+    axis.title.y       = element_text(color = "grey50", size = 10),
+    panel.grid.major.x = element_blank(),
+    panel.grid.minor   = element_blank(),
+    legend.position    = "top",
+    legend.text        = element_text(size = 10),
+    plot.caption       = element_text(color = "grey60", size = 8, margin = margin(t = 8)),
+    plot.margin        = margin(t = 10, r = 10, b = 20, l = 10)
+  )
 ```
+Le graphique confirme cette intuition : la Grèce, le Portugal et l'Espagne affichent les moyennes les plus élevées (autour de 5 cartons par match), tandis que les Pays-Bas et l'Angleterre se situent en bas du classement (autour de 3 cartons par match). L'Allemagne et la France occupent une position intermédiaire.
+
+Cependant, ce résultat ne permet pas de conclure directement que certains championnats sont plus agressifs que d'autres. En effet, le nombre de cartons dépend non seulement du comportement des joueurs, mais aussi de la permissivité des arbitres, qui varie selon les cultures et les ligues. Un championnat avec peu de cartons peut donc refléter un arbitrage plus tolérant plutôt qu'un jeu plus fair-play. Pour aller plus loin, il faudrait croiser ces données avec le nombre de fautes commises par match, afin de distinguer ce qui relève du comportement des joueurs de ce qui relève du style d'arbitrage.
 
 ## 4. Corrélation entre Valeur Marchande et Performance
 
