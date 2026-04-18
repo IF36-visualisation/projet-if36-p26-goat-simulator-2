@@ -1,14 +1,14 @@
 # **Proposition**
 
+#### ⚠️ Attention : Les données utilisées dans ce projet sont des échantillons réduits du dataset original, limités à 1000 lignes par fichier pour des raisons de taille et de performance. Pensez à bien supprimer les échantillons avant de télécharger les données complètes pour vos analyses avec la commande suivante :
+```bash
+   rm data/*
+```
 ## **Contexte**
 Les données proviennent du site Transfermarkt, une plateforme de référence mondiale pour les statistiques de football, les transferts et les valeurs marchandes.
 Téléchargeable [ici](https://www.kaggle.com/datasets/davidcariboo/player-scores?resource=download)  
 
-ou  
-```bash
-   rm data/*
-```
-puis
+ou
 ```bash
    pip install kaggle
 ```

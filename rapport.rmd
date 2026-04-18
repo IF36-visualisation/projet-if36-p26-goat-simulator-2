@@ -1,7 +1,221 @@
 ---
-title: "R Notebook"
+title: "Analyse du dataset Transfermarkt"
 output: html_notebook
 ---
+
+# **Proposition**
+
+#### ⚠️ Attention : Les données utilisées dans ce projet sont des échantillons réduits du dataset original, limités à 1000 lignes par fichier pour des raisons de taille et de performance. Pensez à bien supprimer les échantillons avant de télécharger les données complètes pour vos analyses avec la commande suivante :
+```bash
+   rm data/*
+```
+## **Contexte**
+Les données proviennent du site Transfermarkt, une plateforme de référence mondiale pour les statistiques de football, les transferts et les valeurs marchandes.
+Téléchargeable [ici](https://www.kaggle.com/datasets/davidcariboo/player-scores?resource=download)
+
+ou
+```bash
+   pip install kaggle
+```
+puis
+```bash
+   kaggle datasets download -d davidcariboo/player-scores --unzip -p ./data
+```
+
+Ce jeu de données a été créé pour offrir une base propre, structurée et régulièrement mise à jour (automatiquement via des scripts Python) pour l'analyse du football mondial. Il est utilisé par les data scientists pour la prédiction de valeurs marchandes, l'analyse de performance des joueurs ou le scouting.
+
+Nous avons choisi ce dataset car nous voulions faire notre projet en rapport avec le sport. Après quelques recherches, nous avons trouvé ce dataset suffisamment riche pour le projet.
+
+Les fichiers originaux sont trop volumineux pour être intégrés entièrement dans ce dépôt (plusieurs millions de lignes). Les fichiers présents ici sont donc des versions allégées, uniquement là pour donner un ordre d'idée de la structure des données (1000 lignes maximum).
+Nous avons téléchargé les données le 30 mars 2026.
+Le dataset source étant mis à jour toutes les semaines sur Kaggle, il est possible que les résultats diffèrent si vous utilisez une version plus récente que la nôtre.
+
+## **Détails**
+Le dataset est divisé en 10 fichiers .csv dont voici le détail :
+
+-**appearances.csv** : Chaque ligne est une apparition d'un joueur dans un match (~1 850 000)
+
+>    appearance_id : identifiant de ligne pour le fichier ; Texte
+>    game_id : identifiant pour les parties ; Chiffre (Entier)
+>    player_id : identifiant pour les joueurs ; Chiffre (Entier)
+>    player_club_id : Identifiant du club pour lequel le joueur jouait au moment précis du match ; Chiffre (Entier)
+>    player_current_club_id : Identifiant du club où le joueur évolue actuellement ; Chiffre (Entier)
+>    date : Date exacte à laquelle le match a eu lieu ; Date(AAAA-MM-JJ)
+>    player_name : Nom complet du joueur ; Texte (Chaîne)
+>    competition_id : Identifiant de la compétition ; Texte (Code)
+>    yellow_cards : Nombre de cartons jaunes reçus durant la rencontre ; Chiffre (Entier)
+>    red_cards : Nombre de cartons rouges reçus durant la rencontre ; Chiffre (Entier)
+>    goals : Nombre de buts marqués par le joueur lors de ce match ; Chiffre (Entier)
+>    assists : Nombre de passes décisives délivrées ; Chiffre (Entier)
+>    minutes_played : Temps total passé sur le terrain ; Chiffre (Entier)
+
+
+
+-**players.csv** : profils de joueurs individuels (~38 000)
+
+>    player_id : Identifiant unique du joueur ; Chiffre (Entier)
+>    first_name : Prénom du joueur ; Texte
+>    last_name : Nom de famille du joueur ; Texte
+>    name : Nom complet (maillot) ; Texte
+>    last_season : Dernière saison où le joueur a été actif ; Chiffre (Année)
+>    current_club_id : Identifiant du club actuel où évolue le joueur ; Chiffre (Entier)
+>    player_code : Identifiant textuel utilisé dans l'URL de Transfermarkt ; Texte
+>    country_of_birth : Pays de naissance du joueur ; Texte
+>    city_of_birth : Ville de naissance du joueur ; Texte
+>    country_of_citizenship : Nationalité sportive du joueur ; Texte
+>    date_of_birth : Date de naissance du joueur ; Date (AAAA-MM-JJ)
+>    sub_position : Poste précis ; Texte
+>    position : Catégorie de poste générale (Attaque, Milieu, Défense, Gardien) ; Texte
+>    foot : Pied principal ; Texte
+>    height_in_cm : Taille du joueur en centimètres ; Chiffre (Entier)
+>    contract_expiration_date : Date de fin du contrat actuel avec le club ; Date (AAAA-MM-JJ)
+>    agent_name : Nom de l'agent ou de l'agence qui gère le joueur ; Texte
+>    image_url : Lien vers la photo officielle du joueur sur Transfermarkt ; Texte
+>    international_caps : Nombre total de sélections en équipe nationale ; Chiffre   (Entier)
+>    international_goals : Nombre total de buts marqués en équipe nationale ; Chiffre (Entier)
+>    current_national_team_id : Identifiant de l'équipe nationale actuelle du joueur ; Chiffre (Entier)
+>    url : Lien vers la fiche complète du joueur sur le site web ; Texte
+>    current_club_domestic_competition_id : Identifiant du championnat national du club actuel ; Texte (Code)
+>    current_club_name : Nom complet du club actuel ; Texte
+>    market_value_in_eur : Valeur marchande actuelle estimée en euros ; Chiffre (Décimal)  >    highest_market_value_in_eur : Valeur marchande la plus élevée atteinte dans la carrière ; Chiffre (Décimal)
+
+
+
+-**games.csv** : Détails sur les matchs (~82 000)
+
+>    game_id : Identifiant unique de la rencontre ; Chiffre (Entier)
+>    competition_id : Identifiant de la compétition ; Texte (Code)
+>    season : Année de la saison concernée ; Chiffre (Année)
+>    round : Étape de la compétition ; Texte
+>    date : Date exacte du coup d'envoi ; Date (AAAA-MM-JJ)
+>    home_club_id : Identifiant du club recevant ; Chiffre (Entier)
+>    away_club_id : Identifiant du club visiteur ; Chiffre (Entier)
+>    home_club_goals : Nombre de buts marqués par l'équipe à domicile ; Chiffre (Entier)
+>    away_club_goals : Nombre de buts marqués par l'équipe à l'extérieur ; Chiffre (Entier)
+>    home_club_position : Classement du club à domicile avant le match ; Chiffre (Entier)
+>    away_club_position : Classement du club visiteur avant le match ; Chiffre (Entier)
+>    home_club_manager_name : Nom de l'entraîneur de l'équipe à domicile ; Texte
+>    away_club_manager_name : Nom de l'entraîneur de l'équipe à l'extérieur ; Texte
+>    stadium : Nom du stade où s'est déroulée la rencontre ; Texte
+>    attendance : Nombre de spectateurs présents dans le stade ; Chiffre (Entier)
+>    referee : Nom de l'arbitre principal de la rencontre ; Texte
+>    url : Lien direct vers le rapport de match sur Transfermarkt ; Texte (URL)
+>    home_club_formation : Système tactique de l'équipe à domicile ; Texte
+>    away_club_formation : Système tactique de l'équipe visiteuse ; Texte
+>    home_club_name : Nom complet du club à domicile ; Texte
+>    away_club_name : Nom complet du club visiteur ; Texte
+>    aggregate : Score cumulé (utilisé pour les matchs aller-retour) ; Texte
+>    competition_type : Type de tournoi ; Texte
+
+
+
+-**clubs.csv** : Regroupe les informations sur les clubs (~430)
+
+>    club_id : Identifiant unique du club ; Chiffre (Entier)
+>    club_code : Nom court utilisé dans les URLs ; Texte
+>    name : Nom officiel complet du club ; Texte
+>    domestic_competition_id : Identifiant de la ligue nationale où évolue le club ; Texte (Code)
+>    total_market_value : Somme des valeurs marchandes de tous les joueurs de l'effectif ; Chiffre (Décimal)
+>    squad_size : Nombre total de joueurs sous contrat dans l'équipe première ; Chiffre (Entier)
+>    average_age : Âge moyen des joueurs de l'effectif ; Chiffre (Décimal)
+>    foreigners_number : Nombre de joueurs n'ayant pas la nationalité du pays du club ; Chiffre (Entier)
+>    foreigners_percentage : Pourcentage de joueurs étrangers dans l'effectif ; Chiffre (Pourcentage)
+>    national_team_players : Nombre de joueurs du club évoluant en équipe nationale ; Chiffre (Entier)
+>    stadium_name : Nom du stade principal du club ; Texte
+>    stadium_seats : Capacité totale (nombre de sièges) du stade ; Chiffre (Entier)
+>    net_transfer_record : Balance nette des transferts (Achats - Ventes) sur la période ; Texte/Chiffre
+>    coach_name : Nom de l'entraîneur actuel (ou dernier connu) ; Texte
+>    last_season : Dernière saison où le club est apparu dans les données ; Chiffre (Année)
+>    filename : Nom du fichier source interne au dataset ; Texte
+>    url : Lien vers la page du club sur le site Transfermarkt ; Texte (URL)
+
+
+
+-**player_valuations.csv** : Enregistrements historiques de valeurs marchandes (~520 000)
+
+>    player_id : Identifiant unique du joueur ; Chiffre (Entier)
+>    date : Date à laquelle la valeur marchande a été mise à jour ou enregistrée ; Date (AAAA-MM-JJ)
+>    market_value_in_eur : Estimation de la valeur marchande du joueur à cette date précise ; Chiffre (Entier)
+>    current_club_name : Nom du club où le joueur évoluait lors de cette évaluation ; Texte
+>    current_club_id : Identifiant du club où le joueur évoluait lors de cette évaluation ; Chiffre (Entier)
+>    player_club_domestic_competition_id : Identifiant du championnat dans lequel le club évoluait à ce moment-là ; Texte (Code)
+
+
+
+-**competitions.csv** : Liste des championnats couverts (~50)
+
+>    competition_id : Identifiant unique de la compétition ; Texte (Code)
+>    competition_code : Nom court utilisé dans l'URL ; Texte
+>    name : Nom complet de la compétition ; Texte
+>    sub_type : Sous-catégorie ; Texte
+>    type : Type général de compétition ; Texte
+>    country_id : Identifiant numérique du pays organisateur ; Chiffre (Entier)
+>    country_name : Nom du pays où se déroule la compétition ; Texte
+>    domestic_league_code : Code de la ligue nationale associée ; Texte (Code)
+>    confederation : Confédération continentale ; Texte
+>    url : Lien vers la page de la compétition sur Transfermarkt ; Texte (URL)
+
+
+
+-**club_games.csv** : Fait le lien entre les clubs et les matchs (~160 000)
+
+>    game_id : Identifiant unique du match ; Chiffre (Entier)
+>    club_id : Identifiant du club dont on décrit la performance ; Chiffre (Entier)
+>    own_goals : Nombre de buts marqués par le club sujet lors du match ; Chiffre (Entier)
+>    own_position : Classement du club sujet en championnat avant le match ; Chiffre (Entier)
+>    own_manager_name : Nom de l'entraîneur du club sujet pour ce match ; Texte
+>    opponent_id : Identifiant du club adverse ; Chiffre (Entier)
+>    opponent_goals : Nombre de buts marqués par l'adversaire ; Chiffre (Entier)
+>    opponent_position : Classement de l'adversaire en championnat avant le match ; Chiffre (Entier)
+>    opponent_manager_name : Nom de l'entraîneur de l'équipe adverse ; Texte
+>    hosting : Indique si le club sujet jouait à domicile (Home) ou à l'extérieur (Away) ; Texte
+>    is_win : Résultat final pour le club sujet (1 pour victoire, 0 pour nul ou défaite) ; Chiffre (Binaire)
+
+
+
+-**game_events.csv** : Répertorie les événements marquants de chaque match (~1 150 000)
+
+>    game_event_id : Identifiant unique de l'événement ; Texte
+>    date : Date du match où l'événement a eu lieu ; Date (AAAA-MM-JJ)
+>    game_id : Identifiant du match ; Chiffre (Entier)
+>    minute : Minute précise du match à laquelle l'action s'est produite ; Chiffre (Entier)
+>    type : Nature de l'action ; Texte (Catégorie)
+>    club_id : Identifiant du club qui a réalisé l'action ; Chiffre (Entier)
+>    club_name : Nom du club concerné par l'événement ; Texte
+>    player_id : Identifiant du joueur principal de l'action ; Chiffre (Entier)
+>    description :Détails textuels ; Texte
+>    player_in_id : Identifiant du joueur qui entre (remplacement) ; Chiffre (Entier)
+>    player_assist_id : Identifiant du joueur ayant fait la passe décisive ; Chiffre (Entier)
+
+
+
+-**game_lineups.csv** : Détaille qui était sur le terrain, sur le banc, ou dans le staff technique pour chaque match (~2 800 000)
+
+>    game_lineups_id : Identifiant unique de la ligne ; Texte
+>    date : Date du match ; Date (AAAA-MM-JJ)
+>    game_id : Identifiant du match ; Chiffre (Entier)
+>    player_id : Identifiant du joueur présent sur la feuille de match ; Chiffre (Entier)
+>    club_id : Identifiant du club pour lequel le joueur est aligné ; Chiffre (Entier)
+>    player_name : Nom complet du joueur ; Texte
+>    type : Statut du joueur pour le match ; Texte
+>    position : Poste spécifique occupé durant ce match ; Texte
+>    number : Numéro de maillot porté par le joueur lors de cette rencontre ; Chiffre (Entier)
+>    team_captain : Indicateur précisant si le joueur était le capitaine de l'équipe ; Chiffre (Binaire)
+
+-**transfers.csv** : Suit les mouvements de joueurs entre les clubs
+>    player_id : Identifiant unique du joueur transféré ; Chiffre (Entier)
+>    transfer_date : Date exacte à laquelle le transfert a été enregistré ; Date (AAAA-MM-JJ)
+>    transfer_season : Saison au cours de laquelle le transfert a eu lieu ; Texte
+>    from_club_id : Identifiant du club qui vend ou libère le joueur ; Chiffre (Entier)
+>    to_club_id : Identifiant du club qui achète ou accueille le joueur ; Chiffre (Entier)
+>    from_club_name : Nom du club de départ ; Texte
+>    to_club_name : Nom du club d'arrivée ; Texte
+>    transfer_fee : Montant de la transaction ; Chiffre (Décimal)
+>    market_value_in_eur : Valeur marchande estimée du joueur au moment du transfert ; Chiffre (Décimal)
+>    player_name : Nom complet du joueur au moment de la transaction ; Texte
+
+
+## **Analyses possibles**
 
 
 ```{r}
@@ -13,11 +227,6 @@ library(shiny)
 library(shinydashboard)
 library(readr)
 library(ggrepel)
-```
-
-```{r}
-# load and process dataset
-
 ```
 
 ## 1. L'efficacité offensive : Buts vs Passes décisives
