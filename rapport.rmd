@@ -230,9 +230,81 @@ library(ggrepel)
 ```
 
 ## 1. L'efficacité offensive : Buts vs Passes décisives
+Quels sont les joueurs qui pèsent le plus sur le score et quels sont leurs profils types ? Existe-t-il une hiérarchie claire entre les "finisseurs" et les "distributeurs" au sein de l'élite mondiale ? C'est ce que nous allons analyser ici.
+
+Nous allons examiner la relation entre le nombre de buts marqués et le nombre de passes décisives délivrées par les joueurs les plus valorisés du marché sur les dix dernières années. Cette approche permet de distinguer les profils spécialisés des joueurs ultra-complets.
+
+Pour cette analyse, nous croisons les données suivantes :
+
+Les statistiques de jeu : le cumul des buts et des passes décisives par joueur (depuis 2016).
+
+La valeur marchande : afin de filtrer uniquement l'élite mondiale (joueurs évalués à plus de 30 millions d'euros) et d'observer si le prix est corrélé à l'efficacité.
+
+Grâce à ces données, nous générons un nuage de points (scatter plot) interactif où chaque point représente un joueur. La couleur et la taille des points varient selon la valeur marchande du joueur.
+
 ```{r}
+library(lubridate)
+# 1. Chargement et Préparation des données (Identique à avant)
+players <- read.csv("archive/players.csv")
+appearances <- read.csv("archive/appearances.csv")
+
+# Filtrage temporel (10 dernières années)
+stats_10_ans <- appearances %>%
+  mutate(date = as.Date(date)) %>% 
+  filter(date >= (max(date, na.rm = TRUE) - years(10))) %>%
+  group_by(player_id) %>%
+  summarise(
+    total_goals = sum(goals, na.rm = TRUE),
+    total_assists = sum(assists, na.rm = TRUE),
+    player_name = first(player_name)
+  )
+
+# Jointure et Filtre de valeur marchande (ex: > 30M€ pour l'élite)
+joueurs_stars <- players %>% 
+  select(player_id, market_value_in_eur, current_club_name, position)
+
+stats_finales <- stats_10_ans %>%
+  inner_join(joueurs_stars, by = "player_id") %>%
+  filter(market_value_in_eur > 30000000) %>%
+  # On crée une colonne propre pour l'affichage au survol
+  mutate(valeur_m = market_value_in_eur / 1000000)
+
+# 2. Création du graphique ggplot (SANS geom_text)
+p <- ggplot(stats_finales, aes(x = total_assists, y = total_goals, 
+                               text = paste("Joueur:", player_name,
+                                            "<br>Club:", current_club_name,
+                                            "<br>Poste:", position,
+                                            "<br>Buts:", total_goals,
+                                            "<br>Passes:", total_assists,
+                                            "<br>Valeur:", valeur_m, "M€"))) +
+  geom_point(aes(size = valeur_m, color = valeur_m), alpha = 0.6) +
+  scale_color_gradient(low = "blue", high = "red", name = "Valeur (M€)") +
+  labs(
+    title = "Élite Offensive Mondiale (10 dernières années)",
+    subtitle = "Passez la souris sur les points pour voir les détails",
+    x = "Passes décisives cumulées",
+    y = "Buts cumulés",
+    size = "Valeur (M€)"
+  ) +
+  theme_minimal() +
+  theme(legend.position = "none") # On cache la légende, l'interactivité suffit
+
+# 3. CONVERSION EN GRAPHIQUE INTERACTIF
+ggplotly(p, tooltip = "text")
 
 ```
+Le graphique permet d'identifier immédiatement trois grandes catégories de joueurs de classe mondiale :
+
+Les "Finisseurs" (Haut-Gauche) : Des joueurs présentant un ratio buts/passes très élevé. Ce sont les purs numéros 9 dont la mission principale est la conclusion des actions.
+
+Les "Meneurs de jeu" (Bas-Droite) : Des profils créatifs qui affichent un grand nombre de passes décisives mais un volume de buts plus modeste. Ils sont les architectes du jeu.
+
+Les "Superstars" (Haut-Droite) : Une élite très restreinte qui parvient à dominer les deux statistiques. Ce sont les joueurs les plus complets, souvent ceux dont la valeur marchande (représentée par la taille et la couleur rouge des points) est la plus élevée.
+
+Les points les plus gros et les plus rouges (les plus hautes valeurs marchandes) ont tendance à s'éloigner de l'origine (0,0) pour se situer vers le haut ou vers la droite. Cela confirme que le marché valorise avant tout la capacité d'un joueur à être décisif, que ce soit par la finition ou par la création. Néanmoins, quelques "anomalies" apparaissent : des joueurs avec des statistiques exceptionnelles mais une valeur marchande plus faible, ce qui peut s'expliquer par un âge avancé ou une fin de contrat proche.
+
+La technique du survol permet d'alléger la représentation graphique initiale tout en laissant l'utilisateur explorer les données en détail de manière intuitive.
+
 
 ## 2. L'impact de l'âge sur le temps de jeu
 ```{r}
