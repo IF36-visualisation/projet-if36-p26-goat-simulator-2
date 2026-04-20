@@ -246,11 +246,29 @@ La valeur marchande : afin de filtrer uniquement l'élite mondiale (joueurs éva
 Grâce à ces données, nous générons un nuage de points (scatter plot) interactif où chaque point représente un joueur. La couleur et la taille des points varient selon la valeur marchande du joueur.
 
 ```{r}
-# --- 1. Préparation (identique) ---
-library(ggplot2)
-library(dplyr)
-library(plotly)
-library(lubridate)
+# --- 1. Préparation ---
+appearances <- read.csv("data/appearances.csv")
+
+# Filtrage temporel (10 dernières années)
+stats_10_ans <- appearances %>%
+  mutate(date = as.Date(date)) %>% 
+  filter(date >= (max(date, na.rm = TRUE) - years(10))) %>%
+  group_by(player_id) %>%
+  summarise(
+    total_goals = sum(goals, na.rm = TRUE),
+    total_assists = sum(assists, na.rm = TRUE),
+    player_name = first(player_name)
+  )
+
+joueurs_stars <- players %>% 
+  select(player_id, market_value_in_eur, current_club_name, position)
+
+stats_finales <- stats_10_ans %>%
+  inner_join(joueurs_stars, by = "player_id") %>%
+  filter(market_value_in_eur > 30000000) %>%
+  # On crée une colonne propre pour l'affichage au survol
+  mutate(valeur_m = market_value_in_eur / 1000000)
+
 
 # --- 2. Création du graphique simplifié ---
 p <- ggplot(stats_finales, aes(x = total_assists, y = total_goals)) +
