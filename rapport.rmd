@@ -241,57 +241,42 @@ Pour cette analyse, nous croisons les données suivantes :
 
 Les statistiques de jeu : le cumul des buts et des passes décisives par joueur (depuis 2016).
 
-La valeur marchande : afin de filtrer uniquement l'élite mondiale (joueurs évalués à plus de 30 millions d'euros) et d'observer si le prix est corrélé à l'efficacité.
+La valeur marchande : afin de filtrer uniquement l'élite mondiale (joueurs évalués à plus de 30 millions d'euros).
 
 Grâce à ces données, nous générons un nuage de points (scatter plot) interactif où chaque point représente un joueur. La couleur et la taille des points varient selon la valeur marchande du joueur.
 
 ```{r}
-# 1. Chargement et Préparation des données (Identique à avant)
-players <- read.csv("data/players.csv")
-appearances <- read.csv("data/appearances.csv")
+# --- 1. Préparation (identique) ---
+library(ggplot2)
+library(dplyr)
+library(plotly)
+library(lubridate)
 
-# Filtrage temporel (10 dernières années)
-stats_10_ans <- appearances %>%
-  mutate(date = as.Date(date)) %>% 
-  filter(date >= (max(date, na.rm = TRUE) - years(10))) %>%
-  group_by(player_id) %>%
-  summarise(
-    total_goals = sum(goals, na.rm = TRUE),
-    total_assists = sum(assists, na.rm = TRUE),
-    player_name = first(player_name)
-  )
+# --- 2. Création du graphique simplifié ---
+p <- ggplot(stats_finales, aes(x = total_assists, y = total_goals)) +
 
-# Jointure et Filtre de valeur marchande (ex: > 30M€ pour l'élite)
-joueurs_stars <- players %>% 
-  select(player_id, market_value_in_eur, current_club_name, position)
-
-stats_finales <- stats_10_ans %>%
-  inner_join(joueurs_stars, by = "player_id") %>%
-  filter(market_value_in_eur > 30000000) %>%
-  # On crée une colonne propre pour l'affichage au survol
-  mutate(valeur_m = market_value_in_eur / 1000000)
-
-# 2. Création du graphique ggplot (SANS geom_text)
-p <- ggplot(stats_finales, aes(x = total_assists, y = total_goals, 
-                               text = paste("Joueur:", player_name,
-                                            "<br>Club:", current_club_name,
-                                            "<br>Poste:", position,
-                                            "<br>Buts:", total_goals,
-                                            "<br>Passes:", total_assists,
-                                            "<br>Valeur:", valeur_m, "M€"))) +
-  geom_point(aes(size = valeur_m, color = valeur_m), alpha = 0.6) +
-  scale_color_gradient(low = "blue", high = "red", name = "Valeur (M€)") +
+  geom_point(aes(text = paste("Joueur:", player_name,
+                              "<br>Club:", current_club_name,
+                              "<br>Buts:", total_goals,
+                              "<br>Passes:", total_assists)), 
+             color = "#3498db", 
+             size = 3, 
+             alpha = 0.7) +
+  
+  # On garde les noms des "monstres" statistiques
+  geom_text(data = stats_finales %>% filter(total_goals > 120 | total_assists > 80),
+            aes(label = player_name),
+            vjust = -1.5, size = 3.5, fontface = "bold", check_overlap = TRUE) +
+  
   labs(
-    title = "Élite Offensive Mondiale (10 dernières années)",
-    subtitle = "Passez la souris sur les points pour voir les détails",
+    title = "Efficacité Offensive de l'Élite Mondiale",
+    subtitle = "Cumul buts et passes décisives (10 dernières années)",
     x = "Passes décisives cumulées",
-    y = "Buts cumulés",
-    size = "Valeur (M€)"
+    y = "Buts cumulés"
   ) +
-  theme_minimal() +
-  theme(legend.position = "none") # On cache la légende, l'interactivité suffit
+  theme_minimal()
 
-# 3. CONVERSION EN GRAPHIQUE INTERACTIF
+# --- 3. Rendu interactif ---
 ggplotly(p, tooltip = "text")
 
 ```
@@ -302,10 +287,6 @@ Les "Finisseurs" (Haut-Gauche) : Des joueurs présentant un ratio buts/passes tr
 Les "Meneurs de jeu" (Bas-Droite) : Des profils créatifs qui affichent un grand nombre de passes décisives mais un volume de buts plus modeste. Ils sont les architectes du jeu.
 
 Les "Superstars" (Haut-Droite) : Une élite très restreinte qui parvient à dominer les deux statistiques. Ce sont les joueurs les plus complets, souvent ceux dont la valeur marchande (représentée par la taille et la couleur rouge des points) est la plus élevée.
-
-Les points les plus gros et les plus rouges (les plus hautes valeurs marchandes) ont tendance à s'éloigner de l'origine (0,0) pour se situer vers le haut ou vers la droite. Cela confirme que le marché valorise avant tout la capacité d'un joueur à être décisif, que ce soit par la finition ou par la création. Néanmoins, quelques "anomalies" apparaissent : des joueurs avec des statistiques exceptionnelles mais une valeur marchande plus faible, ce qui peut s'expliquer par un âge avancé ou une fin de contrat proche.
-
-La technique du survol permet d'alléger la représentation graphique initiale tout en laissant l'utilisateur explorer les données en détail de manière intuitive.
 
 
 ## 2. L'impact de l'âge sur le temps de jeu
