@@ -227,6 +227,8 @@ library(shiny)
 library(shinydashboard)
 library(readr)
 library(ggrepel)
+library(lubridate)
+library(plotly)
 ```
 
 ## 1. L'efficacité offensive : Buts vs Passes décisives
@@ -243,10 +245,9 @@ La valeur marchande : afin de filtrer uniquement l'élite mondiale (joueurs éva
 Grâce à ces données, nous générons un nuage de points (scatter plot) interactif où chaque point représente un joueur. La couleur et la taille des points varient selon la valeur marchande du joueur.
 
 ```{r}
-library(lubridate)
 # 1. Chargement et Préparation des données (Identique à avant)
-players <- read.csv("archive/players.csv")
-appearances <- read.csv("archive/appearances.csv")
+players <- read.csv("data/players.csv")
+appearances <- read.csv("data/appearances.csv")
 
 # Filtrage temporel (10 dernières années)
 stats_10_ans <- appearances %>%
