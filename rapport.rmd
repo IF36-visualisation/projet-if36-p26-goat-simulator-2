@@ -229,6 +229,7 @@ library(readr)
 library(ggrepel)
 library(lubridate)
 library(plotly)
+library(tidyr)
 ```
 
 ## 1. L'efficacité offensive : Buts vs Passes décisives
