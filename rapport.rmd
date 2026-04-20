@@ -1,11 +1,11 @@
 ---
 title: "Analyse du dataset Transfermarkt"
-output: html_notebook
+output: pdf_document
 ---
 
 # **Proposition**
 
-#### ⚠️ Attention : Les données utilisées dans ce projet sont des échantillons réduits du dataset original, limités à 1000 lignes par fichier pour des raisons de taille et de performance. Pensez à bien supprimer les échantillons avant de télécharger les données complètes pour vos analyses avec la commande suivante :
+#### Attention : Les données utilisées dans ce projet sont des échantillons réduits du dataset original, limités à 1000 lignes par fichier pour des raisons de taille et de performance. Pensez à bien supprimer les échantillons avant de télécharger les données complètes pour vos analyses avec la commande suivante :
 ```bash
    rm data/*
 ```
@@ -247,6 +247,7 @@ Grâce à ces données, nous générons un nuage de points (scatter plot) intera
 
 ```{r}
 # --- 1. Préparation ---
+players <- read.csv("./data/players.csv")
 appearances <- read.csv("data/appearances.csv")
 
 # Filtrage temporel (10 dernières années)
@@ -295,7 +296,11 @@ p <- ggplot(stats_finales, aes(x = total_assists, y = total_goals)) +
   theme_minimal()
 
 # --- 3. Rendu interactif ---
-ggplotly(p, tooltip = "text")
+if (knitr::is_latex_output()) {
+  p   # pour générer le pdf
+} else {
+  ggplotly(p, tooltip = "text")
+}
 
 ```
 Le graphique permet d'identifier immédiatement trois grandes catégories de joueurs de classe mondiale :
