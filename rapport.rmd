@@ -230,6 +230,7 @@ library(ggrepel)
 library(lubridate)
 library(plotly)
 library(tidyr)
+library(scales)
 ```
 
 ## 1. L'efficacité offensive : Buts vs Passes décisives
@@ -599,9 +600,80 @@ Il serait donc pertinent de s’intéresser également à l’évolution du marc
 ```
 
 ## 7. Domination à domicile vs Extérieur
+On peux supposer que les matchs à domicile sont plus avantageux. Pour vérifier cette hypothèse on va chercher les donnée dans games.csv qui correspond a des matchs puis comparer les colonnes home_club_goals et away_club_goals pour determiner si un match est une vitcoire ou non. Ensuite, à partir des ces infos on va générer un barchart pour déterminer les proportions de victoire / défaite / nul pour les match à domicile puis à l'extérieur.
 ```{r}
 
+games <- read.csv("./data/games.csv")
+
+games2 <- games %>%
+  mutate(
+    home_result = case_when(
+      home_club_goals > away_club_goals ~ "Victoire",
+      home_club_goals < away_club_goals ~ "Défaite",
+      TRUE ~ "Nul"
+    ),
+    away_result = case_when(
+      home_club_goals < away_club_goals ~ "Victoire",
+      home_club_goals > away_club_goals ~ "Défaite",
+      TRUE ~ "Nul"
+    )
+  )
+
+data_long <- games2 %>%
+  select(home_result, away_result) %>%
+  pivot_longer(cols = everything(),
+               names_to = "location",
+               values_to = "result") %>%
+  mutate(location = ifelse(location == "home_result", "Domicile", "Extérieur"))
+
+data_long$result <- factor(data_long$result, levels = c("Victoire", "Nul", "Défaite"))
+
+data_plot <- data_long %>%
+  group_by(location, result) %>%
+  summarise(n = n(), .groups = "drop")
+
+ggplot(data_plot, aes(x = location, y = n, fill = result)) +
+  geom_bar(stat = "identity", position = "fill") +
+  
+  geom_text(aes(label = n),
+            position = position_fill(vjust = 0.5),
+            color = "white",
+            size = 5,
+            fontface = "bold") +
+  
+  labs(
+    title = "Domination : Domicile vs Extérieur",
+    subtitle = "Répartition des résultats",
+    x = "Lieu",
+    y = "Proportion",
+    fill = "Résultat"
+  ) +
+  
+  scale_fill_manual(values = c(
+    "Victoire" = "#3A7D44",
+    "Nul" = "#A59E8C",
+    "Défaite" = "#A63A2B"
+  )) +
+  
+  scale_y_continuous(labels = percent_format()) +
+  
+  theme_minimal() +
+  theme(
+    plot.background = element_rect(fill = "#F4E1D2", color = NA),
+    panel.background = element_rect(fill = "#F4E1D2", color = NA),
+    panel.grid.major = element_line(color = "#E0C3A3"),
+    panel.grid.minor = element_blank(),
+    
+    text = element_text(color = "#5C3A2E"),
+    
+    plot.title = element_text(size = 16, face = "bold"),
+    plot.subtitle = element_text(size = 12),
+    
+    legend.background = element_rect(fill = "#F4E1D2"),
+    legend.key = element_rect(fill = "#F4E1D2")
+  )
 ```
+On peux constater qu'il y a plus de victoire concernant les matchs à domicile. Donc toute équipe doit s'attendre à un match plus difficile à l'extérieur.
 
 ## 8. Analyse des systèmes tactiques les plus victorieux
 ```{r}
