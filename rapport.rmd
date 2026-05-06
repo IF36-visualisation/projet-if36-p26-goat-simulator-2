@@ -677,9 +677,61 @@ ggplot(data_plot, aes(x = location, y = n, fill = result)) +
 On peux constater qu'il y a plus de victoire concernant les matchs à domicile. Donc toute équipe doit s'attendre à un match plus difficile à l'extérieur.
 
 ## 8. Analyse des systèmes tactiques les plus victorieux
+Quels sont les formations les plus efficaces pour une victoire ? Pour y répondre nous allons génerer un scatter plot affichant le taux de victoire et le nombre de victoire.
 ```{r}
+# Charger les données
+games <- read_csv("./data/games.csv")
+
+# refactor
+home <- games %>%
+  select(game_id, club_name = home_club_name, goals_for = home_club_goals, goals_against = away_club_goals, formation = home_club_formation)
+
+away <- games %>%
+  select(game_id, club_name = away_club_name, goals_for = away_club_goals, goals_against = home_club_goals, formation = away_club_formation)
+
+matches <- bind_rows(home, away) %>%
+  mutate(
+    result = case_when(
+      goals_for > goals_against ~ "Win",
+      goals_for == goals_against ~ "Draw",
+      TRUE ~ "Loss"
+    )
+  )
+
+# Calcul du nombre de victoires et taux de victoire par formation
+formation_stats <- matches %>%
+  group_by(formation) %>%
+  summarise(
+    games_played = n(),
+    wins = sum(result == "Win"),
+    win_pct = wins / games_played
+  ) %>%
+  filter(!is.na(formation)) %>%
+  arrange(desc(win_pct)) %>%
+  slice_max(win_pct, n = 30)
+
+# Classement des formations par taux de victoire pour le graphique
+formation_stats <- formation_stats %>%
+  mutate(formation = reorder(formation, win_pct))
+
+# Graphique ggplot
+ggplot(formation_stats, aes(x = win_pct, y = formation, size = wins, color = win_pct)) +
+  geom_point(alpha = 0.8) +
+  scale_x_continuous(labels = percent_format(), limits = c(0,1)) +
+  scale_size_continuous(range = c(3,10)) +
+  scale_color_gradient(low = "#3498DB", high = "#E74C3C", labels = percent_format()) +
+  labs(
+    title = "Classement des formations selon efficacité et nombre de victoires",
+    x = "Taux de victoire",
+    y = "Formation",
+    size = "Nombre de victoires",
+    color = "Taux de victoire"
+  ) +
+  theme_minimal()
 
 ```
+On observe que certaine formation on un taux de victoire à 100% cepandant ce ne sont pas les plus utilisé.
+Certaines formations, comme 4-3-3 ou 4-2-3-1, présentent un taux de victoire élevé, indiquant une grande efficacité tactique. D’autres formations plus utilisées peuvent avoir un nombre élevé de victoires, mais un taux de victoire moyen, ce qui reflète leur popularité plutôt que leur supériorité stratégique. Les formations les plus intéressantes sont celles qui combinent un taux de victoire élevé et un nombre de victoires significatif. Le choix de la formation a un impact significatif sur la probabilité de victoire. Les équipes utilisant des formations équilibrées et offensives (par exemple 4-3-3) obtiennent à la fois un taux de victoire élevé et un nombre de victoires conséquent, ce qui en fait les tactiques les plus victorieux. Les entraîneurs peuvent s’appuyer sur cette information pour optimiser leurs stratégies et maximiser leurs chances de succès. Cependant, il faut prendre en compte pour mettre en place ces formations, il faut avoir les profils de joueurs adaptés ainsi qu'un entraineur qui la maîtrise.
 
 ## 9. Répartition des nationalités dans les grands championnats
 Dans quelle mesure les grands championnats européens se différencient-ils par la diversité et la concentration des nationalités de leurs joueurs ? On va générer un barplot empilé pour distinguer la proportion de joueur nationnaux et internationnaux des grands championnats (Premier League, LaLiga, Serie A, Ligue 1 et Bundesliga).
