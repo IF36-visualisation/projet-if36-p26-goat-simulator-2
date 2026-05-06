@@ -314,6 +314,7 @@ Les "Superstars" (Haut-Droite) : Une élite très restreinte qui parvient à dom
 
 
 ## 2. L'impact de l'âge sur le temps de jeu
+Est ce que l'age d'un joueur a un impact sur son temps de jeu ? Pour y répondre nous allons filtrer les données de players.csv car on a pu observer que des joueurs n'avait pas de date de naissance, on calcul l'age en année, ensuite on fusionne le jeu de données appearances.csv et players.csv (tranformé), puis on génere un Boxplot et un Linechart.
 ```{r}
 
 players <- read.csv("./data/players.csv")
@@ -363,7 +364,7 @@ ggplot(age_groups, aes(x = age_group, y = mean_minutes_played, group = 1)) +
 
 ```
 
-On constate que plus les joueurs sont âgés, plus ils ont de chances d'avoir un temps de jeu élevé durant un match. À l'inverse, plus le joueur est jeune, plus son temps de jeu est variable et en moyenne plus bas qu'un joueur plus âgé.
+On observe que l'age a bien un impact sur le temps de jeu. On constate que plus les joueurs sont âgés, plus ils ont de chances d'avoir un temps de jeu élevé durant un match. À l'inverse, plus le joueur est jeune, plus son temps de jeu est variable et en moyenne plus bas qu'un joueur plus âgé.
 
 ## 3. Discipline et agressivité par championnat
 
