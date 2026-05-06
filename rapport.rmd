@@ -682,9 +682,71 @@ On peux constater qu'il y a plus de victoire concernant les matchs à domicile. 
 ```
 
 ## 9. Répartition des nationalités dans les grands championnats
+Dans quelle mesure les grands championnats européens se différencient-ils par la diversité et la concentration des nationalités de leurs joueurs ? On va générer un barplot empilé pour distinguer la proportion de joueur nationnaux et internationnaux des grands championnats (Premier League, LaLiga, Serie A, Ligue 1 et Bundesliga).
 ```{r}
+players <- read_csv("./data/players.csv")
+appearances <- read_csv("./data/appearances.csv")
+games <- read_csv("./data/games.csv")
+competitions <- read_csv("./data/competitions.csv")
+
+# Mapping ligues
+league_names <- data.frame(
+  competition_id = c("GB1", "ES1", "IT1", "FR1", "L1"),
+  league_name = c("Premier League", "LaLiga", "Serie A", "Ligue 1", "Bundesliga"),
+  country = c("England", "Spain", "Italy", "France", "Germany")
+)
+
+# Nettoyage minimal (évite les conflits)
+players_clean <- players %>%
+  select(player_id, country_of_citizenship)
+
+games_clean <- games %>%
+  select(game_id, competition_id)
+
+# Jointure
+data <- appearances %>%
+  select(player_id, game_id) %>%
+  inner_join(players_clean, by = "player_id") %>%
+  inner_join(games_clean, by = "game_id") %>%
+  inner_join(league_names, by = "competition_id")
+
+# National vs International
+data_players <- data %>%
+  distinct(player_id, league_name, country_of_citizenship, country) %>%
+  mutate(
+    statut = ifelse(country_of_citizenship == country,
+                    "National",
+                    "International")
+  )
+
+# Calcul proportions
+df <- data_players %>%
+  count(league_name, statut) %>%
+  group_by(league_name) %>%
+  mutate(pct = n / sum(n))
+
+# Graphique
+ggplot(df, aes(x = league_name, y = pct, fill = statut)) +
+  geom_col() +
+  scale_y_continuous(labels = percent_format()) +
+  labs(
+    title = "Part de joueurs nationaux vs internationaux par championnat",
+    x = "Championnat",
+    y = "Proportion",
+    fill = "Statut"
+  ) +
+  theme_minimal()
 
 ```
+la répartition des nationalités dans les cinq grands championnats européens montre des structures très contrastées.
+
+D’un côté, des championnats comme la Premier League présentent une forte diversité internationale, avec une large part de joueurs étrangers issus de multiples origines. Cela reflète un marché très globalisé et attractif.
+
+À l’inverse, des ligues comme la Ligue 1 ou la Bundesliga conservent une présence plus importante de joueurs nationaux, même si la tendance à l’internationalisation reste visible.
+
+Enfin, les championnats espagnol et italien occupent une position intermédiaire, combinant un noyau national encore significatif avec une ouverture progressive aux talents étrangers.
+
+Globalement, on observe que plus un championnat est économiquement puissant et médiatisé, plus sa diversité de nationalités est élevée.
 
 ## 10. Relation entre Taille (Hauteur) et Position sur le terrain
 ```{r}
