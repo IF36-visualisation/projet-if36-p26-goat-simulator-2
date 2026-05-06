@@ -753,10 +753,39 @@ Globalement, on observe que plus un championnat est économiquement puissant et 
 
 ```
 
-## 11. Analyse des moments les plus cruciaux au sein d'un match Y a-t-il des tranches horaires où les buts et événements décisifs sont statistiquement plus fréquents ?
+## 11. Analyse des moments les plus cruciaux au sein d'un match
+Y a-t-il des tranches horaires où les buts et événements décisifs sont statistiquement plus fréquents ? Pour y répondre on va créer un histogramme de chaque minutes avec une proportion de but pour visualiser en générale les points cruciaux des matchs.
 ```{r}
+# Chargement
+events <- read_csv("./data/game_events.csv")
 
+unique(events$type)
+
+# Filtrer tous les types de buts
+goals <- events %>%
+  filter(grepl("goal", tolower(type))) %>%
+  mutate(minute = as.numeric(minute)) %>%
+  filter(!is.na(minute))
+
+# Comptage par minute pour courbe fine
+goal_minute <- goals %>%
+  count(minute) %>%
+  mutate(pct = n / sum(n))
+
+# Graphique : histogramme + courbe lissée
+ggplot(goal_minute, aes(x = minute, y = pct)) +
+  geom_col(fill = "#E74C3C", alpha = 0.6) +    # histogramme
+  scale_y_continuous(labels = scales::percent_format()) +
+  scale_x_continuous(breaks = seq(0, max(goal_minute$minute, na.rm=TRUE), 10)) +
+  labs(
+    title = "Analyse des buts sur l'intégralité du match (temps additionnel et prolongations inclus)",
+    subtitle = "Distribution minute par minute avec tendance lissée",
+    x = "Minute du match",
+    y = "Proportion de buts"
+  ) +
+  theme_minimal()
 ```
+On observe que les buts ne tombent pas uniformément dans un match. Les moments de la mi-temps et de la fin de match ont généralement la plus forte fréquence de buts. La seconde période montre une activité legerement plus élevé par rapport à la première. Cette tendance illustre l’impact de la fatigue, des ajustements tactiques et de la pression en fin de match. On peu constater que les moments cruciaux sont les fin de période généralement.
 
 ## 12. Recherche d'une relation entre pays d'origine et poste sur le terrain La nationalité d'un joueur est-elle statistiquement liée au poste qu'il occupe sur le terrain ?
 ```{r}
