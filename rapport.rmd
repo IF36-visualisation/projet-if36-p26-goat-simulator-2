@@ -988,9 +988,84 @@ cependant, la dispersion des points montre que l’affluence seule n’explique 
 L'hypothèse de départ semble donc plutôt correcte : ce ne sont probablement pas uniquement les supporters qui améliorent les performances, mais aussi le fait que les clubs les plus performants attirent davantage de spectateurs.
 
 ## 14. L'impact des agents sur la valeur marchande d'un joueur ? Existe-t-il un écart significatif de valeur marchande entre les joueurs représentés et ceux sans agent déclaré ?
-```{r}
 
+Au-delà d’aider les joueurs à trouver le club qui leur correspond, un agent a aussi pour objectif de tirer un profit maximal de ses joueurs et de les valoriser au maximum.
+
+Mais un agent est-il réellement utile pour permettre à un joueur d’être mieux valorisé sur le marché footballistique ?
+
+Pour vérifier cela, nous allons faire un boxplot comparant la valeur marchande des joueurs par poste avec et sans agents.
+
+```{r}
+# Chargement de la librairie nécessaire et des données
+library(tidyverse)
+library(scales)
+
+players <- read_csv("./data/players.csv")
+
+# Préparation et nettoyage des données
+data_agents <- players %>%
+  # On garde uniquement les joueurs avec une valeur marchande et un poste défini
+  filter(!is.na(market_value_in_eur), 
+         !is.na(position), 
+         position != "Missing") %>%
+  mutate(
+    # Détermination de la présence d'un agent (Vrai si le champ n'est pas vide ou NA)
+    statut_agent = ifelse(is.na(agent_name) | trimws(agent_name) == "", 
+                          "Sans agent", 
+                          "Avec agent"),
+    # Facteur pour ordonner la légende proprement
+    statut_agent = factor(statut_agent, levels = c("Avec agent", "Sans agent"))
+  )
+
+# Création du Boxplot comparatif
+ggplot(data_agents, aes(x = position, y = market_value_in_eur, fill = statut_agent)) +
+  geom_boxplot(outlier.alpha = 0.2, outlier.size = 1) +
+  # Échelle logarithmique indispensable car le marché varie de quelques milliers à plusieurs millions
+  scale_y_log10(labels = label_number(suffix = " M€", scale = 1e-6)) +
+  scale_fill_manual(values = c("Avec agent" = "#2ECC71", "Sans agent" = "#E74C3C")) +
+  labs(
+    title = "Impact de la représentation par un agent sur la valeur marchande",
+    subtitle = "Comparaison par poste du joueur (Échelle logarithmique)",
+    x = "Poste",
+    y = "Valeur marchande",
+    fill = "Représentation",
+    caption = "Source : players.csv"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    plot.title = element_text(face = "bold", size = 14),
+    plot.subtitle = element_text(color = "grey50", margin = margin(b = 10)),
+    axis.text.x = element_text(angle = 45, hjust = 1, size = 10),
+    legend.position = "top",
+    panel.grid.minor = element_blank()
+  )
 ```
+L'analyse de ce graphique est sans appel : la présence d'un agent déclaré est corrélée à une valeur marchande nettement supérieure, et ce, peu importe le poste occupé sur le terrain.
+
+Pour chaque catégorie (Attaquants, Défenseurs, Gardiens, Milieux), la ligne centrale du boxplot vert (avec agent) est systématiquement plus haute que celle du boxplot rouge (sans agent).
+
+En moyenne, la valeur médiane d'un joueur représenté semble se situer aux alentours de 0,40 M€ à 0,50 M€.
+
+À l'inverse, pour les joueurs sans agent, cette médiane chute drastiquement, gravitant souvent autour de 0,10 M€ à 0,20 M€.
+
+La "boîte" verte, qui représente les 50 % centraux de l'échantillon, s'étend beaucoup plus haut dans l'échelle logarithmique. Cela signifie que même un joueur "moyen" avec un agent a de fortes chances d'avoir une valeur marchande supérieure à un joueur "moyen" sans agent.
+
+Bien que l'on observe des valeurs aberrantes (les points noirs en haut des moustaches) dans les deux catégories, les sommets atteints par les joueurs sous contrat avec une agence frôlent ou dépassent les 100 M€.
+
+Chez les joueurs sans agent, si certains atteignent des sommets, la densité de joueurs à haute valeur est beaucoup plus faible.
+
+L'écart est particulièrement frappant chez les milieux de terrain et les attaquants, où la valorisation maximale est nettement plus accessible avec un intermédiaire.
+
+
+Cependant, on peut se poser la question suivante : est-ce l’agent qui crée la valeur, ou les joueurs à forte valeur qui attirent naturellement les agents ?
+
+- Le réseau et la négociation : l’agent utilise son carnet d’adresses pour créer de la concurrence entre les clubs, ce qui fait mécaniquement augmenter la valeur du joueur.
+
+- La professionnalisation : un joueur qui choisit d’être représenté par un agent s’inscrit souvent dans une démarche de carrière plus structurée, ce qui peut rassurer les clubs.
+
+- Le biais de sélection : les agents ciblent prioritairement les joueurs à fort potentiel. Cependant, le graphique montre que même pour les valeurs plus modestes (partie basse du boxplot), l’avantage reste du côté des joueurs représentés.
+
+En conclusion, le graphique confirme qu’il existe un écart significatif. Ne pas avoir d’agent déclaré semble constituer un frein majeur à la valorisation financière d’un joueur sur le marché actuel.
 
 ## 15. Identification des clubs performants pour faire évoluer leurs joueurs Quels clubs créent le plus de valeur sur leurs joueurs formés ?
 ```{r}
