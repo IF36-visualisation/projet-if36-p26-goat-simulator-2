@@ -840,9 +840,91 @@ ggplot(goal_minute, aes(x = minute, y = pct)) +
 On observe que les buts ne tombent pas uniformément dans un match. Les moments de la mi-temps et de la fin de match ont généralement la plus forte fréquence de buts. La seconde période montre une activité legerement plus élevé par rapport à la première. Cette tendance illustre l’impact de la fatigue, des ajustements tactiques et de la pression en fin de match. On peu constater que les moments cruciaux sont les fin de période généralement.
 
 ## 12. Recherche d'une relation entre pays d'origine et poste sur le terrain La nationalité d'un joueur est-elle statistiquement liée au poste qu'il occupe sur le terrain ?
-```{r}
 
+En regardant les différents matchs de football, on peut remarquer que, dans la plupart des grandes équipes européennes, il y a très souvent en attaque des joueurs français : Ousmane Dembélé, Désiré Doué pour le PSG, Kylian Mbappé au Real Madrid, ou encore Michael Olise au Bayern Munich et Hugo Ekitike à Liverpool.
+
+Mais une question se pose : retrouve-t-on ces différents joueurs dispersés dans les équipes à des postes bien précis parce que certains pays constituent un bon vivier de footballeurs, ou bien ces joueurs occupent-ils ces postes parce que leur nationalité influence leur formation, et donc, par conséquent, leur position sur le terrain ?
+
+Pour voir cela, nous allons faire une heatmap du pays par rapport au poste (normalisée par effectif total par pays), pour les joueurs actifs des 5 grands championnats.
+
+```{r}
+# Chargement des données
+players <- read_csv("./data/players.csv")
+
+# Sélection des 5 grands championnats européens
+top_5_leagues <- c("GB1", "ES1", "IT1", "FR1", "L1")
+
+# Filtrage : joueurs actifs dans le top 5, avec poste et nationalité renseignés
+data_top_5 <- players %>%
+  filter(
+    current_club_domestic_competition_id %in% top_5_leagues,
+    !is.na(position),
+    !is.na(country_of_citizenship),
+    position != "Missing"
+  )
+
+# Pour la lisibilité de la heatmap, on limite aux 15 nations les plus représentées
+top_countries <- data_top_5 %>%
+  count(country_of_citizenship) %>%
+  top_n(15, n) %>%
+  pull(country_of_citizenship)
+
+# Calcul des proportions par pays (normalisation)
+heatmap_data <- data_top_5 %>%
+  filter(country_of_citizenship %in% top_countries) %>%
+  count(country_of_citizenship, position) %>%
+  group_by(country_of_citizenship) %>%
+  mutate(pct = n / sum(n)) %>%
+  ungroup()
+
+# Création de la Heatmap
+ggplot(heatmap_data, aes(x = position, y = country_of_citizenship, fill = pct)) +
+  geom_tile(color = "white") +
+  # Ajout des étiquettes de pourcentages sur les tuiles
+  geom_text(aes(label = percent(pct, accuracy = 1)), color = "black", size = 3) +
+  scale_fill_gradient(
+    low = "#E8F4F8", 
+    high = "#2980B9", 
+    labels = percent_format()
+  ) +
+  labs(
+    title = "Relation entre pays d'origine et poste sur le terrain",
+    subtitle = "Répartition (en %) des joueurs d'une même nationalité par poste (Top 5 ligues)",
+    x = "Poste sur le terrain",
+    y = "Nationalité",
+    fill = "Proportion"
+  ) +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(face = "bold", size = 14),
+    axis.text.x = element_text(size = 10, angle = 45, hjust = 1),
+    axis.text.y = element_text(size = 10),
+    panel.grid = element_blank()
+  )
 ```
+Nous pouvons voir que la répartition des postes des joueurs selon les pays est relativement similaire d’un pays à l’autre. En réalité, si l’on observe attentivement le graphique, cette répartition ne semble pas réellement liée à la nationalité, mais représente plutôt la répartition classique des postes dans une équipe de football.
+Pour une répartition « standard », souvent utilisée en analyse de données footballistiques (4-3-3 ou 4-2-3-1), on considère généralement :
+
+
+1 gardien → 9 %
+4 défenseurs → 36 %
+4 milieux → 36 %
+2 attaquants/offensifs → 18 %
+
+
+Le filtrage ne semble donc pas réellement se faire par nationalité, mais davantage selon la répartition naturelle des postes dans une équipe.
+Cependant, certaines tendances peuvent être observées. Les attaquants varient davantage selon les nationalités, avec certaines nations particulièrement offensives :
+
+Côte d’Ivoire : 45 %
+Sénégal et Maroc : 37 %
+Argentine : 32 %
+
+
+À l’inverse, certaines nations semblent produire davantage de profils défensifs :
+
+Pays-Bas : 42 % de défenseurs
+Suisse : 39 %
+Brésil : 40 %
 
 ## 13. Étude de l'impact des grandes affluence sur les résultats d'une équipe Les clubs jouant devant de grandes foules obtiennent-ils de meilleurs résultats ?
 ```{r}
