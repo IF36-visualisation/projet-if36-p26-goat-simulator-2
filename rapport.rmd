@@ -927,9 +927,65 @@ Suisse : 39 %
 Brésil : 40 %
 
 ## 13. Étude de l'impact des grandes affluence sur les résultats d'une équipe Les clubs jouant devant de grandes foules obtiennent-ils de meilleurs résultats ?
-```{r}
 
+Est-ce que le public d’un match de football influence réellement les résultats d’une équipe ? Ou, au contraire, de meilleurs résultats attirent-ils davantage de supporters ?
+
+Avant de répondre à cette question, je pense que les résultats ne sont pas réellement influencés par la présence de grandes foules, mais plutôt que le public se construit progressivement au fil du temps grâce à la dynamique du club.
+
+Pour confirmer ou infirmer cette hypothèse, nous allons réaliser un scatter plot avec une droite de tendance, segmenté par championnat, afin de quantifier l’effet du « douzième homme » à partir de données réelles.
+
+```{r}
+# --- 1. Chargement et préparation des données ---
+library(tidyverse)
+library(scales)
+
+games <- read_csv("./data/games.csv")
+competitions <- read_csv("./data/competitions.csv")
+
+# Sélection des 5 grands championnats pour une visualisation lisible
+top_5_leagues <- c("GB1", "ES1", "IT1", "FR1", "L1")
+
+data_affluence <- games %>%
+  filter(
+    competition_id %in% top_5_leagues, 
+    !is.na(attendance), 
+    attendance > 0
+  ) %>%
+  # Calcul de la différence de buts pour l'équipe à domicile (+ = victoire, - = défaite)
+  mutate(home_goal_diff = home_club_goals - away_club_goals) %>%
+  left_join(competitions %>% select(competition_id, league_name = name), by = "competition_id")
+
+# --- 2. Création du graphique ---
+ggplot(data_affluence, aes(x = attendance, y = home_goal_diff)) +
+  # Points en transparence car il y a des milliers de matchs
+  geom_point(alpha = 0.1, color = "#2C3E50") +
+  # Droite de tendance linéaire pour quantifier l'effet
+  geom_smooth(method = "lm", color = "#E74C3C", fill = "#E74C3C", alpha = 0.2) +
+  # Segmentation par championnat
+  facet_wrap(~ league_name, scales = "free_x") +
+  scale_x_continuous(labels = label_number(suffix = "k", scale = 1e-3)) +
+  labs(
+    title = "Impact de l'affluence sur les résultats de l'équipe à domicile",
+    subtitle = "Différence de buts (Domicile - Extérieur) selon le nombre de spectateurs présents",
+    x = "Affluence (Nombre de spectateurs)",
+    y = "Différence de buts (Domicile)",
+    caption = "Source : games.csv"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    plot.title = element_text(face = "bold", size = 14),
+    strip.text = element_text(face = "bold"),
+    panel.grid.minor = element_blank()
+  )
 ```
+Après avoir fait le graphique, même si les droites de tendance sont positives, leur pente reste relativement faible. 
+
+Cela suggère que : L’affluence semble avoir un effet positif sur les performances à domicile, mais cet effet reste limité.
+
+Autrement dit, les équipes jouant devant davantage de supporters obtiennent en moyenne une meilleure différence de buts;
+cependant, la dispersion des points montre que l’affluence seule n’explique pas les résultats.
+
+L'hypothèse de départ semble donc plutôt correcte : ce ne sont probablement pas uniquement les supporters qui améliorent les performances, mais aussi le fait que les clubs les plus performants attirent davantage de spectateurs.
 
 ## 14. L'impact des agents sur la valeur marchande d'un joueur ? Existe-t-il un écart significatif de valeur marchande entre les joueurs représentés et ceux sans agent déclaré ?
 ```{r}
