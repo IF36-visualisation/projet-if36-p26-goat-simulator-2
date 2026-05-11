@@ -1,6 +1,10 @@
 ---
 title: "Analyse du dataset Transfermarkt"
-output: pdf_document
+author: Gatien Genevois, Arnaud Godard, Raphael Beau, Sacha Himber
+output:
+  prettydoc::html_pretty:
+    theme: cayman
+    highlight: github
 ---
 
 # **Proposition**
