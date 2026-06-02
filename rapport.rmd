@@ -905,9 +905,41 @@ Enfin, les championnats espagnol et italien occupent une position intermédiaire
 Globalement, on observe que plus un championnat est économiquement puissant et médiatisé, plus sa diversité de nationalités est élevée.
 
 ## 10. Relation entre Taille (Hauteur) et Position sur le terrain
-```{r}
 
+Dans le football moderne, la morphologie (et plus précisément la taille en centimètres) reste-t-elle un critère physique discriminant et déterminant selon le poste occupé sur le terrain ?
+
+```{r}
+library(ggplot2)
+library(dplyr)
+library(plotly)
+
+players <- read.csv("./data/players.csv")
+
+donnees_taille <- players %>%
+  filter(!is.na(height_in_cm) & height_in_cm > 100) %>%
+  filter(position %in% c("Goalkeeper", "Defender", "Midfield", "Attack")) %>%
+  mutate(Poste = case_when(
+    position == "Goalkeeper" ~ "Gardien",
+    position == "Defender" ~ "Défenseur",
+    position == "Midfield" ~ "Milieu",
+    position == "Attack" ~ "Attaquant"
+  ))
+
+p_taille <- ggplot(donnees_taille, aes(x = reorder(Poste, height_in_cm, FUN = median), y = height_in_cm, fill = Poste)) +
+  geom_boxplot(alpha = 0.7, outlier.color = "#e74c3c", outlier.size = 2) +
+  scale_fill_brewer(palette = "Set2") +
+  labs(
+    title = "Distribution de la taille des joueurs selon leur poste",
+    x = "Poste sur le terrain",
+    y = "Taille (en cm)"
+  ) +
+  theme_minimal() +
+  theme(legend.position = "none")
 ```
+La boîte représentant les gardiens se situe le plus haut sur l'axe des ordonnées. La distribution montre que la quasi-totalité des gardiens de l'élite se situe au-dessus de la moyenne générale. La taille reste un profil morphologique indispensable à ce poste pour couvrir au maximum la surface du but.
+Les défenseurs suivent de très près les gardiens. Cela confirme que le profil type du défenseur moderne privilégie une grande taille pour remporter les duels de la tête et s'imposer physiquement lors des corners et coups francs.
+La boîte des milieux de terrain est positionnée plus bas et s'avère souvent plus compacte. Un profil plus petit offre un centre de gravité plus bas, synonyme d'une plus grande agilité et d'une meilleure vivacité.
+La distribution des attaquants montre une plus grande dispersion. Cela s'explique par les deux profils tactiques : les "pivots/avants-centres" de grande taille pour le jeu de tête, et les "ailiers de rupture", souvent très petits, dont le jeu repose exclusivement sur la vitesse et le dribble.
 
 ## 11. Analyse des moments les plus cruciaux au sein d'un match
 Y a-t-il des tranches horaires où les buts et événements décisifs sont statistiquement plus fréquents ? Pour y répondre on va créer un histogramme de chaque minutes avec une proportion de but pour visualiser en générale les points cruciaux des matchs.
