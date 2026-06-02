@@ -595,9 +595,56 @@ En conclusion, on peut affirmer que la valorisation d’un joueur est influencé
 Il serait donc pertinent de s’intéresser également à l’évolution du marché et des prix des transferts au cours des années afin de mieux appréhender ces dynamiques.
 
 ## 5. Évolution historique des prix des transferts
+Comment le marché mondial du football a-t-il évolué financièrement sur la dernière décennie et dans quelle mesure les crises globales ont-elles impacté les investissements des clubs ? 
 ```{r}
+library(ggplot2)
+library(dplyr)
+library(plotly)
+
+
+transfers <- read.csv("./data//transfers.csv")
+
+
+evolution_prix <- transfers %>%
+  filter(!is.na(transfer_fee) & transfer_fee > 0) %>%
+  
+  group_by(transfer_season) %>%
+  summarise(
+    montant_total = sum(transfer_fee, na.rm = TRUE),
+    prix_moyen = mean(transfer_fee, na.rm = TRUE),
+    nb_transferts = n()
+  ) %>%
+  # On trie par saison
+  arrange(transfer_season) %>%
+  # on enleve la saison en cours
+  slice(1:(n() - 1)) %>% 
+  tail(10) %>%
+  
+  mutate(
+    total_milliards = round(montant_total / 1000000000, 2),
+    moyen_millions = round(prix_moyen / 1000000, 2)
+  )
+
+# 3. Création du graphique
+p_inflation <- ggplot(evolution_prix, aes(x = transfer_season, y = total_milliards, group = 1,
+                                          text = paste("Saison :", transfer_season,
+                                                       "<br>Total investi :", total_milliards, "Mrd €",
+                                                       "<br>Prix moyen :", moyen_millions, "M€"))) +
+  geom_line(color = "#2c3e50", size = 1.2) +
+  geom_point(color = "#e74c3c", size = 3) +
+  geom_area(fill = "#3498db", alpha = 0.2) +
+  labs(
+    title = "Évolution du Marché des Transferts (Historique)",
+    x = "Saison",
+    y = "Total (en Milliards d'Euros)"
+  ) +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
 
 ```
+
+Le graphique montre un décrochage brutal à partir de 2020. Cette chute correspond précisément à la pandémie de COVID-19. L'arrêt des compétitions, la perte des revenus de billetterie (huis clos) et l'incertitude économique ont forcé les clubs à une austérité soudaine. On remarque que le total investi a chuté de manière significative, marquant un coup d'arrêt net à l'inflation du marché. 
+Après ce creux historique, la courbe amorce une remontée, signe que le marché retrouve peu à peu sa santé financière, même si les clubs semblent désormais plus prudents dans leurs volumes d'achat par rapport aux records de l'avant-crise.
 
 ## 6. Balance commerciale des clubs (Achats vs Ventes)
 ```{r}
