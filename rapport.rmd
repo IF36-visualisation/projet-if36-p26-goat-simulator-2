@@ -647,9 +647,62 @@ Le graphique montre un décrochage brutal à partir de 2020. Cette chute corresp
 Après ce creux historique, la courbe amorce une remontée, signe que le marché retrouve peu à peu sa santé financière, même si les clubs semblent désormais plus prudents dans leurs volumes d'achat par rapport aux records de l'avant-crise.
 
 ## 6. Balance commerciale des clubs (Achats vs Ventes)
+Quels clubs se révèlent être les plus profitables sur le marché des transferts, et comment cette balance commerciale permet-elle de distinguer la stratégie des "clubs formateurs/vendeurs" de celle des "clubs acheteurs" ?
+
 ```{r}
+library(ggplot2)
+library(dplyr)
+library(plotly)
+
+transfers <- read.csv("archive/transfers.csv")
+
+
+depenses <- transfers %>%
+  filter(!is.na(transfer_fee) & transfer_fee > 0) %>%
+  group_by(club_name = to_club_name) %>% 
+  summarise(Total_Achats = sum(as.numeric(transfer_fee), na.rm = TRUE))
+
+revenus <- transfers %>%
+  filter(!is.na(transfer_fee) & transfer_fee > 0) %>%
+  group_by(club_name = from_club_name) %>%
+  summarise(Total_Ventes = sum(as.numeric(transfer_fee), na.rm = TRUE))
+
+
+balance_clubs <- full_join(depenses, revenus, by = "club_name") %>%
+  mutate(
+    Total_Achats = ifelse(is.na(Total_Achats), 0, Total_Achats),
+    Total_Ventes = ifelse(is.na(Total_Ventes), 0, Total_Ventes),
+    Balance = Total_Ventes - Total_Achats,
+    Balance_Millions = round(Balance / 1000000, 2)
+  ) %>%
+  filter(club_name != "" & club_name != "Unknown")
+
+top_profits <- balance_clubs %>% arrange(desc(Balance)) %>% head(5)
+top_deficits <- balance_clubs %>% arrange(Balance) %>% head(5)
+
+donnees_graphique <- bind_rows(top_profits, top_deficits) %>%
+  mutate(Type = ifelse(Balance > 0, "Profit (Vendeur)", "Déficit (Acheteur)"))
+
+p_balance <- ggplot(donnees_graphique, aes(x = reorder(club_name, Balance_Millions), y = Balance_Millions, fill = Type,
+                                           text = paste("Club :", club_name,
+                                                        "<br>Total Ventes :", round(Total_Ventes/1000000, 2), "M€",
+                                                        "<br>Total Achats :", round(Total_Achats/1000000, 2), "M€",
+                                                        "<br>Balance Nette :", Balance_Millions, "M€"))) +
+  geom_col(width = 0.6) +
+  coord_flip() + 
+  scale_fill_manual(values = c("#e74c3c", "#2ecc71")) + 
+  labs(
+    title = "Balance Commerciale Nette du Marché des Transferts (Top Extrêmes)",
+    x = "Club",
+    y = "Balance Nette (en Millions d'Euros)",
+    fill = "Profil économique"
+  ) +
+  theme_minimal()
 
 ```
+À l'une des extrémités de la courbe se trouvent les clubs au profil purement consommateur. Leurs investissements sur le marché des transferts dépassent de très loin les revenus générés par la vente de leurs propres joueurs. Ce modèle privilégie la compétitivité sportive immédiate et l'acquisition de "stars" mondiales au détriment de la rentabilité commerciale des transferts.
+À l'opposé, les clubs affichant une balance largement positive incarnent le modèle de "valorisation sportive". Leur stratégie consiste à acquérir ou former de jeunes talents à bas coût, à les faire progresser au sein de leur effectif, puis à les revendre au prix fort à l'élite européenne.
+
 
 ## 7. Domination à domicile vs Extérieur
 On peux supposer que les matchs à domicile sont plus avantageux. Pour vérifier cette hypothèse on va chercher les donnée dans games.csv qui correspond a des matchs puis comparer les colonnes home_club_goals et away_club_goals pour determiner si un match est une vitcoire ou non. Ensuite, à partir des ces infos on va générer un barchart pour déterminer les proportions de victoire / défaite / nul pour les match à domicile puis à l'extérieur.
