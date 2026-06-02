@@ -654,7 +654,7 @@ library(ggplot2)
 library(dplyr)
 library(plotly)
 
-transfers <- read.csv("archive/transfers.csv")
+transfers <- read.csv("./data/transfers.csv")
 
 
 depenses <- transfers %>%
