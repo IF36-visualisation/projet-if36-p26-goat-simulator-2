@@ -5,222 +5,247 @@ output:
   prettydoc::html_pretty:
     theme: cayman
     highlight: github
+editor_options: 
+  markdown: 
+    wrap: 72
 ---
 
 # **Proposition**
 
 #### Attention : Les données utilisées dans ce projet sont des échantillons réduits du dataset original, limités à 1000 lignes par fichier pour des raisons de taille et de performance. Pensez à bien supprimer les échantillons avant de télécharger les données complètes pour vos analyses avec la commande suivante :
-```bash
+
+``` bash
    rm data/*
 ```
+
 ## **Contexte**
-Les données proviennent du site Transfermarkt, une plateforme de référence mondiale pour les statistiques de football, les transferts et les valeurs marchandes.
-Téléchargeable [ici](https://www.kaggle.com/datasets/davidcariboo/player-scores?resource=download)
+
+Les données proviennent du site Transfermarkt, une plateforme de
+référence mondiale pour les statistiques de football, les transferts et
+les valeurs marchandes. Téléchargeable
+[ici](https://www.kaggle.com/datasets/davidcariboo/player-scores?resource=download)
 
 ou
-```bash
+
+``` bash
    pip install kaggle
 ```
+
 puis
-```bash
+
+``` bash
    kaggle datasets download -d davidcariboo/player-scores --unzip -p ./data
 ```
 
-Ce jeu de données a été créé pour offrir une base propre, structurée et régulièrement mise à jour (automatiquement via des scripts Python) pour l'analyse du football mondial. Il est utilisé par les data scientists pour la prédiction de valeurs marchandes, l'analyse de performance des joueurs ou le scouting.
+Ce jeu de données a été créé pour offrir une base propre, structurée et
+régulièrement mise à jour (automatiquement via des scripts Python) pour
+l'analyse du football mondial. Il est utilisé par les data scientists
+pour la prédiction de valeurs marchandes, l'analyse de performance des
+joueurs ou le scouting.
 
-Nous avons choisi ce dataset car nous voulions faire notre projet en rapport avec le sport. Après quelques recherches, nous avons trouvé ce dataset suffisamment riche pour le projet.
+Nous avons choisi ce dataset car nous voulions faire notre projet en
+rapport avec le sport. Après quelques recherches, nous avons trouvé ce
+dataset suffisamment riche pour le projet.
 
-Les fichiers originaux sont trop volumineux pour être intégrés entièrement dans ce dépôt (plusieurs millions de lignes). Les fichiers présents ici sont donc des versions allégées, uniquement là pour donner un ordre d'idée de la structure des données (1000 lignes maximum).
-Nous avons téléchargé les données le 30 mars 2026.
-Le dataset source étant mis à jour toutes les semaines sur Kaggle, il est possible que les résultats diffèrent si vous utilisez une version plus récente que la nôtre.
+Les fichiers originaux sont trop volumineux pour être intégrés
+entièrement dans ce dépôt (plusieurs millions de lignes). Les fichiers
+présents ici sont donc des versions allégées, uniquement là pour donner
+un ordre d'idée de la structure des données (1000 lignes maximum). Nous
+avons téléchargé les données le 30 mars 2026. Le dataset source étant
+mis à jour toutes les semaines sur Kaggle, il est possible que les
+résultats diffèrent si vous utilisez une version plus récente que la
+nôtre.
 
 ## **Détails**
+
 Le dataset est divisé en 10 fichiers .csv dont voici le détail :
 
--**appearances.csv** : Chaque ligne est une apparition d'un joueur dans un match (~1 850 000)
+\-**appearances.csv** : Chaque ligne est une apparition d'un joueur dans
+un match (\~1 850 000)
 
->    appearance_id : identifiant de ligne pour le fichier ; Texte
->    game_id : identifiant pour les parties ; Chiffre (Entier)
->    player_id : identifiant pour les joueurs ; Chiffre (Entier)
->    player_club_id : Identifiant du club pour lequel le joueur jouait au moment précis du match ; Chiffre (Entier)
->    player_current_club_id : Identifiant du club où le joueur évolue actuellement ; Chiffre (Entier)
->    date : Date exacte à laquelle le match a eu lieu ; Date(AAAA-MM-JJ)
->    player_name : Nom complet du joueur ; Texte (Chaîne)
->    competition_id : Identifiant de la compétition ; Texte (Code)
->    yellow_cards : Nombre de cartons jaunes reçus durant la rencontre ; Chiffre (Entier)
->    red_cards : Nombre de cartons rouges reçus durant la rencontre ; Chiffre (Entier)
->    goals : Nombre de buts marqués par le joueur lors de ce match ; Chiffre (Entier)
->    assists : Nombre de passes décisives délivrées ; Chiffre (Entier)
->    minutes_played : Temps total passé sur le terrain ; Chiffre (Entier)
+> appearance_id : identifiant de ligne pour le fichier ; Texte game_id :
+> identifiant pour les parties ; Chiffre (Entier) player_id :
+> identifiant pour les joueurs ; Chiffre (Entier) player_club_id :
+> Identifiant du club pour lequel le joueur jouait au moment précis du
+> match ; Chiffre (Entier) player_current_club_id : Identifiant du club
+> où le joueur évolue actuellement ; Chiffre (Entier) date : Date exacte
+> à laquelle le match a eu lieu ; Date(AAAA-MM-JJ) player_name : Nom
+> complet du joueur ; Texte (Chaîne) competition_id : Identifiant de la
+> compétition ; Texte (Code) yellow_cards : Nombre de cartons jaunes
+> reçus durant la rencontre ; Chiffre (Entier) red_cards : Nombre de
+> cartons rouges reçus durant la rencontre ; Chiffre (Entier) goals :
+> Nombre de buts marqués par le joueur lors de ce match ; Chiffre
+> (Entier) assists : Nombre de passes décisives délivrées ; Chiffre
+> (Entier) minutes_played : Temps total passé sur le terrain ; Chiffre
+> (Entier)
 
+\-**players.csv** : profils de joueurs individuels (\~38 000)
 
+> player_id : Identifiant unique du joueur ; Chiffre (Entier) first_name
+> : Prénom du joueur ; Texte last_name : Nom de famille du joueur ;
+> Texte name : Nom complet (maillot) ; Texte last_season : Dernière
+> saison où le joueur a été actif ; Chiffre (Année) current_club_id :
+> Identifiant du club actuel où évolue le joueur ; Chiffre (Entier)
+> player_code : Identifiant textuel utilisé dans l'URL de Transfermarkt
+> ; Texte country_of_birth : Pays de naissance du joueur ; Texte
+> city_of_birth : Ville de naissance du joueur ; Texte
+> country_of_citizenship : Nationalité sportive du joueur ; Texte
+> date_of_birth : Date de naissance du joueur ; Date (AAAA-MM-JJ)
+> sub_position : Poste précis ; Texte position : Catégorie de poste
+> générale (Attaque, Milieu, Défense, Gardien) ; Texte foot : Pied
+> principal ; Texte height_in_cm : Taille du joueur en centimètres ;
+> Chiffre (Entier) contract_expiration_date : Date de fin du contrat
+> actuel avec le club ; Date (AAAA-MM-JJ) agent_name : Nom de l'agent ou
+> de l'agence qui gère le joueur ; Texte image_url : Lien vers la photo
+> officielle du joueur sur Transfermarkt ; Texte international_caps :
+> Nombre total de sélections en équipe nationale ; Chiffre (Entier)
+> international_goals : Nombre total de buts marqués en équipe nationale
+> ; Chiffre (Entier) current_national_team_id : Identifiant de l'équipe
+> nationale actuelle du joueur ; Chiffre (Entier) url : Lien vers la
+> fiche complète du joueur sur le site web ; Texte
+> current_club_domestic_competition_id : Identifiant du championnat
+> national du club actuel ; Texte (Code) current_club_name : Nom complet
+> du club actuel ; Texte market_value_in_eur : Valeur marchande actuelle
+> estimée en euros ; Chiffre (Décimal) \> highest_market_value_in_eur :
+> Valeur marchande la plus élevée atteinte dans la carrière ; Chiffre
+> (Décimal)
 
--**players.csv** : profils de joueurs individuels (~38 000)
+\-**games.csv** : Détails sur les matchs (\~82 000)
 
->    player_id : Identifiant unique du joueur ; Chiffre (Entier)
->    first_name : Prénom du joueur ; Texte
->    last_name : Nom de famille du joueur ; Texte
->    name : Nom complet (maillot) ; Texte
->    last_season : Dernière saison où le joueur a été actif ; Chiffre (Année)
->    current_club_id : Identifiant du club actuel où évolue le joueur ; Chiffre (Entier)
->    player_code : Identifiant textuel utilisé dans l'URL de Transfermarkt ; Texte
->    country_of_birth : Pays de naissance du joueur ; Texte
->    city_of_birth : Ville de naissance du joueur ; Texte
->    country_of_citizenship : Nationalité sportive du joueur ; Texte
->    date_of_birth : Date de naissance du joueur ; Date (AAAA-MM-JJ)
->    sub_position : Poste précis ; Texte
->    position : Catégorie de poste générale (Attaque, Milieu, Défense, Gardien) ; Texte
->    foot : Pied principal ; Texte
->    height_in_cm : Taille du joueur en centimètres ; Chiffre (Entier)
->    contract_expiration_date : Date de fin du contrat actuel avec le club ; Date (AAAA-MM-JJ)
->    agent_name : Nom de l'agent ou de l'agence qui gère le joueur ; Texte
->    image_url : Lien vers la photo officielle du joueur sur Transfermarkt ; Texte
->    international_caps : Nombre total de sélections en équipe nationale ; Chiffre   (Entier)
->    international_goals : Nombre total de buts marqués en équipe nationale ; Chiffre (Entier)
->    current_national_team_id : Identifiant de l'équipe nationale actuelle du joueur ; Chiffre (Entier)
->    url : Lien vers la fiche complète du joueur sur le site web ; Texte
->    current_club_domestic_competition_id : Identifiant du championnat national du club actuel ; Texte (Code)
->    current_club_name : Nom complet du club actuel ; Texte
->    market_value_in_eur : Valeur marchande actuelle estimée en euros ; Chiffre (Décimal)  >    highest_market_value_in_eur : Valeur marchande la plus élevée atteinte dans la carrière ; Chiffre (Décimal)
+> game_id : Identifiant unique de la rencontre ; Chiffre (Entier)
+> competition_id : Identifiant de la compétition ; Texte (Code) season :
+> Année de la saison concernée ; Chiffre (Année) round : Étape de la
+> compétition ; Texte date : Date exacte du coup d'envoi ; Date
+> (AAAA-MM-JJ) home_club_id : Identifiant du club recevant ; Chiffre
+> (Entier) away_club_id : Identifiant du club visiteur ; Chiffre
+> (Entier) home_club_goals : Nombre de buts marqués par l'équipe à
+> domicile ; Chiffre (Entier) away_club_goals : Nombre de buts marqués
+> par l'équipe à l'extérieur ; Chiffre (Entier) home_club_position :
+> Classement du club à domicile avant le match ; Chiffre (Entier)
+> away_club_position : Classement du club visiteur avant le match ;
+> Chiffre (Entier) home_club_manager_name : Nom de l'entraîneur de
+> l'équipe à domicile ; Texte away_club_manager_name : Nom de
+> l'entraîneur de l'équipe à l'extérieur ; Texte stadium : Nom du stade
+> où s'est déroulée la rencontre ; Texte attendance : Nombre de
+> spectateurs présents dans le stade ; Chiffre (Entier) referee : Nom de
+> l'arbitre principal de la rencontre ; Texte url : Lien direct vers le
+> rapport de match sur Transfermarkt ; Texte (URL) home_club_formation :
+> Système tactique de l'équipe à domicile ; Texte away_club_formation :
+> Système tactique de l'équipe visiteuse ; Texte home_club_name : Nom
+> complet du club à domicile ; Texte away_club_name : Nom complet du
+> club visiteur ; Texte aggregate : Score cumulé (utilisé pour les
+> matchs aller-retour) ; Texte competition_type : Type de tournoi ;
+> Texte
 
+\-**clubs.csv** : Regroupe les informations sur les clubs (\~430)
 
+> club_id : Identifiant unique du club ; Chiffre (Entier) club_code :
+> Nom court utilisé dans les URLs ; Texte name : Nom officiel complet du
+> club ; Texte domestic_competition_id : Identifiant de la ligue
+> nationale où évolue le club ; Texte (Code) total_market_value : Somme
+> des valeurs marchandes de tous les joueurs de l'effectif ; Chiffre
+> (Décimal) squad_size : Nombre total de joueurs sous contrat dans
+> l'équipe première ; Chiffre (Entier) average_age : Âge moyen des
+> joueurs de l'effectif ; Chiffre (Décimal) foreigners_number : Nombre
+> de joueurs n'ayant pas la nationalité du pays du club ; Chiffre
+> (Entier) foreigners_percentage : Pourcentage de joueurs étrangers dans
+> l'effectif ; Chiffre (Pourcentage) national_team_players : Nombre de
+> joueurs du club évoluant en équipe nationale ; Chiffre (Entier)
+> stadium_name : Nom du stade principal du club ; Texte stadium_seats :
+> Capacité totale (nombre de sièges) du stade ; Chiffre (Entier)
+> net_transfer_record : Balance nette des transferts (Achats - Ventes)
+> sur la période ; Texte/Chiffre coach_name : Nom de l'entraîneur actuel
+> (ou dernier connu) ; Texte last_season : Dernière saison où le club
+> est apparu dans les données ; Chiffre (Année) filename : Nom du
+> fichier source interne au dataset ; Texte url : Lien vers la page du
+> club sur le site Transfermarkt ; Texte (URL)
 
--**games.csv** : Détails sur les matchs (~82 000)
+\-**player_valuations.csv** : Enregistrements historiques de valeurs
+marchandes (\~520 000)
 
->    game_id : Identifiant unique de la rencontre ; Chiffre (Entier)
->    competition_id : Identifiant de la compétition ; Texte (Code)
->    season : Année de la saison concernée ; Chiffre (Année)
->    round : Étape de la compétition ; Texte
->    date : Date exacte du coup d'envoi ; Date (AAAA-MM-JJ)
->    home_club_id : Identifiant du club recevant ; Chiffre (Entier)
->    away_club_id : Identifiant du club visiteur ; Chiffre (Entier)
->    home_club_goals : Nombre de buts marqués par l'équipe à domicile ; Chiffre (Entier)
->    away_club_goals : Nombre de buts marqués par l'équipe à l'extérieur ; Chiffre (Entier)
->    home_club_position : Classement du club à domicile avant le match ; Chiffre (Entier)
->    away_club_position : Classement du club visiteur avant le match ; Chiffre (Entier)
->    home_club_manager_name : Nom de l'entraîneur de l'équipe à domicile ; Texte
->    away_club_manager_name : Nom de l'entraîneur de l'équipe à l'extérieur ; Texte
->    stadium : Nom du stade où s'est déroulée la rencontre ; Texte
->    attendance : Nombre de spectateurs présents dans le stade ; Chiffre (Entier)
->    referee : Nom de l'arbitre principal de la rencontre ; Texte
->    url : Lien direct vers le rapport de match sur Transfermarkt ; Texte (URL)
->    home_club_formation : Système tactique de l'équipe à domicile ; Texte
->    away_club_formation : Système tactique de l'équipe visiteuse ; Texte
->    home_club_name : Nom complet du club à domicile ; Texte
->    away_club_name : Nom complet du club visiteur ; Texte
->    aggregate : Score cumulé (utilisé pour les matchs aller-retour) ; Texte
->    competition_type : Type de tournoi ; Texte
+> player_id : Identifiant unique du joueur ; Chiffre (Entier) date :
+> Date à laquelle la valeur marchande a été mise à jour ou enregistrée ;
+> Date (AAAA-MM-JJ) market_value_in_eur : Estimation de la valeur
+> marchande du joueur à cette date précise ; Chiffre (Entier)
+> current_club_name : Nom du club où le joueur évoluait lors de cette
+> évaluation ; Texte current_club_id : Identifiant du club où le joueur
+> évoluait lors de cette évaluation ; Chiffre (Entier)
+> player_club_domestic_competition_id : Identifiant du championnat dans
+> lequel le club évoluait à ce moment-là ; Texte (Code)
 
+\-**competitions.csv** : Liste des championnats couverts (\~50)
 
+> competition_id : Identifiant unique de la compétition ; Texte (Code)
+> competition_code : Nom court utilisé dans l'URL ; Texte name : Nom
+> complet de la compétition ; Texte sub_type : Sous-catégorie ; Texte
+> type : Type général de compétition ; Texte country_id : Identifiant
+> numérique du pays organisateur ; Chiffre (Entier) country_name : Nom
+> du pays où se déroule la compétition ; Texte domestic_league_code :
+> Code de la ligue nationale associée ; Texte (Code) confederation :
+> Confédération continentale ; Texte url : Lien vers la page de la
+> compétition sur Transfermarkt ; Texte (URL)
 
--**clubs.csv** : Regroupe les informations sur les clubs (~430)
+\-**club_games.csv** : Fait le lien entre les clubs et les matchs (\~160
+000)
 
->    club_id : Identifiant unique du club ; Chiffre (Entier)
->    club_code : Nom court utilisé dans les URLs ; Texte
->    name : Nom officiel complet du club ; Texte
->    domestic_competition_id : Identifiant de la ligue nationale où évolue le club ; Texte (Code)
->    total_market_value : Somme des valeurs marchandes de tous les joueurs de l'effectif ; Chiffre (Décimal)
->    squad_size : Nombre total de joueurs sous contrat dans l'équipe première ; Chiffre (Entier)
->    average_age : Âge moyen des joueurs de l'effectif ; Chiffre (Décimal)
->    foreigners_number : Nombre de joueurs n'ayant pas la nationalité du pays du club ; Chiffre (Entier)
->    foreigners_percentage : Pourcentage de joueurs étrangers dans l'effectif ; Chiffre (Pourcentage)
->    national_team_players : Nombre de joueurs du club évoluant en équipe nationale ; Chiffre (Entier)
->    stadium_name : Nom du stade principal du club ; Texte
->    stadium_seats : Capacité totale (nombre de sièges) du stade ; Chiffre (Entier)
->    net_transfer_record : Balance nette des transferts (Achats - Ventes) sur la période ; Texte/Chiffre
->    coach_name : Nom de l'entraîneur actuel (ou dernier connu) ; Texte
->    last_season : Dernière saison où le club est apparu dans les données ; Chiffre (Année)
->    filename : Nom du fichier source interne au dataset ; Texte
->    url : Lien vers la page du club sur le site Transfermarkt ; Texte (URL)
+> game_id : Identifiant unique du match ; Chiffre (Entier) club_id :
+> Identifiant du club dont on décrit la performance ; Chiffre (Entier)
+> own_goals : Nombre de buts marqués par le club sujet lors du match ;
+> Chiffre (Entier) own_position : Classement du club sujet en
+> championnat avant le match ; Chiffre (Entier) own_manager_name : Nom
+> de l'entraîneur du club sujet pour ce match ; Texte opponent_id :
+> Identifiant du club adverse ; Chiffre (Entier) opponent_goals : Nombre
+> de buts marqués par l'adversaire ; Chiffre (Entier) opponent_position
+> : Classement de l'adversaire en championnat avant le match ; Chiffre
+> (Entier) opponent_manager_name : Nom de l'entraîneur de l'équipe
+> adverse ; Texte hosting : Indique si le club sujet jouait à domicile
+> (Home) ou à l'extérieur (Away) ; Texte is_win : Résultat final pour le
+> club sujet (1 pour victoire, 0 pour nul ou défaite) ; Chiffre
+> (Binaire)
 
+\-**game_events.csv** : Répertorie les événements marquants de chaque
+match (\~1 150 000)
 
+> game_event_id : Identifiant unique de l'événement ; Texte date : Date
+> du match où l'événement a eu lieu ; Date (AAAA-MM-JJ) game_id :
+> Identifiant du match ; Chiffre (Entier) minute : Minute précise du
+> match à laquelle l'action s'est produite ; Chiffre (Entier) type :
+> Nature de l'action ; Texte (Catégorie) club_id : Identifiant du club
+> qui a réalisé l'action ; Chiffre (Entier) club_name : Nom du club
+> concerné par l'événement ; Texte player_id : Identifiant du joueur
+> principal de l'action ; Chiffre (Entier) description :Détails textuels
+> ; Texte player_in_id : Identifiant du joueur qui entre (remplacement)
+> ; Chiffre (Entier) player_assist_id : Identifiant du joueur ayant fait
+> la passe décisive ; Chiffre (Entier)
 
--**player_valuations.csv** : Enregistrements historiques de valeurs marchandes (~520 000)
+\-**game_lineups.csv** : Détaille qui était sur le terrain, sur le banc,
+ou dans le staff technique pour chaque match (\~2 800 000)
 
->    player_id : Identifiant unique du joueur ; Chiffre (Entier)
->    date : Date à laquelle la valeur marchande a été mise à jour ou enregistrée ; Date (AAAA-MM-JJ)
->    market_value_in_eur : Estimation de la valeur marchande du joueur à cette date précise ; Chiffre (Entier)
->    current_club_name : Nom du club où le joueur évoluait lors de cette évaluation ; Texte
->    current_club_id : Identifiant du club où le joueur évoluait lors de cette évaluation ; Chiffre (Entier)
->    player_club_domestic_competition_id : Identifiant du championnat dans lequel le club évoluait à ce moment-là ; Texte (Code)
+> game_lineups_id : Identifiant unique de la ligne ; Texte date : Date
+> du match ; Date (AAAA-MM-JJ) game_id : Identifiant du match ; Chiffre
+> (Entier) player_id : Identifiant du joueur présent sur la feuille de
+> match ; Chiffre (Entier) club_id : Identifiant du club pour lequel le
+> joueur est aligné ; Chiffre (Entier) player_name : Nom complet du
+> joueur ; Texte type : Statut du joueur pour le match ; Texte position
+> : Poste spécifique occupé durant ce match ; Texte number : Numéro de
+> maillot porté par le joueur lors de cette rencontre ; Chiffre (Entier)
+> team_captain : Indicateur précisant si le joueur était le capitaine de
+> l'équipe ; Chiffre (Binaire)
 
-
-
--**competitions.csv** : Liste des championnats couverts (~50)
-
->    competition_id : Identifiant unique de la compétition ; Texte (Code)
->    competition_code : Nom court utilisé dans l'URL ; Texte
->    name : Nom complet de la compétition ; Texte
->    sub_type : Sous-catégorie ; Texte
->    type : Type général de compétition ; Texte
->    country_id : Identifiant numérique du pays organisateur ; Chiffre (Entier)
->    country_name : Nom du pays où se déroule la compétition ; Texte
->    domestic_league_code : Code de la ligue nationale associée ; Texte (Code)
->    confederation : Confédération continentale ; Texte
->    url : Lien vers la page de la compétition sur Transfermarkt ; Texte (URL)
-
-
-
--**club_games.csv** : Fait le lien entre les clubs et les matchs (~160 000)
-
->    game_id : Identifiant unique du match ; Chiffre (Entier)
->    club_id : Identifiant du club dont on décrit la performance ; Chiffre (Entier)
->    own_goals : Nombre de buts marqués par le club sujet lors du match ; Chiffre (Entier)
->    own_position : Classement du club sujet en championnat avant le match ; Chiffre (Entier)
->    own_manager_name : Nom de l'entraîneur du club sujet pour ce match ; Texte
->    opponent_id : Identifiant du club adverse ; Chiffre (Entier)
->    opponent_goals : Nombre de buts marqués par l'adversaire ; Chiffre (Entier)
->    opponent_position : Classement de l'adversaire en championnat avant le match ; Chiffre (Entier)
->    opponent_manager_name : Nom de l'entraîneur de l'équipe adverse ; Texte
->    hosting : Indique si le club sujet jouait à domicile (Home) ou à l'extérieur (Away) ; Texte
->    is_win : Résultat final pour le club sujet (1 pour victoire, 0 pour nul ou défaite) ; Chiffre (Binaire)
-
-
-
--**game_events.csv** : Répertorie les événements marquants de chaque match (~1 150 000)
-
->    game_event_id : Identifiant unique de l'événement ; Texte
->    date : Date du match où l'événement a eu lieu ; Date (AAAA-MM-JJ)
->    game_id : Identifiant du match ; Chiffre (Entier)
->    minute : Minute précise du match à laquelle l'action s'est produite ; Chiffre (Entier)
->    type : Nature de l'action ; Texte (Catégorie)
->    club_id : Identifiant du club qui a réalisé l'action ; Chiffre (Entier)
->    club_name : Nom du club concerné par l'événement ; Texte
->    player_id : Identifiant du joueur principal de l'action ; Chiffre (Entier)
->    description :Détails textuels ; Texte
->    player_in_id : Identifiant du joueur qui entre (remplacement) ; Chiffre (Entier)
->    player_assist_id : Identifiant du joueur ayant fait la passe décisive ; Chiffre (Entier)
-
-
-
--**game_lineups.csv** : Détaille qui était sur le terrain, sur le banc, ou dans le staff technique pour chaque match (~2 800 000)
-
->    game_lineups_id : Identifiant unique de la ligne ; Texte
->    date : Date du match ; Date (AAAA-MM-JJ)
->    game_id : Identifiant du match ; Chiffre (Entier)
->    player_id : Identifiant du joueur présent sur la feuille de match ; Chiffre (Entier)
->    club_id : Identifiant du club pour lequel le joueur est aligné ; Chiffre (Entier)
->    player_name : Nom complet du joueur ; Texte
->    type : Statut du joueur pour le match ; Texte
->    position : Poste spécifique occupé durant ce match ; Texte
->    number : Numéro de maillot porté par le joueur lors de cette rencontre ; Chiffre (Entier)
->    team_captain : Indicateur précisant si le joueur était le capitaine de l'équipe ; Chiffre (Binaire)
-
--**transfers.csv** : Suit les mouvements de joueurs entre les clubs
->    player_id : Identifiant unique du joueur transféré ; Chiffre (Entier)
->    transfer_date : Date exacte à laquelle le transfert a été enregistré ; Date (AAAA-MM-JJ)
->    transfer_season : Saison au cours de laquelle le transfert a eu lieu ; Texte
->    from_club_id : Identifiant du club qui vend ou libère le joueur ; Chiffre (Entier)
->    to_club_id : Identifiant du club qui achète ou accueille le joueur ; Chiffre (Entier)
->    from_club_name : Nom du club de départ ; Texte
->    to_club_name : Nom du club d'arrivée ; Texte
->    transfer_fee : Montant de la transaction ; Chiffre (Décimal)
->    market_value_in_eur : Valeur marchande estimée du joueur au moment du transfert ; Chiffre (Décimal)
->    player_name : Nom complet du joueur au moment de la transaction ; Texte
-
+\-**transfers.csv** : Suit les mouvements de joueurs entre les clubs \>
+player_id : Identifiant unique du joueur transféré ; Chiffre (Entier) \>
+transfer_date : Date exacte à laquelle le transfert a été enregistré ;
+Date (AAAA-MM-JJ) \> transfer_season : Saison au cours de laquelle le
+transfert a eu lieu ; Texte \> from_club_id : Identifiant du club qui
+vend ou libère le joueur ; Chiffre (Entier) \> to_club_id : Identifiant
+du club qui achète ou accueille le joueur ; Chiffre (Entier) \>
+from_club_name : Nom du club de départ ; Texte \> to_club_name : Nom du
+club d'arrivée ; Texte \> transfer_fee : Montant de la transaction ;
+Chiffre (Décimal) \> market_value_in_eur : Valeur marchande estimée du
+joueur au moment du transfert ; Chiffre (Décimal) \> player_name : Nom
+complet du joueur au moment de la transaction ; Texte
 
 ## **Analyses possibles**
-
 
 ```{r}
 # import libraries
@@ -238,17 +263,28 @@ library(scales)
 ```
 
 ## 1. L'efficacité offensive : Buts vs Passes décisives
-Quels sont les joueurs qui pèsent le plus sur le score et quels sont leurs profils types ? Existe-t-il une hiérarchie claire entre les "finisseurs" et les "distributeurs" au sein de l'élite mondiale ? C'est ce que nous allons analyser ici.
 
-Nous allons examiner la relation entre le nombre de buts marqués et le nombre de passes décisives délivrées par les joueurs les plus valorisés du marché sur les dix dernières années. Cette approche permet de distinguer les profils spécialisés des joueurs ultra-complets.
+Quels sont les joueurs qui pèsent le plus sur le score et quels sont
+leurs profils types ? Existe-t-il une hiérarchie claire entre les
+"finisseurs" et les "distributeurs" au sein de l'élite mondiale ? C'est
+ce que nous allons analyser ici.
+
+Nous allons examiner la relation entre le nombre de buts marqués et le
+nombre de passes décisives délivrées par les joueurs les plus valorisés
+du marché sur les dix dernières années. Cette approche permet de
+distinguer les profils spécialisés des joueurs ultra-complets.
 
 Pour cette analyse, nous croisons les données suivantes :
 
-Les statistiques de jeu : le cumul des buts et des passes décisives par joueur (depuis 2016).
+Les statistiques de jeu : le cumul des buts et des passes décisives par
+joueur (depuis 2016).
 
-La valeur marchande : afin de filtrer uniquement l'élite mondiale (joueurs évalués à plus de 30 millions d'euros).
+La valeur marchande : afin de filtrer uniquement l'élite mondiale
+(joueurs évalués à plus de 30 millions d'euros).
 
-Grâce à ces données, nous générons un nuage de points (scatter plot) interactif où chaque point représente un joueur. La couleur et la taille des points varient selon la valeur marchande du joueur.
+Grâce à ces données, nous générons un nuage de points (scatter plot)
+interactif où chaque point représente un joueur. La couleur et la taille
+des points varient selon la valeur marchande du joueur.
 
 ```{r}
 # --- 1. Préparation ---
@@ -308,17 +344,31 @@ if (knitr::is_latex_output()) {
 }
 
 ```
-Le graphique permet d'identifier immédiatement trois grandes catégories de joueurs de classe mondiale :
 
-Les "Finisseurs" (Haut-Gauche) : Des joueurs présentant un ratio buts/passes très élevé. Ce sont les purs numéros 9 dont la mission principale est la conclusion des actions.
+Le graphique permet d'identifier immédiatement trois grandes catégories
+de joueurs de classe mondiale :
 
-Les "Meneurs de jeu" (Bas-Droite) : Des profils créatifs qui affichent un grand nombre de passes décisives mais un volume de buts plus modeste. Ils sont les architectes du jeu.
+Les "Finisseurs" (Haut-Gauche) : Des joueurs présentant un ratio
+buts/passes très élevé. Ce sont les purs numéros 9 dont la mission
+principale est la conclusion des actions.
 
-Les "Superstars" (Haut-Droite) : Une élite très restreinte qui parvient à dominer les deux statistiques. Ce sont les joueurs les plus complets, souvent ceux dont la valeur marchande (représentée par la taille et la couleur rouge des points) est la plus élevée.
+Les "Meneurs de jeu" (Bas-Droite) : Des profils créatifs qui affichent
+un grand nombre de passes décisives mais un volume de buts plus modeste.
+Ils sont les architectes du jeu.
 
+Les "Superstars" (Haut-Droite) : Une élite très restreinte qui parvient
+à dominer les deux statistiques. Ce sont les joueurs les plus complets,
+souvent ceux dont la valeur marchande (représentée par la taille et la
+couleur rouge des points) est la plus élevée.
 
 ## 2. L'impact de l'âge sur le temps de jeu
-Est ce que l'age d'un joueur a un impact sur son temps de jeu ? Pour y répondre nous allons filtrer les données de players.csv car on a pu observer que des joueurs n'avait pas de date de naissance, on calcul l'age en année, ensuite on fusionne le jeu de données appearances.csv et players.csv (tranformé), puis on génere un Boxplot et un Linechart.
+
+Est ce que l'age d'un joueur a un impact sur son temps de jeu ? Pour y
+répondre nous allons filtrer les données de players.csv car on a pu
+observer que des joueurs n'avait pas de date de naissance, on calcul
+l'age en année, ensuite on fusionne le jeu de données appearances.csv et
+players.csv (tranformé), puis on génere un Boxplot et un Linechart.
+
 ```{r}
 
 players <- read.csv("./data/players.csv")
@@ -368,22 +418,38 @@ ggplot(age_groups, aes(x = age_group, y = mean_minutes_played, group = 1)) +
 
 ```
 
-On observe que l'age a bien un impact sur le temps de jeu. On constate que plus les joueurs sont âgés, plus ils ont de chances d'avoir un temps de jeu élevé durant un match. À l'inverse, plus le joueur est jeune, plus son temps de jeu est variable et en moyenne plus bas qu'un joueur plus âgé.
+On observe que l'age a bien un impact sur le temps de jeu. On constate
+que plus les joueurs sont âgés, plus ils ont de chances d'avoir un temps
+de jeu élevé durant un match. À l'inverse, plus le joueur est jeune,
+plus son temps de jeu est variable et en moyenne plus bas qu'un joueur
+plus âgé.
 
 ## 3. Discipline et agressivité par championnat
 
-Y a-t-il un championnat où les cartons sont plus souvent distribués que dans les autres, ou au contraire des championnats où les joueurs sont plus disciplinés ? C’est la question à laquelle nous allons essayer de répondre aujourd’hui. 
+Y a-t-il un championnat où les cartons sont plus souvent distribués que
+dans les autres, ou au contraire des championnats où les joueurs sont
+plus disciplinés ? C’est la question à laquelle nous allons essayer de
+répondre aujourd’hui.
 
-Nous allons examiner cela en comparant la moyenne de cartons reçus par match pour chaque championnat national (Ligue 1, Premier League, LaLiga…).
+Nous allons examiner cela en comparant la moyenne de cartons reçus par
+match pour chaque championnat national (Ligue 1, Premier League,
+LaLiga…).
 
 Pour cela, nous avons besoin des données suivantes :
 
-- les noms des championnats ainsi que le pays dans lequel ils se déroulent ;
-- la moyenne de cartons rouges et jaunes par championnat, triée par moyenne de cartons jaune reçus.
+-   les noms des championnats ainsi que le pays dans lequel ils se
+    déroulent ;
+-   la moyenne de cartons rouges et jaunes par championnat, triée par
+    moyenne de cartons jaune reçus.
 
-Grâce à ces données, nous allons créer un graphique en bar (barchart) avec la moyenne de cartons par match pour chaque championnat.
+Grâce à ces données, nous allons créer un graphique en bar (barchart)
+avec la moyenne de cartons par match pour chaque championnat.
 
-Certains championnats ont la réputation d'être plus "rugueux" que d'autres. On peut donc s'attendre à observer des différences significatives dans le nombre de cartons distribués selon les ligues, avec peut-être les championnats méditerranéens plus sanctionnés que les ligues du nord de l'Europe.
+Certains championnats ont la réputation d'être plus "rugueux" que
+d'autres. On peut donc s'attendre à observer des différences
+significatives dans le nombre de cartons distribués selon les ligues,
+avec peut-être les championnats méditerranéens plus sanctionnés que les
+ligues du nord de l'Europe.
 
 ```{r fig-width: 16}
 # --- 1. Chargement des données ---
@@ -474,23 +540,47 @@ ggplot(stats_long, aes(x = display_label, y = avg_cards, fill = card_type)) +
     plot.margin        = margin(t = 10, r = 10, b = 20, l = 10)
   )
 ```
-Le graphique confirme cette intuition : la Grèce, le Portugal et l'Espagne affichent les moyennes les plus élevées (autour de 5 cartons par match), tandis que les Pays-Bas et l'Angleterre se situent en bas du classement (autour de 3 cartons par match). L'Allemagne et la France occupent une position intermédiaire.
 
-Cependant, ce résultat ne permet pas de conclure directement que certains championnats sont plus agressifs que d'autres. En effet, le nombre de cartons dépend non seulement du comportement des joueurs, mais aussi de la permissivité des arbitres, qui varie selon les cultures et les ligues. Un championnat avec peu de cartons peut donc refléter un arbitrage plus tolérant plutôt qu'un jeu plus fair-play. Pour aller plus loin, il faudrait croiser ces données avec le nombre de fautes commises par match, afin de distinguer ce qui relève du comportement des joueurs de ce qui relève du style d'arbitrage.
+Le graphique confirme cette intuition : la Grèce, le Portugal et
+l'Espagne affichent les moyennes les plus élevées (autour de 5 cartons
+par match), tandis que les Pays-Bas et l'Angleterre se situent en bas du
+classement (autour de 3 cartons par match). L'Allemagne et la France
+occupent une position intermédiaire.
+
+Cependant, ce résultat ne permet pas de conclure directement que
+certains championnats sont plus agressifs que d'autres. En effet, le
+nombre de cartons dépend non seulement du comportement des joueurs, mais
+aussi de la permissivité des arbitres, qui varie selon les cultures et
+les ligues. Un championnat avec peu de cartons peut donc refléter un
+arbitrage plus tolérant plutôt qu'un jeu plus fair-play. Pour aller plus
+loin, il faudrait croiser ces données avec le nombre de fautes commises
+par match, afin de distinguer ce qui relève du comportement des joueurs
+de ce qui relève du style d'arbitrage.
 
 ## 4. Corrélation entre Valeur Marchande et Performance
 
-Aujourd’hui, de nombreux analystes, spécialistes ou simples supporters s’interrogent sur l’évolution du marché des joueurs et sur la légitimité de leur valorisation. Cette étude vise donc à tenter de répondre à cette question à travers la recherche d’une corrélation entre les performances d’un joueur, ses contributions décisives et sa valorisation marchande.
+Aujourd’hui, de nombreux analystes, spécialistes ou simples supporters
+s’interrogent sur l’évolution du marché des joueurs et sur la légitimité
+de leur valorisation. Cette étude vise donc à tenter de répondre à cette
+question à travers la recherche d’une corrélation entre les performances
+d’un joueur, ses contributions décisives et sa valorisation marchande.
 
-Dans un premier temps, énumérons les données dont nous avons besoin pour notre étude :
+Dans un premier temps, énumérons les données dont nous avons besoin pour
+notre étude :
 
--le nombre total de buts d’un joueur (somme des buts lors de chacune de ses apparitions)
--le nombre total de passes décisives d’un joueur (même calcul que pour les buts)
--en additionnant ces deux variables, nous obtenons le nombre total de contributions décisives
--la valorisation actuelle du joueur en euros, ainsi que sa plus haute valorisation enregistrée
--le nom des joueurs pour pouvoir les identifier et faciliter l’analyse
+-le nombre total de buts d’un joueur (somme des buts lors de chacune de
+ses apparitions) -le nombre total de passes décisives d’un joueur (même
+calcul que pour les buts) -en additionnant ces deux variables, nous
+obtenons le nombre total de contributions décisives -la valorisation
+actuelle du joueur en euros, ainsi que sa plus haute valorisation
+enregistrée -le nom des joueurs pour pouvoir les identifier et faciliter
+l’analyse
 
-Avec ces données, nous avons d’abord tenté de créer un graphique en nuage de points (scatter plot) prenant en compte la valeur marchande actuelle d’un joueur et le total de ses contributions décisives en essayant de tracer une relation via une régression linéaire (geom_smooth).
+Avec ces données, nous avons d’abord tenté de créer un graphique en
+nuage de points (scatter plot) prenant en compte la valeur marchande
+actuelle d’un joueur et le total de ses contributions décisives en
+essayant de tracer une relation via une régression linéaire
+(geom_smooth).
 
 ```{r}
 #loading des DFs players et appearances que nous allons utiliser
@@ -538,22 +628,37 @@ data %>% ggplot(aes(x = market_value_in_eur, y = total_contribution)) +
   )+ geom_smooth(method = "lm", color = "red", se = FALSE)
 
 ```
+
 Cette première étude n’est pas totalement concluante :
 
-En effet nous retrouvons :
--des joueurs avec énormément de contributions (+500) et une valeur marchande moyenne (ex : Cristiano Ronaldo, Lionel Messi, Robert Lewandowski)
--des joueurs avec des valeurs marchandes très élevées (+120 000 000 €) qui ne dépassent pas (ou à peine) une centaine de contributions (Declan Rice, Pedri, Federico Valverde)
+En effet nous retrouvons : -des joueurs avec énormément de contributions
+(+500) et une valeur marchande moyenne (ex : Cristiano Ronaldo, Lionel
+Messi, Robert Lewandowski) -des joueurs avec des valeurs marchandes très
+élevées (+120 000 000 €) qui ne dépassent pas (ou à peine) une centaine
+de contributions (Declan Rice, Pedri, Federico Valverde)
 
-Après analyse, ces deux “incohérences” s’expliquent par d’autres facteurs :
+Après analyse, ces deux “incohérences” s’expliquent par d’autres
+facteurs :
 
--l’âge
--la position sur le terrain
+-l’âge -la position sur le terrain
 
-En effet, les joueurs en fin de carrière voient leurs performances décliner avec l’âge, ce qui diminue leur valeur marchande. De plus, comme nous prenons en compte l’ensemble des contributions décisives depuis juillet 2012 jusqu’à mars 2026, nous avons décidé de changer d’approche et de sélectionner plutôt la plus haute valorisation atteinte par joueur sur la période.
+En effet, les joueurs en fin de carrière voient leurs performances
+décliner avec l’âge, ce qui diminue leur valeur marchande. De plus,
+comme nous prenons en compte l’ensemble des contributions décisives
+depuis juillet 2012 jusqu’à mars 2026, nous avons décidé de changer
+d’approche et de sélectionner plutôt la plus haute valorisation atteinte
+par joueur sur la période.
 
-Un autre aspect qui ressort de cette étude est que la performance d’un défenseur ou d’un milieu à vocation défensive ne peut pas être correctement mesurée par les contributions décisives offensives. Pour plus de cohérence et de fidélité, nous avons donc choisi de limiter notre étude aux joueurs à vocation offensive (attaquants ou milieux offensifs → variables position et sub_position de players).
+Un autre aspect qui ressort de cette étude est que la performance d’un
+défenseur ou d’un milieu à vocation défensive ne peut pas être
+correctement mesurée par les contributions décisives offensives. Pour
+plus de cohérence et de fidélité, nous avons donc choisi de limiter
+notre étude aux joueurs à vocation offensive (attaquants ou milieux
+offensifs → variables position et sub_position de players).
 
-Nous répétons ainsi le graphique avec en abscisse la valorisation maximale et en ordonnée le nombre de contributions décisives des joueurs offensifs.
+Nous répétons ainsi le graphique avec en abscisse la valorisation
+maximale et en ordonnée le nombre de contributions décisives des joueurs
+offensifs.
 
 ```{r}
 #Création d'un second  scatter plot qui montre la relation entre la valeur marchande maximale ateinte par un joueur à vocation offensive (depuis 2012) et sa performance (ces contributions décisives)
@@ -583,19 +688,38 @@ data_attaquant %>% ggplot(aes(x= highest_market_value_in_eur,y= total_contributi
   geom_smooth(method = "lm", color = "red", se = FALSE)
 
 ```
-Il en résulte une corrélation légèrement plus cohérente, mais qui reste, selon nous, insatisfaisante.
 
-En effet, les points restent très dispersés et ne sont pas toujours centrés autour de la droite, notamment à cause des valeurs extrêmes (outliers).
+Il en résulte une corrélation légèrement plus cohérente, mais qui reste,
+selon nous, insatisfaisante.
 
-En conclusion, on peut affirmer que la valorisation d’un joueur est influencé par ses contribution décisives mais n'est pas limité à cette donnée. Certes, plus un joueur est efficace et participe à des buts, plus sa valeur marchande tend à augmenter, mais ce n’est pas le seul facteur déterminant pour plusieurs raisons :
+En effet, les points restent très dispersés et ne sont pas toujours
+centrés autour de la droite, notamment à cause des valeurs extrêmes
+(outliers).
 
-- ces contributions ne permettent pas de décrire totalement la performance d’un joueur, (en particulier pour les joueurs à rôle défensif)
-- la valorisation dépend également des mécanismes du marché (concurrence, investissement à court ou long terme en fonction de l'âge du joueur, offre et demande, championnats, image du joueur, etc...), qui restent difficiles à quantifier.
+En conclusion, on peut affirmer que la valorisation d’un joueur est
+influencé par ses contribution décisives mais n'est pas limité à cette
+donnée. Certes, plus un joueur est efficace et participe à des buts,
+plus sa valeur marchande tend à augmenter, mais ce n’est pas le seul
+facteur déterminant pour plusieurs raisons :
 
-Il serait donc pertinent de s’intéresser également à l’évolution du marché et des prix des transferts au cours des années afin de mieux appréhender ces dynamiques.
+-   ces contributions ne permettent pas de décrire totalement la
+    performance d’un joueur, (en particulier pour les joueurs à rôle
+    défensif)
+-   la valorisation dépend également des mécanismes du marché
+    (concurrence, investissement à court ou long terme en fonction de
+    l'âge du joueur, offre et demande, championnats, image du joueur,
+    etc...), qui restent difficiles à quantifier.
+
+Il serait donc pertinent de s’intéresser également à l’évolution du
+marché et des prix des transferts au cours des années afin de mieux
+appréhender ces dynamiques.
 
 ## 5. Évolution historique des prix des transferts
-Comment le marché mondial du football a-t-il évolué financièrement sur la dernière décennie et dans quelle mesure les crises globales ont-elles impacté les investissements des clubs ? 
+
+Comment le marché mondial du football a-t-il évolué financièrement sur
+la dernière décennie et dans quelle mesure les crises globales ont-elles
+impacté les investissements des clubs ?
+
 ```{r}
 library(ggplot2)
 library(dplyr)
@@ -643,11 +767,23 @@ p_inflation <- ggplot(evolution_prix, aes(x = transfer_season, y = total_milliar
 
 ```
 
-Le graphique montre un décrochage brutal à partir de 2020. Cette chute correspond précisément à la pandémie de COVID-19. L'arrêt des compétitions, la perte des revenus de billetterie (huis clos) et l'incertitude économique ont forcé les clubs à une austérité soudaine. On remarque que le total investi a chuté de manière significative, marquant un coup d'arrêt net à l'inflation du marché. 
-Après ce creux historique, la courbe amorce une remontée, signe que le marché retrouve peu à peu sa santé financière, même si les clubs semblent désormais plus prudents dans leurs volumes d'achat par rapport aux records de l'avant-crise.
+Le graphique montre un décrochage brutal à partir de 2020. Cette chute
+correspond précisément à la pandémie de COVID-19. L'arrêt des
+compétitions, la perte des revenus de billetterie (huis clos) et
+l'incertitude économique ont forcé les clubs à une austérité soudaine.
+On remarque que le total investi a chuté de manière significative,
+marquant un coup d'arrêt net à l'inflation du marché. Après ce creux
+historique, la courbe amorce une remontée, signe que le marché retrouve
+peu à peu sa santé financière, même si les clubs semblent désormais plus
+prudents dans leurs volumes d'achat par rapport aux records de
+l'avant-crise.
 
 ## 6. Balance commerciale des clubs (Achats vs Ventes)
-Quels clubs se révèlent être les plus profitables sur le marché des transferts, et comment cette balance commerciale permet-elle de distinguer la stratégie des "clubs formateurs/vendeurs" de celle des "clubs acheteurs" ?
+
+Quels clubs se révèlent être les plus profitables sur le marché des
+transferts, et comment cette balance commerciale permet-elle de
+distinguer la stratégie des "clubs formateurs/vendeurs" de celle des
+"clubs acheteurs" ?
 
 ```{r}
 library(ggplot2)
@@ -700,12 +836,28 @@ p_balance <- ggplot(donnees_graphique, aes(x = reorder(club_name, Balance_Millio
   theme_minimal()
 
 ```
-À l'une des extrémités de la courbe se trouvent les clubs au profil purement consommateur. Leurs investissements sur le marché des transferts dépassent de très loin les revenus générés par la vente de leurs propres joueurs. Ce modèle privilégie la compétitivité sportive immédiate et l'acquisition de "stars" mondiales au détriment de la rentabilité commerciale des transferts.
-À l'opposé, les clubs affichant une balance largement positive incarnent le modèle de "valorisation sportive". Leur stratégie consiste à acquérir ou former de jeunes talents à bas coût, à les faire progresser au sein de leur effectif, puis à les revendre au prix fort à l'élite européenne.
 
+À l'une des extrémités de la courbe se trouvent les clubs au profil
+purement consommateur. Leurs investissements sur le marché des
+transferts dépassent de très loin les revenus générés par la vente de
+leurs propres joueurs. Ce modèle privilégie la compétitivité sportive
+immédiate et l'acquisition de "stars" mondiales au détriment de la
+rentabilité commerciale des transferts. À l'opposé, les clubs affichant
+une balance largement positive incarnent le modèle de "valorisation
+sportive". Leur stratégie consiste à acquérir ou former de jeunes
+talents à bas coût, à les faire progresser au sein de leur effectif,
+puis à les revendre au prix fort à l'élite européenne.
 
 ## 7. Domination à domicile vs Extérieur
-On peux supposer que les matchs à domicile sont plus avantageux. Pour vérifier cette hypothèse on va chercher les donnée dans games.csv qui correspond a des matchs puis comparer les colonnes home_club_goals et away_club_goals pour determiner si un match est une vitcoire ou non. Ensuite, à partir des ces infos on va générer un barchart pour déterminer les proportions de victoire / défaite / nul pour les match à domicile puis à l'extérieur.
+
+On peux supposer que les matchs à domicile sont plus avantageux. Pour
+vérifier cette hypothèse on va chercher les donnée dans games.csv qui
+correspond a des matchs puis comparer les colonnes home_club_goals et
+away_club_goals pour determiner si un match est une vitcoire ou non.
+Ensuite, à partir des ces infos on va générer un barchart pour
+déterminer les proportions de victoire / défaite / nul pour les match à
+domicile puis à l'extérieur.
+
 ```{r}
 
 games <- read.csv("./data/games.csv")
@@ -778,10 +930,17 @@ ggplot(data_plot, aes(x = location, y = n, fill = result)) +
     legend.key = element_rect(fill = "#F4E1D2")
   )
 ```
-On peux constater qu'il y a plus de victoire concernant les matchs à domicile. Donc toute équipe doit s'attendre à un match plus difficile à l'extérieur.
+
+On peux constater qu'il y a plus de victoire concernant les matchs à
+domicile. Donc toute équipe doit s'attendre à un match plus difficile à
+l'extérieur.
 
 ## 8. Analyse des systèmes tactiques les plus victorieux
-Quels sont les formations les plus efficaces pour une victoire ? Pour y répondre nous allons génerer un scatter plot affichant le taux de victoire et le nombre de victoire.
+
+Quels sont les formations les plus efficaces pour une victoire ? Pour y
+répondre nous allons génerer un scatter plot affichant le taux de
+victoire et le nombre de victoire.
+
 ```{r}
 # Charger les données
 games <- read_csv("./data/games.csv")
@@ -834,11 +993,33 @@ ggplot(formation_stats, aes(x = win_pct, y = formation, size = wins, color = win
   theme_minimal()
 
 ```
-On observe que certaine formation on un taux de victoire à 100% cepandant ce ne sont pas les plus utilisé.
-Certaines formations, comme 4-3-3 ou 4-2-3-1, présentent un taux de victoire élevé, indiquant une grande efficacité tactique. D’autres formations plus utilisées peuvent avoir un nombre élevé de victoires, mais un taux de victoire moyen, ce qui reflète leur popularité plutôt que leur supériorité stratégique. Les formations les plus intéressantes sont celles qui combinent un taux de victoire élevé et un nombre de victoires significatif. Le choix de la formation a un impact significatif sur la probabilité de victoire. Les équipes utilisant des formations équilibrées et offensives (par exemple 4-3-3) obtiennent à la fois un taux de victoire élevé et un nombre de victoires conséquent, ce qui en fait les tactiques les plus victorieux. Les entraîneurs peuvent s’appuyer sur cette information pour optimiser leurs stratégies et maximiser leurs chances de succès. Cependant, il faut prendre en compte pour mettre en place ces formations, il faut avoir les profils de joueurs adaptés ainsi qu'un entraineur qui la maîtrise.
+
+On observe que certaine formation on un taux de victoire à 100%
+cepandant ce ne sont pas les plus utilisé. Certaines formations, comme
+4-3-3 ou 4-2-3-1, présentent un taux de victoire élevé, indiquant une
+grande efficacité tactique. D’autres formations plus utilisées peuvent
+avoir un nombre élevé de victoires, mais un taux de victoire moyen, ce
+qui reflète leur popularité plutôt que leur supériorité stratégique. Les
+formations les plus intéressantes sont celles qui combinent un taux de
+victoire élevé et un nombre de victoires significatif. Le choix de la
+formation a un impact significatif sur la probabilité de victoire. Les
+équipes utilisant des formations équilibrées et offensives (par exemple
+4-3-3) obtiennent à la fois un taux de victoire élevé et un nombre de
+victoires conséquent, ce qui en fait les tactiques les plus victorieux.
+Les entraîneurs peuvent s’appuyer sur cette information pour optimiser
+leurs stratégies et maximiser leurs chances de succès. Cependant, il
+faut prendre en compte pour mettre en place ces formations, il faut
+avoir les profils de joueurs adaptés ainsi qu'un entraineur qui la
+maîtrise.
 
 ## 9. Répartition des nationalités dans les grands championnats
-Dans quelle mesure les grands championnats européens se différencient-ils par la diversité et la concentration des nationalités de leurs joueurs ? On va générer un barplot empilé pour distinguer la proportion de joueur nationnaux et internationnaux des grands championnats (Premier League, LaLiga, Serie A, Ligue 1 et Bundesliga).
+
+Dans quelle mesure les grands championnats européens se
+différencient-ils par la diversité et la concentration des nationalités
+de leurs joueurs ? On va générer un barplot empilé pour distinguer la
+proportion de joueur nationnaux et internationnaux des grands
+championnats (Premier League, LaLiga, Serie A, Ligue 1 et Bundesliga).
+
 ```{r}
 players <- read_csv("./data/players.csv")
 appearances <- read_csv("./data/appearances.csv")
@@ -894,26 +1075,33 @@ ggplot(df, aes(x = league_name, y = pct, fill = statut)) +
   theme_minimal()
 
 ```
-la répartition des nationalités dans les cinq grands championnats européens montre des structures très contrastées.
 
-D’un côté, des championnats comme la Premier League présentent une forte diversité internationale, avec une large part de joueurs étrangers issus de multiples origines. Cela reflète un marché très globalisé et attractif.
+la répartition des nationalités dans les cinq grands championnats
+européens montre des structures très contrastées.
 
-À l’inverse, des ligues comme la Ligue 1 ou la Bundesliga conservent une présence plus importante de joueurs nationaux, même si la tendance à l’internationalisation reste visible.
+D’un côté, des championnats comme la Premier League présentent une forte
+diversité internationale, avec une large part de joueurs étrangers issus
+de multiples origines. Cela reflète un marché très globalisé et
+attractif.
 
-Enfin, les championnats espagnol et italien occupent une position intermédiaire, combinant un noyau national encore significatif avec une ouverture progressive aux talents étrangers.
+À l’inverse, des ligues comme la Ligue 1 ou la Bundesliga conservent une
+présence plus importante de joueurs nationaux, même si la tendance à
+l’internationalisation reste visible.
 
-Globalement, on observe que plus un championnat est économiquement puissant et médiatisé, plus sa diversité de nationalités est élevée.
+Enfin, les championnats espagnol et italien occupent une position
+intermédiaire, combinant un noyau national encore significatif avec une
+ouverture progressive aux talents étrangers.
+
+Globalement, on observe que plus un championnat est économiquement
+puissant et médiatisé, plus sa diversité de nationalités est élevée.
 
 ## 10. Relation entre Taille (Hauteur) et Position sur le terrain
 
-Dans le football moderne, la morphologie (et plus précisément la taille en centimètres) reste-t-elle un critère physique discriminant et déterminant selon le poste occupé sur le terrain ?
+Dans le football moderne, la morphologie (et plus précisément la taille
+en centimètres) reste-t-elle un critère physique discriminant et
+déterminant selon le poste occupé sur le terrain ?
 
 ```{r}
-library(ggplot2)
-library(dplyr)
-library(plotly)
-
-players <- read.csv("./data/players.csv")
 
 donnees_taille <- players %>%
   filter(!is.na(height_in_cm) & height_in_cm > 100) %>%
@@ -925,7 +1113,12 @@ donnees_taille <- players %>%
     position == "Attack" ~ "Attaquant"
   ))
 
-p_taille <- ggplot(donnees_taille, aes(x = reorder(Poste, height_in_cm, FUN = median), y = height_in_cm, fill = Poste)) +
+p_taille <- ggplot(
+  donnees_taille,
+  aes(x = reorder(Poste, height_in_cm, FUN = median),
+      y = height_in_cm,
+      fill = Poste)
+) +
   geom_boxplot(alpha = 0.7, outlier.color = "#e74c3c", outlier.size = 2) +
   scale_fill_brewer(palette = "Set2") +
   labs(
@@ -935,14 +1128,33 @@ p_taille <- ggplot(donnees_taille, aes(x = reorder(Poste, height_in_cm, FUN = me
   ) +
   theme_minimal() +
   theme(legend.position = "none")
+
+p_taille
 ```
-La boîte représentant les gardiens se situe le plus haut sur l'axe des ordonnées. La distribution montre que la quasi-totalité des gardiens de l'élite se situe au-dessus de la moyenne générale. La taille reste un profil morphologique indispensable à ce poste pour couvrir au maximum la surface du but.
-Les défenseurs suivent de très près les gardiens. Cela confirme que le profil type du défenseur moderne privilégie une grande taille pour remporter les duels de la tête et s'imposer physiquement lors des corners et coups francs.
-La boîte des milieux de terrain est positionnée plus bas et s'avère souvent plus compacte. Un profil plus petit offre un centre de gravité plus bas, synonyme d'une plus grande agilité et d'une meilleure vivacité.
-La distribution des attaquants montre une plus grande dispersion. Cela s'explique par les deux profils tactiques : les "pivots/avants-centres" de grande taille pour le jeu de tête, et les "ailiers de rupture", souvent très petits, dont le jeu repose exclusivement sur la vitesse et le dribble.
+
+La boîte représentant les gardiens se situe le plus haut sur l'axe des
+ordonnées. La distribution montre que la quasi-totalité des gardiens de
+l'élite se situe au-dessus de la moyenne générale. La taille reste un
+profil morphologique indispensable à ce poste pour couvrir au maximum la
+surface du but. Les défenseurs suivent de très près les gardiens. Cela
+confirme que le profil type du défenseur moderne privilégie une grande
+taille pour remporter les duels de la tête et s'imposer physiquement
+lors des corners et coups francs. La boîte des milieux de terrain est
+positionnée plus bas et s'avère souvent plus compacte. Un profil plus
+petit offre un centre de gravité plus bas, synonyme d'une plus grande
+agilité et d'une meilleure vivacité. La distribution des attaquants
+montre une plus grande dispersion. Cela s'explique par les deux profils
+tactiques : les "pivots/avants-centres" de grande taille pour le jeu de
+tête, et les "ailiers de rupture", souvent très petits, dont le jeu
+repose exclusivement sur la vitesse et le dribble.
 
 ## 11. Analyse des moments les plus cruciaux au sein d'un match
-Y a-t-il des tranches horaires où les buts et événements décisifs sont statistiquement plus fréquents ? Pour y répondre on va créer un histogramme de chaque minutes avec une proportion de but pour visualiser en générale les points cruciaux des matchs.
+
+Y a-t-il des tranches horaires où les buts et événements décisifs sont
+statistiquement plus fréquents ? Pour y répondre on va créer un
+histogramme de chaque minutes avec une proportion de but pour visualiser
+en générale les points cruciaux des matchs.
+
 ```{r}
 # Chargement
 events <- read_csv("./data/game_events.csv")
@@ -973,15 +1185,32 @@ ggplot(goal_minute, aes(x = minute, y = pct)) +
   ) +
   theme_minimal()
 ```
-On observe que les buts ne tombent pas uniformément dans un match. Les moments de la mi-temps et de la fin de match ont généralement la plus forte fréquence de buts. La seconde période montre une activité legerement plus élevé par rapport à la première. Cette tendance illustre l’impact de la fatigue, des ajustements tactiques et de la pression en fin de match. On peu constater que les moments cruciaux sont les fin de période généralement.
+
+On observe que les buts ne tombent pas uniformément dans un match. Les
+moments de la mi-temps et de la fin de match ont généralement la plus
+forte fréquence de buts. La seconde période montre une activité
+legerement plus élevé par rapport à la première. Cette tendance illustre
+l’impact de la fatigue, des ajustements tactiques et de la pression en
+fin de match. On peu constater que les moments cruciaux sont les fin de
+période généralement.
 
 ## 12. Recherche d'une relation entre pays d'origine et poste sur le terrain La nationalité d'un joueur est-elle statistiquement liée au poste qu'il occupe sur le terrain ?
 
-En regardant les différents matchs de football, on peut remarquer que, dans la plupart des grandes équipes européennes, il y a très souvent en attaque des joueurs français : Ousmane Dembélé, Désiré Doué pour le PSG, Kylian Mbappé au Real Madrid, ou encore Michael Olise au Bayern Munich et Hugo Ekitike à Liverpool.
+En regardant les différents matchs de football, on peut remarquer que,
+dans la plupart des grandes équipes européennes, il y a très souvent en
+attaque des joueurs français : Ousmane Dembélé, Désiré Doué pour le PSG,
+Kylian Mbappé au Real Madrid, ou encore Michael Olise au Bayern Munich
+et Hugo Ekitike à Liverpool.
 
-Mais une question se pose : retrouve-t-on ces différents joueurs dispersés dans les équipes à des postes bien précis parce que certains pays constituent un bon vivier de footballeurs, ou bien ces joueurs occupent-ils ces postes parce que leur nationalité influence leur formation, et donc, par conséquent, leur position sur le terrain ?
+Mais une question se pose : retrouve-t-on ces différents joueurs
+dispersés dans les équipes à des postes bien précis parce que certains
+pays constituent un bon vivier de footballeurs, ou bien ces joueurs
+occupent-ils ces postes parce que leur nationalité influence leur
+formation, et donc, par conséquent, leur position sur le terrain ?
 
-Pour voir cela, nous allons faire une heatmap du pays par rapport au poste (normalisée par effectif total par pays), pour les joueurs actifs des 5 grands championnats.
+Pour voir cela, nous allons faire une heatmap du pays par rapport au
+poste (normalisée par effectif total par pays), pour les joueurs actifs
+des 5 grands championnats.
 
 ```{r}
 # Chargement des données
@@ -1038,37 +1267,45 @@ ggplot(heatmap_data, aes(x = position, y = country_of_citizenship, fill = pct)) 
     panel.grid = element_blank()
   )
 ```
-Nous pouvons voir que la répartition des postes des joueurs selon les pays est relativement similaire d’un pays à l’autre. En réalité, si l’on observe attentivement le graphique, cette répartition ne semble pas réellement liée à la nationalité, mais représente plutôt la répartition classique des postes dans une équipe de football.
-Pour une répartition « standard », souvent utilisée en analyse de données footballistiques (4-3-3 ou 4-2-3-1), on considère généralement :
 
+Nous pouvons voir que la répartition des postes des joueurs selon les
+pays est relativement similaire d’un pays à l’autre. En réalité, si l’on
+observe attentivement le graphique, cette répartition ne semble pas
+réellement liée à la nationalité, mais représente plutôt la répartition
+classique des postes dans une équipe de football. Pour une répartition «
+standard », souvent utilisée en analyse de données footballistiques
+(4-3-3 ou 4-2-3-1), on considère généralement :
 
-1 gardien → 9 %
-4 défenseurs → 36 %
-4 milieux → 36 %
-2 attaquants/offensifs → 18 %
+1 gardien → 9 % 4 défenseurs → 36 % 4 milieux → 36 % 2
+attaquants/offensifs → 18 %
 
+Le filtrage ne semble donc pas réellement se faire par nationalité, mais
+davantage selon la répartition naturelle des postes dans une équipe.
+Cependant, certaines tendances peuvent être observées. Les attaquants
+varient davantage selon les nationalités, avec certaines nations
+particulièrement offensives :
 
-Le filtrage ne semble donc pas réellement se faire par nationalité, mais davantage selon la répartition naturelle des postes dans une équipe.
-Cependant, certaines tendances peuvent être observées. Les attaquants varient davantage selon les nationalités, avec certaines nations particulièrement offensives :
+Côte d’Ivoire : 45 % Sénégal et Maroc : 37 % Argentine : 32 %
 
-Côte d’Ivoire : 45 %
-Sénégal et Maroc : 37 %
-Argentine : 32 %
+À l’inverse, certaines nations semblent produire davantage de profils
+défensifs :
 
-
-À l’inverse, certaines nations semblent produire davantage de profils défensifs :
-
-Pays-Bas : 42 % de défenseurs
-Suisse : 39 %
-Brésil : 40 %
+Pays-Bas : 42 % de défenseurs Suisse : 39 % Brésil : 40 %
 
 ## 13. Étude de l'impact des grandes affluence sur les résultats d'une équipe Les clubs jouant devant de grandes foules obtiennent-ils de meilleurs résultats ?
 
-Est-ce que le public d’un match de football influence réellement les résultats d’une équipe ? Ou, au contraire, de meilleurs résultats attirent-ils davantage de supporters ?
+Est-ce que le public d’un match de football influence réellement les
+résultats d’une équipe ? Ou, au contraire, de meilleurs résultats
+attirent-ils davantage de supporters ?
 
-Avant de répondre à cette question, je pense que les résultats ne sont pas réellement influencés par la présence de grandes foules, mais plutôt que le public se construit progressivement au fil du temps grâce à la dynamique du club.
+Avant de répondre à cette question, je pense que les résultats ne sont
+pas réellement influencés par la présence de grandes foules, mais plutôt
+que le public se construit progressivement au fil du temps grâce à la
+dynamique du club.
 
-Pour confirmer ou infirmer cette hypothèse, nous allons réaliser un scatter plot avec une droite de tendance, segmenté par championnat, afin de quantifier l’effet du « douzième homme » à partir de données réelles.
+Pour confirmer ou infirmer cette hypothèse, nous allons réaliser un
+scatter plot avec une droite de tendance, segmenté par championnat, afin
+de quantifier l’effet du « douzième homme » à partir de données réelles.
 
 ```{r}
 # --- 1. Chargement et préparation des données ---
@@ -1114,22 +1351,34 @@ ggplot(data_affluence, aes(x = attendance, y = home_goal_diff)) +
     panel.grid.minor = element_blank()
   )
 ```
-Après avoir fait le graphique, même si les droites de tendance sont positives, leur pente reste relativement faible. 
 
-Cela suggère que : L’affluence semble avoir un effet positif sur les performances à domicile, mais cet effet reste limité.
+Après avoir fait le graphique, même si les droites de tendance sont
+positives, leur pente reste relativement faible.
 
-Autrement dit, les équipes jouant devant davantage de supporters obtiennent en moyenne une meilleure différence de buts;
-cependant, la dispersion des points montre que l’affluence seule n’explique pas les résultats.
+Cela suggère que : L’affluence semble avoir un effet positif sur les
+performances à domicile, mais cet effet reste limité.
 
-L'hypothèse de départ semble donc plutôt correcte : ce ne sont probablement pas uniquement les supporters qui améliorent les performances, mais aussi le fait que les clubs les plus performants attirent davantage de spectateurs.
+Autrement dit, les équipes jouant devant davantage de supporters
+obtiennent en moyenne une meilleure différence de buts; cependant, la
+dispersion des points montre que l’affluence seule n’explique pas les
+résultats.
+
+L'hypothèse de départ semble donc plutôt correcte : ce ne sont
+probablement pas uniquement les supporters qui améliorent les
+performances, mais aussi le fait que les clubs les plus performants
+attirent davantage de spectateurs.
 
 ## 14. L'impact des agents sur la valeur marchande d'un joueur ? Existe-t-il un écart significatif de valeur marchande entre les joueurs représentés et ceux sans agent déclaré ?
 
-Au-delà d’aider les joueurs à trouver le club qui leur correspond, un agent a aussi pour objectif de tirer un profit maximal de ses joueurs et de les valoriser au maximum.
+Au-delà d’aider les joueurs à trouver le club qui leur correspond, un
+agent a aussi pour objectif de tirer un profit maximal de ses joueurs et
+de les valoriser au maximum.
 
-Mais un agent est-il réellement utile pour permettre à un joueur d’être mieux valorisé sur le marché footballistique ?
+Mais un agent est-il réellement utile pour permettre à un joueur d’être
+mieux valorisé sur le marché footballistique ?
 
-Pour vérifier cela, nous allons faire un boxplot comparant la valeur marchande des joueurs par poste avec et sans agents.
+Pour vérifier cela, nous allons faire un boxplot comparant la valeur
+marchande des joueurs par poste avec et sans agents.
 
 ```{r}
 # Chargement de la librairie nécessaire et des données
@@ -1176,34 +1425,60 @@ ggplot(data_agents, aes(x = position, y = market_value_in_eur, fill = statut_age
     panel.grid.minor = element_blank()
   )
 ```
-L'analyse de ce graphique est sans appel : la présence d'un agent déclaré est corrélée à une valeur marchande nettement supérieure, et ce, peu importe le poste occupé sur le terrain.
 
-Pour chaque catégorie (Attaquants, Défenseurs, Gardiens, Milieux), la ligne centrale du boxplot vert (avec agent) est systématiquement plus haute que celle du boxplot rouge (sans agent).
+L'analyse de ce graphique est sans appel : la présence d'un agent
+déclaré est corrélée à une valeur marchande nettement supérieure, et ce,
+peu importe le poste occupé sur le terrain.
 
-En moyenne, la valeur médiane d'un joueur représenté semble se situer aux alentours de 0,40 M€ à 0,50 M€.
+Pour chaque catégorie (Attaquants, Défenseurs, Gardiens, Milieux), la
+ligne centrale du boxplot vert (avec agent) est systématiquement plus
+haute que celle du boxplot rouge (sans agent).
 
-À l'inverse, pour les joueurs sans agent, cette médiane chute drastiquement, gravitant souvent autour de 0,10 M€ à 0,20 M€.
+En moyenne, la valeur médiane d'un joueur représenté semble se situer
+aux alentours de 0,40 M€ à 0,50 M€.
 
-La "boîte" verte, qui représente les 50 % centraux de l'échantillon, s'étend beaucoup plus haut dans l'échelle logarithmique. Cela signifie que même un joueur "moyen" avec un agent a de fortes chances d'avoir une valeur marchande supérieure à un joueur "moyen" sans agent.
+À l'inverse, pour les joueurs sans agent, cette médiane chute
+drastiquement, gravitant souvent autour de 0,10 M€ à 0,20 M€.
 
-Bien que l'on observe des valeurs aberrantes (les points noirs en haut des moustaches) dans les deux catégories, les sommets atteints par les joueurs sous contrat avec une agence frôlent ou dépassent les 100 M€.
+La "boîte" verte, qui représente les 50 % centraux de l'échantillon,
+s'étend beaucoup plus haut dans l'échelle logarithmique. Cela signifie
+que même un joueur "moyen" avec un agent a de fortes chances d'avoir une
+valeur marchande supérieure à un joueur "moyen" sans agent.
 
-Chez les joueurs sans agent, si certains atteignent des sommets, la densité de joueurs à haute valeur est beaucoup plus faible.
+Bien que l'on observe des valeurs aberrantes (les points noirs en haut
+des moustaches) dans les deux catégories, les sommets atteints par les
+joueurs sous contrat avec une agence frôlent ou dépassent les 100 M€.
 
-L'écart est particulièrement frappant chez les milieux de terrain et les attaquants, où la valorisation maximale est nettement plus accessible avec un intermédiaire.
+Chez les joueurs sans agent, si certains atteignent des sommets, la
+densité de joueurs à haute valeur est beaucoup plus faible.
 
+L'écart est particulièrement frappant chez les milieux de terrain et les
+attaquants, où la valorisation maximale est nettement plus accessible
+avec un intermédiaire.
 
-Cependant, on peut se poser la question suivante : est-ce l’agent qui crée la valeur, ou les joueurs à forte valeur qui attirent naturellement les agents ?
+Cependant, on peut se poser la question suivante : est-ce l’agent qui
+crée la valeur, ou les joueurs à forte valeur qui attirent naturellement
+les agents ?
 
-- Le réseau et la négociation : l’agent utilise son carnet d’adresses pour créer de la concurrence entre les clubs, ce qui fait mécaniquement augmenter la valeur du joueur.
+-   Le réseau et la négociation : l’agent utilise son carnet d’adresses
+    pour créer de la concurrence entre les clubs, ce qui fait
+    mécaniquement augmenter la valeur du joueur.
 
-- La professionnalisation : un joueur qui choisit d’être représenté par un agent s’inscrit souvent dans une démarche de carrière plus structurée, ce qui peut rassurer les clubs.
+-   La professionnalisation : un joueur qui choisit d’être représenté
+    par un agent s’inscrit souvent dans une démarche de carrière plus
+    structurée, ce qui peut rassurer les clubs.
 
-- Le biais de sélection : les agents ciblent prioritairement les joueurs à fort potentiel. Cependant, le graphique montre que même pour les valeurs plus modestes (partie basse du boxplot), l’avantage reste du côté des joueurs représentés.
+-   Le biais de sélection : les agents ciblent prioritairement les
+    joueurs à fort potentiel. Cependant, le graphique montre que même
+    pour les valeurs plus modestes (partie basse du boxplot), l’avantage
+    reste du côté des joueurs représentés.
 
-En conclusion, le graphique confirme qu’il existe un écart significatif. Ne pas avoir d’agent déclaré semble constituer un frein majeur à la valorisation financière d’un joueur sur le marché actuel.
+En conclusion, le graphique confirme qu’il existe un écart significatif.
+Ne pas avoir d’agent déclaré semble constituer un frein majeur à la
+valorisation financière d’un joueur sur le marché actuel.
 
 ## 15. Identification des clubs performants pour faire évoluer leurs joueurs Quels clubs créent le plus de valeur sur leurs joueurs formés ?
+
 ```{r}
 
 ```
