@@ -1478,7 +1478,46 @@ Ne pas avoir d’agent déclaré semble constituer un frein majeur à la
 valorisation financière d’un joueur sur le marché actuel.
 
 ## 15. Identification des clubs performants pour faire évoluer leurs joueurs Quels clubs créent le plus de valeur sur leurs joueurs formés ?
-
+Au-delà de la simple rentabilité comptable des transferts, quels sont les clubs qui génèrent la plus forte progression de valeur marchande chez leurs joueurs, s'affirmant ainsi comme les meilleurs incubateurs de talents ?
 ```{r}
+transfers <- read.csv("./data/transfers.csv")
+valuations <- read.csv("./data/player_valuations.csv")
 
+valeur_creee_par_joueur <- transfers %>%
+  filter(!is.na(market_value_in_eur) & market_value_in_eur > 0) %>%
+  filter(!is.na(transfer_fee) & transfer_fee > 0) %>%
+  
+  mutate(Valeur_Developpee = market_value_in_eur) %>%
+  filter(from_club_name != "" & from_club_name != "Unknown")
+
+
+incubateurs <- valeur_creee_par_joueur %>%
+  group_by(club_name = from_club_name) %>%
+  summarise(
+    Valeur_Totale_M = round(sum(Valeur_Developpee, na.rm = TRUE) / 1000000, 2),
+    Nombre_Joueurs = n(),
+    Moyenne_Par_Joueur_M = round(mean(Valeur_Developpee, na.rm = TRUE) / 1000000, 2)
+  ) %>%
+  arrange(desc(Valeur_Totale_M)) %>%
+  head(10) 
+p_incubateurs <- ggplot(incubateurs, aes(x = reorder(club_name, Valeur_Totale_M), y = Valeur_Totale_M, fill = Valeur_Totale_M,
+                                         text = paste("Club :", club_name,
+                                                      "<br>Valeur totale développée :", Valeur_Totale_M, "M€",
+                                                      "<br>Joueurs transférés :", Nombre_Joueurs,
+                                                      "<br>Moyenne par joueur :", Moyenne_Par_Joueur_M, "M€"))) +
+  geom_col(width = 0.6) +
+  coord_flip() + 
+  scale_fill_gradient(low = "#34495e", high = "#27ae60") + 
+  labs(
+    title = "Top 10 des clubs qui développent la plus forte valeur marchande",
+    x = "Club Formateur / Vendeur",
+    y = "Cumul de la valeur marchande développée (en Millions d'Euros)"
+  ) +
+  theme_minimal() +
+  theme(legend.position = "none")
+
+ggplotly(p_incubateurs, tooltip = "text")
 ```
+Les clubs qui dominent ce classement horizontal sont les véritables poumons du football mondial.
+Ce développement de valeur n'est pas le fruit du hasard. Il valide scientifiquement la qualité des infrastructures d'un club, la compétence de son staff technique et surtout une philosophie sportive qui ose donner du temps de jeu aux jeunes talents.
+Pour calculer cet indicateur, nous avons cumulé les valeurs marchandes estimées des joueurs au moment précis de leur transfert en les attribuant à leur club vendeur. Ce calcul permet d'obtenir la valeur marchande globale exportée, mettant ainsi en lumière les structures qui réussissent le mieux à développer le potentiel de leurs talents avant de les céder sur le marché.
