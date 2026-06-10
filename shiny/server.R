@@ -8,7 +8,7 @@ library(scales)
 # =========================
 # DATA LOAD
 # =========================
-path <- "./data"
+path <- "../data"
 
 clubs <- read_csv(file.path(path, "clubs.csv"))
 games <- read_csv(file.path(path, "games.csv"))
