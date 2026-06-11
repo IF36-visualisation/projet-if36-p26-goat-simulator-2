@@ -10,6 +10,10 @@ editor_options:
     wrap: 72
 ---
 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
 # **Proposition**
 
 #### Attention : Les données utilisées dans ce projet sont des échantillons réduits du dataset original, limités à 1000 lignes par fichier pour des raisons de taille et de performance. Pensez à bien supprimer les échantillons avant de télécharger les données complètes pour vos analyses avec la commande suivante :
