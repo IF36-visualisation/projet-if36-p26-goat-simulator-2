@@ -251,7 +251,7 @@ complet du joueur au moment de la transaction ; Texte
 
 ## **Analyses possibles**
 
-```{r}
+```{r, echo=FALSE}
 # import libraries
 library(tibble)
 library(dplyr)
@@ -290,7 +290,7 @@ Grâce à ces données, nous générons un nuage de points (scatter plot)
 interactif où chaque point représente un joueur. La couleur et la taille
 des points varient selon la valeur marchande du joueur.
 
-```{r}
+```{r, echo=FALSE}
 # --- 1. Préparation ---
 players <- read.csv("./data/players.csv")
 appearances <- read.csv("data/appearances.csv")
@@ -373,7 +373,7 @@ observer que des joueurs n'avait pas de date de naissance, on calcul
 l'age en année, ensuite on fusionne le jeu de données appearances.csv et
 players.csv (tranformé), puis on génere un Boxplot et un Linechart.
 
-```{r}
+```{r, echo=FALSE}
 
 players <- read.csv("./data/players.csv")
 appearances <- read.csv("./data/appearances.csv")
@@ -455,7 +455,7 @@ significatives dans le nombre de cartons distribués selon les ligues,
 avec peut-être les championnats méditerranéens plus sanctionnés que les
 ligues du nord de l'Europe.
 
-```{r fig-width: 16}
+```{r fig-width: 16, echo=FALSE}
 # --- 1. Chargement des données ---
 appearances  <- read.csv("./data/appearances.csv",  stringsAsFactors = FALSE)
 competitions <- read.csv("./data/competitions.csv", stringsAsFactors = FALSE)
@@ -586,7 +586,7 @@ actuelle d’un joueur et le total de ses contributions décisives en
 essayant de tracer une relation via une régression linéaire
 (geom_smooth).
 
-```{r}
+```{r, echo=FALSE}
 #loading des DFs players et appearances que nous allons utiliser
 players <- read_csv("./data/players.csv")
 appearances <- read_csv("./data/appearances.csv")
@@ -664,7 +664,7 @@ Nous répétons ainsi le graphique avec en abscisse la valorisation
 maximale et en ordonnée le nombre de contributions décisives des joueurs
 offensifs.
 
-```{r}
+```{r, echo=FALSE}
 #Création d'un second  scatter plot qui montre la relation entre la valeur marchande maximale ateinte par un joueur à vocation offensive (depuis 2012) et sa performance (ces contributions décisives)
 data_attaquant <- data %>% filter(position == "Attack" | position == "Midfield" & sub_position == "Attacking Midfield")
 
@@ -724,7 +724,7 @@ Comment le marché mondial du football a-t-il évolué financièrement sur
 la dernière décennie et dans quelle mesure les crises globales ont-elles
 impacté les investissements des clubs ?
 
-```{r}
+```{r, echo=FALSE}
 library(ggplot2)
 library(dplyr)
 library(plotly)
@@ -789,7 +789,7 @@ transferts, et comment cette balance commerciale permet-elle de
 distinguer la stratégie des "clubs formateurs/vendeurs" de celle des
 "clubs acheteurs" ?
 
-```{r}
+```{r, echo=FALSE}
 library(ggplot2)
 library(dplyr)
 library(plotly)
@@ -862,7 +862,7 @@ Ensuite, à partir des ces infos on va générer un barchart pour
 déterminer les proportions de victoire / défaite / nul pour les match à
 domicile puis à l'extérieur.
 
-```{r}
+```{r, echo=FALSE}
 
 games <- read.csv("./data/games.csv")
 
@@ -945,7 +945,7 @@ Quels sont les formations les plus efficaces pour une victoire ? Pour y
 répondre nous allons génerer un scatter plot affichant le taux de
 victoire et le nombre de victoire.
 
-```{r}
+```{r, echo=FALSE}
 # Charger les données
 games <- read_csv("./data/games.csv")
 
@@ -1024,7 +1024,7 @@ de leurs joueurs ? On va générer un barplot empilé pour distinguer la
 proportion de joueur nationnaux et internationnaux des grands
 championnats (Premier League, LaLiga, Serie A, Ligue 1 et Bundesliga).
 
-```{r}
+```{r, echo=FALSE}
 players <- read_csv("./data/players.csv")
 appearances <- read_csv("./data/appearances.csv")
 games <- read_csv("./data/games.csv")
@@ -1105,7 +1105,7 @@ Dans le football moderne, la morphologie (et plus précisément la taille
 en centimètres) reste-t-elle un critère physique discriminant et
 déterminant selon le poste occupé sur le terrain ?
 
-```{r}
+```{r, echo=FALSE}
 
 donnees_taille <- players %>%
   filter(!is.na(height_in_cm) & height_in_cm > 100) %>%
@@ -1159,7 +1159,7 @@ statistiquement plus fréquents ? Pour y répondre on va créer un
 histogramme de chaque minutes avec une proportion de but pour visualiser
 en générale les points cruciaux des matchs.
 
-```{r}
+```{r, echo=FALSE}
 # Chargement
 events <- read_csv("./data/game_events.csv")
 
@@ -1216,7 +1216,7 @@ Pour voir cela, nous allons faire une heatmap du pays par rapport au
 poste (normalisée par effectif total par pays), pour les joueurs actifs
 des 5 grands championnats.
 
-```{r}
+```{r, echo=FALSE}
 # Chargement des données
 players <- read_csv("./data/players.csv")
 
@@ -1311,7 +1311,7 @@ Pour confirmer ou infirmer cette hypothèse, nous allons réaliser un
 scatter plot avec une droite de tendance, segmenté par championnat, afin
 de quantifier l’effet du « douzième homme » à partir de données réelles.
 
-```{r}
+```{r, echo=FALSE}
 # --- 1. Chargement et préparation des données ---
 library(tidyverse)
 library(scales)
@@ -1384,7 +1384,7 @@ mieux valorisé sur le marché footballistique ?
 Pour vérifier cela, nous allons faire un boxplot comparant la valeur
 marchande des joueurs par poste avec et sans agents.
 
-```{r}
+```{r, echo=FALSE}
 # Chargement de la librairie nécessaire et des données
 library(tidyverse)
 library(scales)
@@ -1483,7 +1483,7 @@ valorisation financière d’un joueur sur le marché actuel.
 
 ## 15. Identification des clubs performants pour faire évoluer leurs joueurs Quels clubs créent le plus de valeur sur leurs joueurs formés ?
 Au-delà de la simple rentabilité comptable des transferts, quels sont les clubs qui génèrent la plus forte progression de valeur marchande chez leurs joueurs, s'affirmant ainsi comme les meilleurs incubateurs de talents ?
-```{r}
+```{r, echo=FALSE}
 transfers <- read.csv("./data/transfers.csv")
 valuations <- read.csv("./data/player_valuations.csv")
 
@@ -1525,3 +1525,83 @@ ggplotly(p_incubateurs, tooltip = "text")
 Les clubs qui dominent ce classement horizontal sont les véritables poumons du football mondial.
 Ce développement de valeur n'est pas le fruit du hasard. Il valide scientifiquement la qualité des infrastructures d'un club, la compétence de son staff technique et surtout une philosophie sportive qui ose donner du temps de jeu aux jeunes talents.
 Pour calculer cet indicateur, nous avons cumulé les valeurs marchandes estimées des joueurs au moment précis de leur transfert en les attribuant à leur club vendeur. Ce calcul permet d'obtenir la valeur marchande globale exportée, mettant ainsi en lumière les structures qui réussissent le mieux à développer le potentiel de leurs talents avant de les céder sur le marché.
+
+# Conclusion
+
+## Résumé des apprentissages et difficultés
+Ce projet d'analyse du jeu de données Transfermarkt nous a permis de plonger au cœur de la dynamique économique et sportive du football mondial. Nous avons pu comprendre comment se structurent les valeurs marchandes des joueurs au fil du temps et mettre en lumière les stratégies des différents clubs (notamment l'importance des clubs formateurs ou "tremplins" qui valorisent les jeunes talents avant de les exporter). 
+Parmi les difficultés rencontrées, le nettoyage et la préparation des données ont été des défis majeurs : il a fallu gérer de nombreuses valeurs manquantes, harmoniser les formats de dates et de devises, et réaliser des jointures complexes entre plusieurs tables (joueurs, clubs, transferts) sans perdre en cohérence. 
+
+## Pistes d'élargissement
+Pour étendre ce travail, il serait particulièrement pertinent d'intégrer encore plus de données de statistiques sportives pures (distances parcourues, etc.) afin de corréler directement les performances sur le terrain à la valeur financière. Une autre piste majeure consisterait à utiliser des algorithmes d'apprentissage automatique (Machine Learning) pour tenter de prédire le futur montant du transfert d'un joueur en fonction de son âge, de son poste et de son club actuel.
+
+## Retours d'expérience individuels
+* **Gatien :** "Ce projet m'a permis de consolider mes compétences en création de visualisations interactives pour raconter une histoire avec les données. Par manque de temps et de connaissances techniques avancées, j'aurais aimé que l'on tente de développer un modèle prédictif sur l'évolution de la valeur marchande d'un jeune talent. (car je suis en SN, et beaucoup de membres du groupe aussi)"
+* **Raphaël :** "J'ai appris à nettoyer et restructurer efficacement un jeu de données brut et volumineux. Il aurait été intéressant d'incorporer une dimension de *web scraping* pour récupérer des données en temps réel sur le mercato, ce que nous n'avons pas pu faire par manque de temps."
+* **Arnaud :** "J'ai particulièrement retenu les techniques de manipulation et de filtrage ciblé sur des bases de données interconnectées. Avec plus de données médicales disponibles, j'aurais souhaité pouvoir analyser l'impact financier exact des blessures graves sur la courbe de valeur des joueurs."
+* **Sacha :** "Ce travail m'a fait progresser dans l'analyse de données exploratoire globale et la gestion de projet collaboratif. J'aurais beaucoup apprécié que nous puissions déployer une application web ou un *dashboard* interactif complet (comme une application Shiny) pour rendre notre analyse accessible au public, ce qui dépassait le cadre du cours."
+
+---
+
+# Annexe : Répartition du travail au sein du groupe
+
+Ce projet a été réalisé de manière collaborative par Gatien Genevois, Arnaud Godard, Raphaël Beau et Sacha Himber. Afin de garantir une charge de travail équilibrée et de permettre à chacun de développer ses compétences en programmation et en analyse de données, nous avons choisi de nous répartir les différentes questions de l'étude. 
+
+Bien que chaque membre ait été responsable du code et de l'analyse de ses parties respectives, nous avons régulièrement échangé lors de sessions de travail communes pour harmoniser notre code, valider nos résultats et corriger les bugs ensemble. L'intégration finale du rapport a été un effort collectif.
+
+Voici la répartition exacte des questions du projet :
+
+* **Raphaël Beau** s'est chargé des questions d'introduction et d'analyse exploratoire ciblée, traitant les **questions 1, 5, 7 et 9**.
+* **Arnaud Godard** s'est occupé des analyses intermédiaires et de certaines extractions spécifiques en réalisant les **questions 6, 10 et 15** ainsi que la ShinyApp
+* **Gatien Genevois** a géré une grande partie des analyses complexes et des visualisations de fin de projet en réalisant les **questions 3, 12, 13 et 14**.
+* **Sacha Himber** a pris en charge la totalité des **autres questions (2, 4, 8, 11...)** assurant ainsi le liant de l'analyse et la continuité du fil conducteur entre les différentes parties.
+
+## **Shiny dashboard**
+
+Nous avons également développé un dashboard interactif totalement paramétrable. 
+Le but de celui-ci est de pouvoir explorer les données des différentes compétitions et des différents joueurs. 
+Ce dashboard est composé de 4 pages :  
+- une vue générale qui montre un visuel de l’étendue des données sur les 10 plus grandes compétitions de football ;
+- un onglet pour étudier les compétitions et leurs statistiques ;
+- un onglet clubs qui présente les attributs du club sélectionné ;
+- et un dernier onglet joueurs pour retrouver les informations précises sur les joueurs, notamment sur la période sélectionnée.
+
+Voici la page d'accueil du dashboard :
+
+```{r accueil, echo=FALSE}
+knitr::include_graphics("shiny/print_screen_app/Acceuil.png")
+
+```
+
+En effet, tout est paramétrable : ici, vous pouvez sélectionner la période de l'étude des données, le championnat, le club et le joueur que vous voulez étudier.
+
+Prenons par exemple le club de Liverpool qui évolue en Premier League et étudions les données sur cette saison (du 15 août 2025 à la date de fin de prise des données).
+
+Voici les statistiques présentes sur la page de la Premier League :
+
+```{r premierLeague, echo=FALSE}
+
+knitr::include_graphics("shiny/print_screen_app/Premier League.png")
+knitr::include_graphics("shiny/print_screen_app/Premier League_2.png")
+```
+
+Celles du club :
+
+```{r liverpool,echo=FALSE}
+
+knitr::include_graphics("shiny/print_screen_app/liverpool.png")
+```
+
+Et enfin celles de leur plus grande star, Mohamed Salah :
+
+
+```{r mo_salah,echo=FALSE}
+knitr::include_graphics("shiny/print_screen_app/mo_Salah_1.png")
+knitr::include_graphics("shiny/print_screen_app/mo_Salah_2.png")
+```
+Nous pouvons remarquer ici, sur ce dernier graphique, l'évolution de la valeur marchande du joueur. Nous pouvons observer que, malgré de très bonnes statistiques (14 buts et 10 passes décisives cette saison), le joueur voit sa cote sur le marché baisser depuis 6 ans maintenant.
+
+Ceci peut s'expliquer de deux manières :
+
+tout d'abord, il n'est plus à son pic de forme et de performance, chose que l'on peut constater en recherchant ses statistiques des autres saisons ;
+ensuite et surtout, il est en fin de carrière et devient plutôt âgé pour le football professionnel (34 ans). Sa valeur marchande baisse ainsi car il sera difficile pour un club de faire des bénéfices avec lui.
